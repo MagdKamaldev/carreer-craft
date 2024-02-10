@@ -1,0 +1,53 @@
+import 'package:career_craft/colors.dart';
+import 'package:flutter/material.dart';
+
+ThemeData theme = ThemeData(
+    primarySwatch: primary,
+    scaffoldBackgroundColor: primary.shade200,
+    textTheme: TextTheme(
+      displayLarge: TextStyle(
+          fontSize: 57,
+          fontWeight: FontWeight.bold,
+          color: primary.shade900,
+          fontFamily: "inter"),
+      displayMedium: TextStyle(
+          fontSize: 45,
+          fontWeight: FontWeight.bold,
+          color: primary.shade900,
+          fontFamily: "inter"),
+      displaySmall: TextStyle(
+          fontSize: 36,
+          fontWeight: FontWeight.bold,
+          color: primary.shade900,
+          fontFamily: "inter"),
+      headlineLarge: TextStyle(
+          fontSize: 32,
+          fontWeight: FontWeight.bold,
+          color: primary.shade900,
+          fontFamily: "inter"),
+      headlineMedium: TextStyle(
+          fontSize: 28,
+          fontWeight: FontWeight.bold,
+          color: primary.shade900,
+          fontFamily: "inter"),
+      headlineSmall: TextStyle(
+          fontSize: 24,
+          fontWeight: FontWeight.bold,
+          color: primary.shade900,
+          fontFamily: "inter"),
+      titleLarge: TextStyle(
+          fontSize: 22,
+          fontWeight: FontWeight.bold,
+          color: primary.shade900,
+          fontFamily: "inter"),
+      titleMedium: TextStyle(
+          fontSize: 16,
+          fontWeight: FontWeight.bold,
+          color: primary.shade900,
+          fontFamily: "inter"),
+      titleSmall: TextStyle(
+          fontSize: 14,
+          fontWeight: FontWeight.bold,
+          color: primary.shade900,
+          fontFamily: "inter"),
+    ));
