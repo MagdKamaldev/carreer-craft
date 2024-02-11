@@ -5,4 +5,3 @@ import 'package:dartz/dartz.dart';
 abstract class LoginRepository {
   Future<Either<Failure, UserModel>> login(String email, String password);
 }
-

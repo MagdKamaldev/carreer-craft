@@ -1,17 +1,47 @@
-abstract class Failure {}
+// ignore_for_file: deprecated_member_use
+import 'package:dio/dio.dart';
 
-class ServerFailure extends Failure {}
+abstract class Failure {
+  final String message;
 
-class CacheFailure extends Failure {}
+  Failure(this.message);
+}
 
-class NetworkFailure extends Failure {}
+class ServerFailure extends Failure {
+  ServerFailure(super.message);
+  factory ServerFailure.fromDioError(DioError e) {
+    switch (e.type) {
+      case DioExceptionType.connectionTimeout:
+        return ServerFailure("connection Timeout with api server");
+      case DioExceptionType.sendTimeout:
+        return ServerFailure("send Timeout with api server");
+      case DioExceptionType.receiveTimeout:
+        return ServerFailure("receive Timeout with api server");
+      case DioExceptionType.badCertificate:
+        return ServerFailure("bad Certificate with api server");
+      case DioExceptionType.badResponse:
+        return ServerFailure.fromResponse(
+            e.response!.statusCode!, e.response!.data);
+      case DioExceptionType.cancel:
+        return ServerFailure("Request cancelled with api server");
+      case DioExceptionType.connectionError:
+        return ServerFailure("No Connection with api server");
+      case DioExceptionType.unknown:
+        return ServerFailure("Unknown Error with api server");
+    }
+  }
 
-class InvalidInputFailure extends Failure {}
-
-class UnAuthenticatedFailure extends Failure {}
-
-class UnAuthorizedFailure extends Failure {}
-
-class UnknownFailure extends Failure {}
-
-class NoInternetFailure extends Failure {}
+  factory ServerFailure.fromResponse(int statusCode, dynamic response) {
+    if (statusCode == 404) {
+      return ServerFailure("request not found, Please try again later !");
+    } else if (statusCode == 500) {
+      return ServerFailure(
+          "A problem occured within remote server, Please try again later !");
+    } else if (statusCode == 400 || statusCode == 401 || statusCode == 403) {
+      return ServerFailure(response["error"]["message"]);
+    } else {
+      return ServerFailure(
+          "An error occured, Please try again later !");
+    }
+  }
+}
