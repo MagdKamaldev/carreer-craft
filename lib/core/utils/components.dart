@@ -87,7 +87,7 @@ Widget defaultTextField({
           },
           style: theme.bodyMedium!.copyWith(fontWeight: FontWeight.bold),
           cursorColor: primary.shade600,
-
+          
           //disable the line below text
           decoration: InputDecoration(
             hintText: label,

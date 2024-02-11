@@ -9,8 +9,8 @@ PreferredSizeWidget homeAppBar(
       toolbarHeight: size.height * 0.1,
       backgroundColor: primary.shade200,
       leading: Padding(
-        padding: EdgeInsets.all(size.width * 0.015),
-        child: SvgPicture.asset("assets/images/logo.svg"),
+        padding: EdgeInsets.all(size.width * 0.03),
+        child: SvgPicture.asset("assets/images/drawer.svg"),
       ),
       actions: [
         SizedBox(
