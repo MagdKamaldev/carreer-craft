@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 class EntranceView extends StatelessWidget {
   const EntranceView({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

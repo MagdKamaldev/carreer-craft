@@ -15,7 +15,7 @@ class HomeView extends StatelessWidget {
       appBar: homeAppBar(size),
       body: Column(
         children: [
-           const HomeSearchBar(),
+          const HomeSearchBar(),
           SizedBox(
             height: size.height * 0.02,
           ),

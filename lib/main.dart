@@ -2,7 +2,6 @@ import 'package:career_craft/core/utils/app_router.dart';
 import 'package:career_craft/core/utils/themes.dart';
 import 'package:flutter/material.dart';
 
-
 void main() {
   runApp(const CareerCraft());
 }

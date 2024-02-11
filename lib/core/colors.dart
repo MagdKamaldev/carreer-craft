@@ -12,9 +12,10 @@ const MaterialColor primary = MaterialColor(_primaryPrimaryValue, <int, Color>{
   800: Color(0xFF231E58),
   900: Color(_primaryPrimaryValue),
 });
- const int _primaryPrimaryValue = 0xFF15104D;
+const int _primaryPrimaryValue = 0xFF15104D;
 
-const MaterialColor secondary = MaterialColor(_secondaryPrimaryValue, <int, Color>{
+const MaterialColor secondary =
+    MaterialColor(_secondaryPrimaryValue, <int, Color>{
   50: Color(0xFFEDEBFF),
   100: Color(0xFFE3E1FF),
   200: Color(0xFFC6C0FF),
@@ -24,6 +25,6 @@ const MaterialColor secondary = MaterialColor(_secondaryPrimaryValue, <int, Colo
   600: Color(0xFF3528BF),
   700: Color(0xFF2A2099),
   800: Color(0xFF1F1873),
-  900: Color(0xFF191359),     
+  900: Color(0xFF191359),
 });
-  const int _secondaryPrimaryValue = 0xFF382ACC;
+const int _secondaryPrimaryValue = 0xFF382ACC;
