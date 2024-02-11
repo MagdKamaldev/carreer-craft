@@ -21,7 +21,6 @@ class _SignUpTabState extends State<SignUpTab> {
   TextEditingController monthController = TextEditingController();
   TextEditingController yearController = TextEditingController();
   DateTime selectedDate = DateTime.now();
-
   List<String> dropList = <String>['User', 'HR'];
 
   Future<void> _selectDate(BuildContext context) async {

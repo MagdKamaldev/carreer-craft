@@ -10,6 +10,7 @@
 
 #### 1- we create the feature models : inside the feature folder  data/models/eg_model
 
+#### 2- we create the feature repository : inside the feature folder  data/repository/eg_repository
 
 
 

@@ -1,4 +1,4 @@
-import 'package:career_craft/colors.dart';
+import 'package:career_craft/core/colors.dart';
 import 'package:career_craft/core/utils/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';

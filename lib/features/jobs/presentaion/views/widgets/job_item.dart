@@ -1,4 +1,4 @@
-import 'package:career_craft/colors.dart';
+import 'package:career_craft/core/colors.dart';
 import 'package:career_craft/core/utils/themes.dart';
 import 'package:flutter/material.dart';
 
@@ -36,13 +36,13 @@ class JobItem extends StatelessWidget {
                         style: theme.textTheme.titleLarge,
                       ),
                       Text(
-                        "  Flutter developer",
+                        "Flutter developer",
                         style: theme.textTheme.titleSmall!.copyWith(
                           color: primary.shade700,
                         ),
                       ),
                       Text(
-                        "  2 years",
+                        "2 years",
                         style: theme.textTheme.titleSmall!.copyWith(
                           color: primary.shade600,
                         ),

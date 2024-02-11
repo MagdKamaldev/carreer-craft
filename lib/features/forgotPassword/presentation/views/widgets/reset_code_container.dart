@@ -1,4 +1,4 @@
-import 'package:career_craft/colors.dart';
+import 'package:career_craft/core/colors.dart';
 import 'package:flutter/material.dart';
 
 Widget resetCodeContainer(Size size, BuildContext context) => Container(

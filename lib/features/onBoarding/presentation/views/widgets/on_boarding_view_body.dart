@@ -1,4 +1,4 @@
-import 'package:career_craft/colors.dart';
+import 'package:career_craft/core/colors.dart';
 import 'package:career_craft/core/utils/app_router.dart';
 import 'package:career_craft/core/utils/assets.dart';
 import 'package:career_craft/core/utils/components.dart';

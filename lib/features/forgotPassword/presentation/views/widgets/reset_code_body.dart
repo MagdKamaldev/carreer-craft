@@ -1,7 +1,7 @@
 import 'package:career_craft/core/utils/app_router.dart';
 import 'package:career_craft/features/forgotPassword/presentation/views/widgets/reset_code_container.dart';
 import 'package:flutter/material.dart';
-import 'package:career_craft/colors.dart';
+import 'package:career_craft/core/colors.dart';
 import 'package:career_craft/core/utils/components.dart';
 import 'package:go_router/go_router.dart';
 

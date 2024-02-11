@@ -1,6 +1,6 @@
-import 'package:career_craft/colors.dart';
-import 'package:career_craft/features/entrance/presentation/views/widgets/login_tab.dart';
-import 'package:career_craft/features/entrance/presentation/views/widgets/signup_tab.dart';
+import 'package:career_craft/core/colors.dart';
+import 'package:career_craft/features/login/presentaion/views/login_tab.dart';
+import 'package:career_craft/features/signup/presentation/views/signup_tab.dart';
 import 'package:flutter/material.dart';
 
 class EntranceBody extends StatefulWidget {

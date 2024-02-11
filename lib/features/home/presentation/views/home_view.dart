@@ -1,8 +1,8 @@
-import 'package:career_craft/colors.dart';
+import 'package:career_craft/core/colors.dart';
 import 'package:career_craft/features/home/presentation/views/widgets/home_app_bar.dart';
 import 'package:career_craft/features/home/presentation/views/widgets/home_bottom_nav.dart';
 import 'package:career_craft/features/home/presentation/views/widgets/home_search_bar.dart';
-import 'package:career_craft/features/home/presentation/views/widgets/job_item.dart';
+import 'package:career_craft/features/jobs/presentaion/views/jobs_view.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
@@ -15,7 +15,7 @@ class HomeView extends StatelessWidget {
       appBar: homeAppBar(size),
       body: Column(
         children: [
-          const HomeSearchBar(),
+           const HomeSearchBar(),
           SizedBox(
             height: size.height * 0.02,
           ),
@@ -24,22 +24,7 @@ class HomeView extends StatelessWidget {
             height: 0.5,
             color: primary,
           ),
-          SizedBox(
-            height: size.height * 0.04,
-          ),
-          const JobItem(),
-          SizedBox(
-            height: size.height * 0.02,
-          ),
-          const JobItem(),
-          SizedBox(
-            height: size.height * 0.02,
-          ),
-          const JobItem(),
-          SizedBox(
-            height: size.height * 0.02,
-          ),
-          const JobItem(),
+          const JobsView(),
         ],
       ),
       bottomNavigationBar: homeBottomNav(),
