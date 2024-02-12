@@ -1,11 +1,12 @@
-import 'package:bloc/bloc.dart';
 import 'package:career_craft/features/login/data/models/user_model.dart';
 import 'package:career_craft/features/login/data/repositories/login_repository.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 part 'login_state.dart';
 
 class LoginCubit extends Cubit<LoginStates> {
   LoginCubit(this.loginRepository) : super(LoginInitial());
   final LoginRepository loginRepository;
+  static LoginCubit get(context) => BlocProvider.of(context);
 
   Future<void> login(String email, String password) async {
     emit(LoginLoading());

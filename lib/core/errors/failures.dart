@@ -3,7 +3,6 @@ import 'package:dio/dio.dart';
 
 abstract class Failure {
   final String message;
-
   Failure(this.message);
 }
 
@@ -38,10 +37,9 @@ class ServerFailure extends Failure {
       return ServerFailure(
           "A problem occured within remote server, Please try again later !");
     } else if (statusCode == 400 || statusCode == 401 || statusCode == 403) {
-      return ServerFailure(response["error"]["message"]);
+      return ServerFailure(response["message"]);
     } else {
-      return ServerFailure(
-          "An error occured, Please try again later !");
+      return ServerFailure("An error occured, Please try again later !");
     }
   }
 }

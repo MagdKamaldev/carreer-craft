@@ -20,7 +20,7 @@ class ApiServices {
 
   Future<Map<String, dynamic>> post({
     required String endPoint,
-    required Map<String, dynamic> data,
+    required dynamic data,
     String? jwt,
   }) async {
     _dio.options.headers = {
