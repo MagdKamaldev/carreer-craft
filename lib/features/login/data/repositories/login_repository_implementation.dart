@@ -25,7 +25,7 @@ class LoginRepositoryImplementation implements LoginRepository {
         },
       );
       token = response["token"];
-      return Right(UserModel.fromJson(response["data"]));
+      return Right(UserModel.fromJson(response["user"]));
     } catch (e) {
       if (e is DioError) {
         return Left(ServerFailure.fromDioError(e));

@@ -6,12 +6,10 @@ import 'package:career_craft/features/login/presentaion/manager/login_cubit/logi
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-
+                                                             
 class LoginButton extends StatelessWidget {
   final void Function() onPressed;
-  
-  const LoginButton(
-      {super.key,  required this.onPressed});
+  const LoginButton({super.key, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +19,7 @@ class LoginButton extends StatelessWidget {
         GoRouter.of(context).pushReplacement(AppRouter.homeView);
       } else if (state is LoginFailure) {
         showErrorSnackbar(
-            context: context, title: "LoginError", body: state.message);
+            context: context, title: "Login Error", body: state.message);
       }
     }, builder: (context, state) {
       if (state is LoginLoading) {
@@ -32,7 +30,7 @@ class LoginButton extends StatelessWidget {
         );
       } else {
         return defaultButton(
-        function: onPressed,
+          function: onPressed,
           context: context,
           text: "Sign in",
           height: size.height * 0.06,
