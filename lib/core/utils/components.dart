@@ -1,5 +1,6 @@
 import 'package:career_craft/core/colors.dart';
 import 'package:career_craft/core/utils/assets.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -106,3 +107,15 @@ Widget defaultTextField({
         ),
       ),
     );
+
+
+void navigateTo(context, widget) => Navigator.push(
+    context,
+    CupertinoPageRoute(
+      builder: (context) => widget,
+    ));
+
+void navigateAndFinish(context, widget) => Navigator.pushAndRemoveUntil(
+        context, CupertinoPageRoute(builder: (context) => widget), (route) {
+      return false;
+    });

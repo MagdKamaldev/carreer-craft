@@ -1,13 +1,13 @@
 import 'package:career_craft/core/colors.dart';
-import 'package:career_craft/core/utils/app_router.dart';
 import 'package:career_craft/core/utils/components.dart';
 import 'package:career_craft/core/utils/service_locator.dart';
+import 'package:career_craft/features/forgotPassword/presentation/views/forgot_password_view.dart';
 import 'package:career_craft/features/login/data/repositories/login_repository_implementation.dart';
 import 'package:career_craft/features/login/presentaion/manager/login_cubit/login_cubit.dart';
 import 'package:career_craft/features/login/presentaion/views/login_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
+
 
 class LoginTab extends StatelessWidget {
   const LoginTab({super.key});
@@ -95,7 +95,7 @@ class LoginTab extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () {
-                      GoRouter.of(context).push(AppRouter.forgotPasswordView);
+                      navigateTo(context, const ForgotPasswordView());
                     },
                     child: Text(
                       "Forgot password",

@@ -1,14 +1,14 @@
 import 'package:career_craft/core/errors/error_snackbar.dart';
-import 'package:career_craft/core/utils/app_router.dart';
+import 'package:career_craft/core/utils/components.dart';
 import 'package:career_craft/core/utils/service_locator.dart';
 import 'package:career_craft/features/forgotPassword/data/repositories/forgot_password_repository_implementation.dart';
 import 'package:career_craft/features/forgotPassword/presentation/manager/forgot_password_cubit/forgot_password_cubit.dart';
+import 'package:career_craft/features/forgotPassword/presentation/views/reset_password_view.dart';
 import 'package:career_craft/features/forgotPassword/presentation/views/widgets/reset_code_button.dart';
 import 'package:career_craft/features/forgotPassword/presentation/views/widgets/reset_code_container.dart';
 import 'package:flutter/material.dart';
 import 'package:career_craft/core/colors.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 
 class ResetCodeViewBody extends StatelessWidget {
   const ResetCodeViewBody({super.key});
@@ -31,7 +31,7 @@ class ResetCodeViewBody extends StatelessWidget {
       child: BlocConsumer<ForgotPasswordCubit, ForgotPasswordState>(
         listener: (context, state) {
           if (state is VerifyCodeSuccessState) {
-            GoRouter.of(context).push(AppRouter.resetPasswordView);
+            navigateAndFinish(context, const ResetPasswordView());
           } else if (state is VerifyCodeFailureState) {
             showErrorSnackbar(
                 context: context,

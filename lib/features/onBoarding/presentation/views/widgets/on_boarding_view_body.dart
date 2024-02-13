@@ -1,10 +1,9 @@
 import 'package:career_craft/core/colors.dart';
-import 'package:career_craft/core/utils/app_router.dart';
 import 'package:career_craft/core/utils/assets.dart';
 import 'package:career_craft/core/utils/components.dart';
+import 'package:career_craft/features/entrance/presentation/views/entrance_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
 
 class OnBoardingViewBody extends StatefulWidget {
@@ -86,7 +85,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                 children: [
                   defaultButton(
                       function: () {
-                        GoRouter.of(context).push(AppRouter.entranceView);
+                        navigateTo(context, const EntranceView());
                       },
                       context: context,
                       text: "Start Now",

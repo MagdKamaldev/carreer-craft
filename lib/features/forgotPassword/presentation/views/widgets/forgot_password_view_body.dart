@@ -1,14 +1,13 @@
 import 'package:career_craft/core/colors.dart';
 import 'package:career_craft/core/errors/error_snackbar.dart';
-import 'package:career_craft/core/utils/app_router.dart';
 import 'package:career_craft/core/utils/components.dart';
 import 'package:career_craft/core/utils/service_locator.dart';
 import 'package:career_craft/features/forgotPassword/data/repositories/forgot_password_repository_implementation.dart';
 import 'package:career_craft/features/forgotPassword/presentation/manager/forgot_password_cubit/forgot_password_cubit.dart';
+import 'package:career_craft/features/forgotPassword/presentation/views/reset_code_view.dart';
 import 'package:career_craft/features/forgotPassword/presentation/views/widgets/forgot_password_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 
 class ForgotPasswordViewBody extends StatelessWidget {
   const ForgotPasswordViewBody({super.key});
@@ -25,7 +24,7 @@ class ForgotPasswordViewBody extends StatelessWidget {
       child: BlocConsumer<ForgotPasswordCubit, ForgotPasswordState>(
         listener: (context, state) {
           if (state is SendCodeSuccessState) {
-            GoRouter.of(context).push(AppRouter.resetCodeView);
+            navigateTo(context, const ResetCodeView());
             showErrorSnackbar(
                 context: context,
                 icon: "assets/images/true.svg",
