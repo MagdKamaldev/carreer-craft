@@ -1,3 +1,4 @@
+import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class SlidingText extends StatelessWidget {
@@ -21,7 +22,7 @@ class SlidingText extends StatelessWidget {
       child: SlideTransition(
         position: slidingAnimation,
         child: Text(
-          "Your Career Compass !",
+          S.of(context).slogan,
           style: Theme.of(context).textTheme.titleLarge,
         ),
       ),

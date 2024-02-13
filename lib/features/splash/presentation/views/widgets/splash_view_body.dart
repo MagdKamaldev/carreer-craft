@@ -4,8 +4,10 @@ import 'package:career_craft/core/utils/components.dart';
 import 'package:career_craft/features/home/presentation/views/home_view.dart';
 import 'package:career_craft/features/onBoarding/presentation/views/on_borading_view.dart';
 import 'package:career_craft/features/splash/presentation/views/widgets/sliding_text.dart';
+import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -45,7 +47,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
             child: SvgPicture.asset(AppAssets.logo)),
         Center(
           child: Text(
-            'Career Craft',
+            S.of(context).appName,
             style: theme.displayMedium,
           ),
         ),

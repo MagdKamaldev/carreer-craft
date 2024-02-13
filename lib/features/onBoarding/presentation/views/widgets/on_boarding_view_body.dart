@@ -2,6 +2,7 @@ import 'package:career_craft/core/colors.dart';
 import 'package:career_craft/core/utils/assets.dart';
 import 'package:career_craft/core/utils/components.dart';
 import 'package:career_craft/features/entrance/presentation/views/entrance_view.dart';
+import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:lottie/lottie.dart';
@@ -18,6 +19,20 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     TextTheme theme = Theme.of(context).textTheme;
+    final List<Map<String, dynamic>> onBoardingData = [
+      {
+        'text': S.of(context).onBoardingText1,
+        'image': 'assets/animations/1.json',
+      },
+      {
+        'text': S.of(context).onBoardingText2,
+        'image': 'assets/animations/2.json',
+      },
+      {
+        'text': S.of(context).onBoardingText3,
+        'image': 'assets/animations/3.json',
+      },
+    ];
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 60.0),
       child: Column(
@@ -30,7 +45,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
               child: SvgPicture.asset(AppAssets.logo)),
           Center(
             child: Text(
-              'Career Craft',
+              S.of(context).appName,
               style: theme.headlineMedium,
             ),
           ),
@@ -88,7 +103,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                         navigateTo(context, const EntranceView());
                       },
                       context: context,
-                      text: "Start Now",
+                      text: S.of(context).onBoardingButton,
                       width: size.width * 0.6),
                 ],
               ),
@@ -102,21 +117,6 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
   final PageController _pageController = PageController();
 
   int _currentPage = 0;
-
-  final List<Map<String, dynamic>> onBoardingData = [
-    {
-      'text': 'Feeling overwhelmed by the job market?',
-      'image': 'assets/animations/1.json',
-    },
-    {
-      'text': 'Your career\'s next step isn\'t that far.',
-      'image': 'assets/animations/2.json',
-    },
-    {
-      'text': 'Join a big community of employees and employers.',
-      'image': 'assets/animations/3.json',
-    },
-  ];
 
   Widget buildDot({required int index, required Color color}) {
     return AnimatedContainer(
