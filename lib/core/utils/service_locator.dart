@@ -1,4 +1,5 @@
 import 'package:career_craft/core/utils/api_services.dart';
+import 'package:career_craft/features/forgotPassword/data/repositories/forgot_password_repository_implementation.dart';
 import 'package:career_craft/features/login/data/repositories/login_repository_implementation.dart';
 import 'package:career_craft/features/signup/data/repositories/sign_up_repository_implementation.dart';
 import 'package:dio/dio.dart';
@@ -21,6 +22,10 @@ void setupLocator() {
     () => SignUpRepositoryImplementation(
       apiServices: getIt<ApiServices>(),
     ),
-    
+  );
+   getIt.registerLazySingleton<ForgotPasswordRepositoryImplementation>(
+    () => ForgotPasswordRepositoryImplementation(
+      apiServices: getIt<ApiServices>(),
+    ),
   );
 }

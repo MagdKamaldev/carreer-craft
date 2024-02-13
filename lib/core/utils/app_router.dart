@@ -1,3 +1,4 @@
+import 'package:career_craft/core/constants.dart';
 import 'package:career_craft/features/forgotPassword/presentation/views/forgot_password_view.dart';
 import 'package:career_craft/features/forgotPassword/presentation/views/reset_code_view.dart';
 import 'package:career_craft/features/forgotPassword/presentation/views/reset_password_view.dart';
@@ -19,7 +20,8 @@ abstract class AppRouter {
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => const SplashView(),
+        builder: (context, state) =>
+            token == "" ? const SplashView() : const HomeView(),
       ),
       GoRoute(
         path: onBoardingView,

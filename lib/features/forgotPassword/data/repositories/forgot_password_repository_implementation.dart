@@ -10,7 +10,8 @@ import 'package:dio/dio.dart';
 
 class ForgotPasswordRepositoryImplementation
     implements ForgotPasswordRepository {
-  late final ApiServices apiServices;
+  final ApiServices apiServices;
+  ForgotPasswordRepositoryImplementation({required this.apiServices});
 
   @override
   Future<Either<Failure, String>> sendPasswordResetEmail(String email) async {

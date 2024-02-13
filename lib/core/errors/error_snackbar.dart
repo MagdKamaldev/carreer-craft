@@ -8,7 +8,8 @@ void showErrorSnackbar(
     required String title,
     required String body,
     void Function()? actionPressed,
-    String actionText = ""}) {
+    String actionText = "",
+    String icon = "assets/images/warning.svg"}) {
   Size size = MediaQuery.of(context).size;
   ScaffoldMessenger.of(context).showSnackBar(
     SnackBar(
@@ -21,7 +22,7 @@ void showErrorSnackbar(
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SvgPicture.asset("assets/images/warning.svg"),
+              SvgPicture.asset(icon),
               SizedBox(
                 width: size.width * 0.04,
               ),
