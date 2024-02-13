@@ -7,7 +7,6 @@ import 'package:career_craft/features/login/presentaion/manager/login_cubit/logi
 import 'package:career_craft/features/login/presentaion/views/login_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 
 class LoginTab extends StatelessWidget {
@@ -31,6 +30,14 @@ class LoginTab extends StatelessWidget {
               key: formKey,
               child: Column(
                 children: [
+                  SizedBox(
+                    height: size.height * 0.06,
+                  ),
+                  Text(
+                    "Welcome Back !",
+                    style: theme.headlineMedium!
+                        .copyWith(fontWeight: FontWeight.bold),
+                  ),
                   SizedBox(
                     height: size.height * 0.06,
                   ),
@@ -84,7 +91,7 @@ class LoginTab extends StatelessWidget {
                         ],
                       )),
                   SizedBox(
-                    height: size.height * 0.04,
+                    height: size.height * 0.06,
                   ),
                   GestureDetector(
                     onTap: () {
@@ -95,66 +102,6 @@ class LoginTab extends StatelessWidget {
                       style: theme.bodyMedium!.copyWith(
                           color: secondary, fontWeight: FontWeight.bold),
                     ),
-                  ),
-                  SizedBox(
-                    height: size.height * 0.04,
-                  ),
-                  Row(
-                    children: [
-                      SizedBox(
-                        width: size.width * 0.05,
-                      ),
-                      Container(
-                        height: 1,
-                        width: size.width * 0.296,
-                        color: primary.shade600,
-                      ),
-                      SizedBox(
-                        width: size.width * 0.03,
-                      ),
-                      Text(
-                        "Or better yet...",
-                        style:
-                            theme.bodyMedium!.copyWith(color: primary.shade600),
-                      ),
-                      SizedBox(
-                        width: size.width * 0.03,
-                      ),
-                      Container(
-                        height: 1,
-                        width: size.width * 0.296,
-                        color: primary.shade600,
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: size.height * 0.06,
-                  ),
-                  SvgPicture.asset("assets/images/google-button.svg"),
-                  SizedBox(
-                    height: size.height * 0.04,
-                  ),
-                  SvgPicture.asset("assets/images/facebook-button.svg"),
-                  SizedBox(
-                    height: size.height * 0.04,
-                  ),
-                  Text(
-                    "By creating an account, you accept our ",
-                    style: theme.bodyMedium,
-                    textAlign: TextAlign.center,
-                    maxLines: 2,
-                    overflow: TextOverflow.clip,
-                  ),
-                  Text(
-                    " Terms and conditions",
-                    maxLines: 2,
-                    style: theme.bodyMedium!.copyWith(
-                      color: secondary,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  SizedBox(
-                    height: size.height * 0.04,
                   ),
                 ],
               ),

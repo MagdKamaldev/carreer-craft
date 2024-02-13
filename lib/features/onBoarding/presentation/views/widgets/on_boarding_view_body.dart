@@ -76,12 +76,12 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             ),
           ),
           SizedBox(
-            height: size.height * 0.03,
+            height: size.height * 0.06,
           ),
           Center(
             child: SizedBox(
               height: 56,
-              width: size.width * 0.85,
+              width: size.width * 0.6,
               child: Row(
                 children: [
                   defaultButton(
@@ -89,60 +89,12 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                         GoRouter.of(context).push(AppRouter.entranceView);
                       },
                       context: context,
-                      text: "Sign in",
-                      width: size.width * 0.85),
+                      text: "Start Now",
+                      width: size.width * 0.6),
                 ],
               ),
             ),
           ),
-          SizedBox(
-            height: size.height * 0.03,
-          ),
-          Row(
-            children: [
-              SizedBox(
-                width: size.width * 0.05,
-              ),
-              Container(
-                height: 1,
-                width: size.width * 0.296,
-                color: primary.shade600,
-              ),
-              SizedBox(
-                width: size.width * 0.03,
-              ),
-              Text(
-                "Or better yet...",
-                style: theme.bodyMedium!.copyWith(color: primary.shade600),
-              ),
-              SizedBox(
-                width: size.width * 0.03,
-              ),
-              Container(
-                height: 1,
-                width: size.width * 0.296,
-                color: primary.shade600,
-              ),
-            ],
-          ),
-          SizedBox(
-            height: size.height * 0.03,
-          ),
-          SizedBox(
-            height: size.height * 0.06,
-            child: Row(
-              children: [
-                SizedBox(
-                  width: size.width * 0.33,
-                ),
-                SvgPicture.asset("assets/images/facebook.svg"),
-                SizedBox(
-                  width: size.width * 0.1,
-                ),
-                SvgPicture.asset("assets/images/google.svg"),
-              ],
-            ),
-          )
         ],
       ),
     );
