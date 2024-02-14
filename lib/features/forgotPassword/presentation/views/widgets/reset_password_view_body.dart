@@ -6,9 +6,9 @@ import 'package:career_craft/features/forgotPassword/data/repositories/forgot_pa
 import 'package:career_craft/features/forgotPassword/presentation/manager/forgot_password_cubit/forgot_password_cubit.dart';
 import 'package:career_craft/features/forgotPassword/presentation/views/widgets/reset_password_button.dart';
 import 'package:career_craft/features/home/presentation/views/home_view.dart';
+import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 
 class ResetPasswordViewBody extends StatelessWidget {
   const ResetPasswordViewBody({super.key});
@@ -32,8 +32,8 @@ class ResetPasswordViewBody extends StatelessWidget {
             showErrorSnackbar(
                 context: context,
                 icon: "assets/images/true.svg",
-                title: "Success",
-                body: "Your Password has been Successfully Changed");
+                title: S.of(context).success,
+                body: S.of(context).passwordChanged);
           } else if (state is ChangePasswordFailureState) {
             showErrorSnackbar(
                 context: context, title: "Error", body: state.message);
@@ -52,14 +52,14 @@ class ResetPasswordViewBody extends StatelessWidget {
                       height: size.height * .08,
                     ),
                     Text(
-                      "Confirm new Password",
+                      S.of(context).confirmNewPass,
                       style: theme.titleLarge,
                     ),
                     SizedBox(
                       height: size.height * .02,
                     ),
                     Text(
-                      "Enter your Password to reset it !",
+                      S.of(context).confirmNewPassText,
                       style:
                           theme.bodyMedium!.copyWith(color: primary.shade500),
                     ),
@@ -69,12 +69,12 @@ class ResetPasswordViewBody extends StatelessWidget {
                     defaultTextField(
                         controller: emailController,
                         type: TextInputType.emailAddress,
-                        label: "Email",
+                        label: S.of(context).email,
                         theme: theme,
                         context: context,
                         validate: (String value) {
                           if (value.isEmpty) {
-                            return "field must not be empty";
+                            return S.of(context).emptyValidation;
                           }
                         }),
                     SizedBox(
@@ -83,7 +83,7 @@ class ResetPasswordViewBody extends StatelessWidget {
                     defaultTextField(
                         controller: confirmPasswordController,
                         type: TextInputType.emailAddress,
-                        label: "Password",
+                        label: S.of(context).password,
                         theme: theme,
                         context: context,
                         suffix: ForgotPasswordCubit.get(context).passwordSuffix,
@@ -95,7 +95,7 @@ class ResetPasswordViewBody extends StatelessWidget {
                         },
                         validate: (String value) {
                           if (value.isEmpty) {
-                            return "field must not be empty";
+                            return S.of(context).emptyValidation;
                           }
                         }),
                     SizedBox(
@@ -104,7 +104,7 @@ class ResetPasswordViewBody extends StatelessWidget {
                     defaultTextField(
                         controller: passwordController,
                         type: TextInputType.emailAddress,
-                        label: "Confirm Password",
+                        label: S.of(context).confirmPassword,
                         theme: theme,
                         context: context,
                         isPassword:
@@ -116,9 +116,9 @@ class ResetPasswordViewBody extends StatelessWidget {
                         },
                         validate: (String value) {
                           if (value.isEmpty) {
-                            return "field must not be empty";
+                            return S.of(context).emptyValidation;
                           } else if (value != confirmPasswordController.text) {
-                            return "Passwords does not match";
+                            return S.of(context).confirmpasValidation;
                           }
                         }),
                     SizedBox(

@@ -3,6 +3,7 @@ import 'package:career_craft/core/errors/error_snackbar.dart';
 import 'package:career_craft/core/utils/components.dart';
 import 'package:career_craft/features/home/presentation/views/home_view.dart';
 import 'package:career_craft/features/login/presentaion/manager/login_cubit/login_cubit.dart';
+import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -31,7 +32,7 @@ class LoginButton extends StatelessWidget {
         return defaultButton(
           function: onPressed,
           context: context,
-          text: "Sign in",
+          text: S.of(context).enterLogin,
           height: size.height * 0.06,
         );
       }

@@ -6,6 +6,7 @@ import 'package:career_craft/features/signup/presentation/manager/sign_up_cubit/
 import 'package:career_craft/features/signup/presentation/views/widgets/date_widget.dart';
 import 'package:career_craft/features/signup/presentation/views/widgets/planning_to_hire.dart';
 import 'package:career_craft/features/signup/presentation/views/widgets/sign_up_button.dart';
+import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -46,12 +47,12 @@ class SignUpTab extends StatelessWidget {
                           child: defaultTextField(
                               controller: firstNameController,
                               type: TextInputType.name,
-                              label: "First Name",
+                              label: S.of(context).firstName,
                               theme: theme,
                               context: context,
                               validate: (String value) {
                                 if (value.isEmpty) {
-                                  return "field must not be empty";
+                                  return S.of(context).emptyValidation;
                                 }
                               }),
                         ),
@@ -63,12 +64,12 @@ class SignUpTab extends StatelessWidget {
                           child: defaultTextField(
                               controller: lastNameController,
                               type: TextInputType.name,
-                              label: "Last Name",
+                              label: S.of(context).lastName,
                               theme: theme,
                               context: context,
                               validate: (String value) {
                                 if (value.isEmpty) {
-                                  return "field must not be empty";
+                                  return S.of(context).emptyValidation;
                                 }
                               }),
                         ),
@@ -81,12 +82,12 @@ class SignUpTab extends StatelessWidget {
                   defaultTextField(
                       controller: emailcontroller,
                       type: TextInputType.emailAddress,
-                      label: "Email",
+                      label: S.of(context).email,
                       theme: theme,
                       context: context,
                       validate: (String value) {
                         if (value.isEmpty) {
-                          return "field must not be empty";
+                          return S.of(context).emptyValidation;
                         }
                       }),
                   SizedBox(
@@ -95,12 +96,12 @@ class SignUpTab extends StatelessWidget {
                   defaultTextField(
                       controller: phoneController,
                       type: TextInputType.emailAddress,
-                      label: "Phone number",
+                      label: S.of(context).phoneNumber,
                       theme: theme,
                       context: context,
                       validate: (String value) {
                         if (value.isEmpty) {
-                          return "field must not be empty";
+                          return S.of(context).emptyValidation;
                         }
                       }),
                   SizedBox(
@@ -109,7 +110,7 @@ class SignUpTab extends StatelessWidget {
                   defaultTextField(
                       controller: passwordcontroller,
                       type: TextInputType.visiblePassword,
-                      label: "Password",
+                      label: S.of(context).password,
                       theme: theme,
                       context: context,
                       suffix: SignUpCubit.get(context).passwordSuffix,
@@ -119,7 +120,7 @@ class SignUpTab extends StatelessWidget {
                       },
                       validate: (String value) {
                         if (value.isEmpty) {
-                          return "field must not be empty";
+                          return S.of(context).emptyValidation;
                         }
                       }),
                   SizedBox(
@@ -128,7 +129,7 @@ class SignUpTab extends StatelessWidget {
                   defaultTextField(
                       controller: confirmPasswordcontroller,
                       type: TextInputType.visiblePassword,
-                      label: " Confirm Password",
+                      label: S.of(context).confirmPassword,
                       theme: theme,
                       suffix: SignUpCubit.get(context).confirmSuffix,
                       isPassword: SignUpCubit.get(context).confirmIsPassword,
@@ -138,9 +139,9 @@ class SignUpTab extends StatelessWidget {
                       context: context,
                       validate: (String value) {
                         if (value.isEmpty) {
-                          return "field must not be empty";
+                          return S.of(context).emptyValidation;
                         } else if (value != passwordcontroller.text) {
-                          return "passwords do not match";
+                          return S.of(context).confirmpasValidation;
                         }
                       }),
                   SizedBox(
@@ -176,14 +177,14 @@ class SignUpTab extends StatelessWidget {
                     height: size.height * 0.05,
                   ),
                   Text(
-                    "By creating an account, you accept our ",
+                    S.of(context).creatingAcc,
                     style: theme.bodyMedium,
                     textAlign: TextAlign.center,
                     maxLines: 2,
                     overflow: TextOverflow.clip,
                   ),
                   Text(
-                    " Terms and conditions",
+                    S.of(context).terms,
                     maxLines: 2,
                     style: theme.bodyMedium!.copyWith(
                       color: secondary,

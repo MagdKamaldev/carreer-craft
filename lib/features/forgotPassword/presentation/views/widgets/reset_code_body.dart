@@ -6,6 +6,7 @@ import 'package:career_craft/features/forgotPassword/presentation/manager/forgot
 import 'package:career_craft/features/forgotPassword/presentation/views/reset_password_view.dart';
 import 'package:career_craft/features/forgotPassword/presentation/views/widgets/reset_code_button.dart';
 import 'package:career_craft/features/forgotPassword/presentation/views/widgets/reset_code_container.dart';
+import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:career_craft/core/colors.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -35,7 +36,7 @@ class ResetCodeViewBody extends StatelessWidget {
           } else if (state is VerifyCodeFailureState) {
             showErrorSnackbar(
                 context: context,
-                title: "Validation Error",
+                title: S.of(context).validationFailed,
                 body: state.message);
           }
         },
@@ -52,14 +53,14 @@ class ResetCodeViewBody extends StatelessWidget {
                       height: size.height * .08,
                     ),
                     Text(
-                      "Reset Code",
+                      S.of(context).resetCode,
                       style: theme.titleLarge,
                     ),
                     SizedBox(
                       height: size.height * .02,
                     ),
                     Text(
-                      "Please enter the code sent to your Email!",
+                      S.of(context).enterCode,
                       style:
                           theme.bodyMedium!.copyWith(color: primary.shade500),
                     ),

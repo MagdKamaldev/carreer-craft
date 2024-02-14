@@ -109,6 +109,336 @@ class S {
       args: [],
     );
   }
+
+  /// `Welcome Back !`
+  String get welcomeText {
+    return Intl.message(
+      'Welcome Back !',
+      name: 'welcomeText',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get email {
+    return Intl.message(
+      'Email',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login`
+  String get enterLogin {
+    return Intl.message(
+      'Login',
+      name: 'enterLogin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forgot Password?`
+  String get forgotPasswordq {
+    return Intl.message(
+      'Forgot Password?',
+      name: 'forgotPasswordq',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `login`
+  String get login {
+    return Intl.message(
+      'login',
+      name: 'login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create an account`
+  String get createAccount {
+    return Intl.message(
+      'Create an account',
+      name: 'createAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `First Name`
+  String get firstName {
+    return Intl.message(
+      'First Name',
+      name: 'firstName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Last Name`
+  String get lastName {
+    return Intl.message(
+      'Last Name',
+      name: 'lastName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone Number`
+  String get phoneNumber {
+    return Intl.message(
+      'Phone Number',
+      name: 'phoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm Password`
+  String get confirmPassword {
+    return Intl.message(
+      'Confirm Password',
+      name: 'confirmPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `planning To hire ?`
+  String get hirePlan {
+    return Intl.message(
+      'planning To hire ?',
+      name: 'hirePlan',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yes`
+  String get yes {
+    return Intl.message(
+      'Yes',
+      name: 'yes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No`
+  String get no {
+    return Intl.message(
+      'No',
+      name: 'no',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Maybe`
+  String get maybe {
+    return Intl.message(
+      'Maybe',
+      name: 'maybe',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `By creating an account, you accept our `
+  String get creatingAcc {
+    return Intl.message(
+      'By creating an account, you accept our ',
+      name: 'creatingAcc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Terms and Conditions`
+  String get terms {
+    return Intl.message(
+      'Terms and Conditions',
+      name: 'terms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `field must not be empty`
+  String get emptyValidation {
+    return Intl.message(
+      'field must not be empty',
+      name: 'emptyValidation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password and Confirm Password must be same`
+  String get confirmpasValidation {
+    return Intl.message(
+      'Password and Confirm Password must be same',
+      name: 'confirmpasValidation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send Code`
+  String get sendCode {
+    return Intl.message(
+      'Send Code',
+      name: 'sendCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forgot Password`
+  String get forgotPasswordText {
+    return Intl.message(
+      'Forgot Password',
+      name: 'forgotPasswordText',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your email address !`
+  String get forgotPasswordText2 {
+    return Intl.message(
+      'Please enter your email address !',
+      name: 'forgotPasswordText2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We will send you a code, it help us keep your account secure.`
+  String get weWillSend {
+    return Intl.message(
+      'We will send you a code, it help us keep your account secure.',
+      name: 'weWillSend',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Check Your Mail`
+  String get checkMail {
+    return Intl.message(
+      'Check Your Mail',
+      name: 'checkMail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Validation Error`
+  String get validationFailed {
+    return Intl.message(
+      'Validation Error',
+      name: 'validationFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset Code`
+  String get resetCode {
+    return Intl.message(
+      'Reset Code',
+      name: 'resetCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter the code sent to your email !`
+  String get enterCode {
+    return Intl.message(
+      'Please enter the code sent to your email !',
+      name: 'enterCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm Code`
+  String get confirmCode {
+    return Intl.message(
+      'Confirm Code',
+      name: 'confirmCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm New Password`
+  String get confirmNewPass {
+    return Intl.message(
+      'Confirm New Password',
+      name: 'confirmNewPass',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your new password !`
+  String get confirmNewPassText {
+    return Intl.message(
+      'Enter your new password !',
+      name: 'confirmNewPassText',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset Password`
+  String get resetPassword {
+    return Intl.message(
+      'Reset Password',
+      name: 'resetPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Success`
+  String get success {
+    return Intl.message(
+      'Success',
+      name: 'success',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password Changed Successfully`
+  String get passwordChanged {
+    return Intl.message(
+      'Password Changed Successfully',
+      name: 'passwordChanged',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

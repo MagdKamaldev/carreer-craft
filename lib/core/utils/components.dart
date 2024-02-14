@@ -1,5 +1,6 @@
 import 'package:career_craft/core/colors.dart';
 import 'package:career_craft/core/utils/assets.dart';
+import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -19,7 +20,7 @@ PreferredSizeWidget defaultAppBar(
             width: MediaQuery.of(context).size.width * 0.2,
             child: SvgPicture.asset(AppAssets.logo)),
         Text(
-          'Career Craft',
+          S.of(context).appName,
           style: Theme.of(context).textTheme.headlineMedium,
         ),
       ],
@@ -88,8 +89,6 @@ Widget defaultTextField({
           },
           style: theme.bodyMedium!.copyWith(fontWeight: FontWeight.bold),
           cursorColor: primary.shade600,
-
-          //disable the line below text
           decoration: InputDecoration(
             hintText: label,
             hintStyle: theme.bodyMedium!.copyWith(color: primary.shade600),
@@ -107,7 +106,6 @@ Widget defaultTextField({
         ),
       ),
     );
-
 
 void navigateTo(context, widget) => Navigator.push(
     context,

@@ -23,6 +23,38 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "appName": MessageLookupByLibrary.simpleMessage("Career Craft"),
+        "checkMail": MessageLookupByLibrary.simpleMessage("Check Your Mail"),
+        "confirmCode": MessageLookupByLibrary.simpleMessage("Confirm Code"),
+        "confirmNewPass":
+            MessageLookupByLibrary.simpleMessage("Confirm New Password"),
+        "confirmNewPassText":
+            MessageLookupByLibrary.simpleMessage("Enter your new password !"),
+        "confirmPassword":
+            MessageLookupByLibrary.simpleMessage("Confirm Password"),
+        "confirmpasValidation": MessageLookupByLibrary.simpleMessage(
+            "Password and Confirm Password must be same"),
+        "createAccount":
+            MessageLookupByLibrary.simpleMessage("Create an account"),
+        "creatingAcc": MessageLookupByLibrary.simpleMessage(
+            "By creating an account, you accept our "),
+        "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "emptyValidation":
+            MessageLookupByLibrary.simpleMessage("field must not be empty"),
+        "enterCode": MessageLookupByLibrary.simpleMessage(
+            "Please enter the code sent to your email !"),
+        "enterLogin": MessageLookupByLibrary.simpleMessage("Login"),
+        "firstName": MessageLookupByLibrary.simpleMessage("First Name"),
+        "forgotPasswordText":
+            MessageLookupByLibrary.simpleMessage("Forgot Password"),
+        "forgotPasswordText2": MessageLookupByLibrary.simpleMessage(
+            "Please enter your email address !"),
+        "forgotPasswordq":
+            MessageLookupByLibrary.simpleMessage("Forgot Password?"),
+        "hirePlan": MessageLookupByLibrary.simpleMessage("planning To hire ?"),
+        "lastName": MessageLookupByLibrary.simpleMessage("Last Name"),
+        "login": MessageLookupByLibrary.simpleMessage("login"),
+        "maybe": MessageLookupByLibrary.simpleMessage("Maybe"),
+        "no": MessageLookupByLibrary.simpleMessage("No"),
         "onBoardingButton": MessageLookupByLibrary.simpleMessage("Start Now"),
         "onBoardingText1": MessageLookupByLibrary.simpleMessage(
             "Feeling overwhelmed by the job market?"),
@@ -30,6 +62,21 @@ class MessageLookup extends MessageLookupByLibrary {
             "Your career\'s next step isn\'t that far."),
         "onBoardingText3": MessageLookupByLibrary.simpleMessage(
             "Join a big community of employees and employers."),
-        "slogan": MessageLookupByLibrary.simpleMessage("Your Career Compass !")
+        "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "passwordChanged": MessageLookupByLibrary.simpleMessage(
+            "Password Changed Successfully"),
+        "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone Number"),
+        "resetCode": MessageLookupByLibrary.simpleMessage("Reset Code"),
+        "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
+        "sendCode": MessageLookupByLibrary.simpleMessage("Send Code"),
+        "slogan": MessageLookupByLibrary.simpleMessage("Your Career Compass !"),
+        "success": MessageLookupByLibrary.simpleMessage("Success"),
+        "terms": MessageLookupByLibrary.simpleMessage("Terms and Conditions"),
+        "validationFailed":
+            MessageLookupByLibrary.simpleMessage("Validation Error"),
+        "weWillSend": MessageLookupByLibrary.simpleMessage(
+            "We will send you a code, it help us keep your account secure."),
+        "welcomeText": MessageLookupByLibrary.simpleMessage("Welcome Back !"),
+        "yes": MessageLookupByLibrary.simpleMessage("Yes")
       };
 }

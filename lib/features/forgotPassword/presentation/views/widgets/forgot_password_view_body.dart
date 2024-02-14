@@ -6,6 +6,7 @@ import 'package:career_craft/features/forgotPassword/data/repositories/forgot_pa
 import 'package:career_craft/features/forgotPassword/presentation/manager/forgot_password_cubit/forgot_password_cubit.dart';
 import 'package:career_craft/features/forgotPassword/presentation/views/reset_code_view.dart';
 import 'package:career_craft/features/forgotPassword/presentation/views/widgets/forgot_password_button.dart';
+import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -28,7 +29,7 @@ class ForgotPasswordViewBody extends StatelessWidget {
             showErrorSnackbar(
                 context: context,
                 icon: "assets/images/true.svg",
-                title: "Check Your Mail",
+                title: S.of(context).checkMail,
                 body: state.message);
           } else if (state is SendCodeFailureState) {
             showErrorSnackbar(
@@ -48,14 +49,14 @@ class ForgotPasswordViewBody extends StatelessWidget {
                       height: size.height * .08,
                     ),
                     Text(
-                      "Forgot Password",
+                      S.of(context).forgotPasswordText,
                       style: theme.titleLarge,
                     ),
                     SizedBox(
                       height: size.height * .02,
                     ),
                     Text(
-                      "Please enter your Email Adress!",
+                      S.of(context).forgotPasswordText2,
                       style:
                           theme.bodyMedium!.copyWith(color: primary.shade500),
                     ),
@@ -65,12 +66,12 @@ class ForgotPasswordViewBody extends StatelessWidget {
                     defaultTextField(
                         controller: emailController,
                         type: TextInputType.emailAddress,
-                        label: "Email",
+                        label: S.of(context).email,
                         theme: theme,
                         context: context,
                         validate: (String value) {
                           if (value.isEmpty) {
-                            return "Email must not be empty";
+                            return S.of(context).emptyValidation;
                           }
                           return null;
                         }),
@@ -78,7 +79,7 @@ class ForgotPasswordViewBody extends StatelessWidget {
                       height: size.height * .08,
                     ),
                     Text(
-                      "We’ll send you a code, it help us keep your account secure.",
+                      S.of(context).weWillSend,
                       style:
                           theme.bodyMedium!.copyWith(color: primary.shade500),
                     ),

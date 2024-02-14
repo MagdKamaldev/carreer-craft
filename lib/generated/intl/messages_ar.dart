@@ -23,6 +23,34 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "appName": MessageLookupByLibrary.simpleMessage("كاريير كرافت"),
+        "checkMail":
+            MessageLookupByLibrary.simpleMessage("تحقق من بريدك الإلكتروني"),
+        "confirmCode": MessageLookupByLibrary.simpleMessage("تأكيد الرمز"),
+        "confirmNewPass":
+            MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور الجديدة"),
+        "confirmNewPassText":
+            MessageLookupByLibrary.simpleMessage("أدخل كلمة المرور الجديدة!"),
+        "confirmPassword":
+            MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
+        "createAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
+        "creatingAcc":
+            MessageLookupByLibrary.simpleMessage("بإنشاء حساب، أنت توافق على "),
+        "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "enterCode": MessageLookupByLibrary.simpleMessage(
+            "الرجاء إدخال الرمز المرسل إلى بريدك الإلكتروني!"),
+        "enterLogin": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "firstName": MessageLookupByLibrary.simpleMessage("الاسم الأول"),
+        "forgotPasswordText":
+            MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
+        "forgotPasswordText2": MessageLookupByLibrary.simpleMessage(
+            "الرجاء إدخال عنوان بريدك الإلكتروني!"),
+        "forgotPasswordq":
+            MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+        "hirePlan": MessageLookupByLibrary.simpleMessage("هل تخطط للتوظيف؟"),
+        "lastName": MessageLookupByLibrary.simpleMessage("الاسم الأخير"),
+        "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "maybe": MessageLookupByLibrary.simpleMessage("ربما"),
+        "no": MessageLookupByLibrary.simpleMessage("لا"),
         "onBoardingButton": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
         "onBoardingText1": MessageLookupByLibrary.simpleMessage(
             "هل تشعر بالإرهاق من سوق العمل؟"),
@@ -30,6 +58,22 @@ class MessageLookup extends MessageLookupByLibrary {
             "الخطوة التالية في مسارك المهني ليست بعيدة."),
         "onBoardingText3": MessageLookupByLibrary.simpleMessage(
             "انضم إلى مجتمع كبير من الموظفين وأصحاب العمل."),
-        "slogan": MessageLookupByLibrary.simpleMessage("بوصلتك المهنية !")
+        "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "passwordChanged":
+            MessageLookupByLibrary.simpleMessage("تم تغيير كلمة المرور بنجاح"),
+        "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+        "resetCode": MessageLookupByLibrary.simpleMessage("رمز التحقق"),
+        "resetPassword":
+            MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
+        "sendCode": MessageLookupByLibrary.simpleMessage("إرسال الرمز"),
+        "slogan": MessageLookupByLibrary.simpleMessage("بوصلتك المهنية !"),
+        "success": MessageLookupByLibrary.simpleMessage("نجاح"),
+        "terms": MessageLookupByLibrary.simpleMessage("الشروط والأحكام"),
+        "validationFailed":
+            MessageLookupByLibrary.simpleMessage("خطأ في التحقق"),
+        "weWillSend": MessageLookupByLibrary.simpleMessage(
+            "سنقوم بإرسال رمز لمساعدتنا في الحفاظ على أمان حسابك."),
+        "welcomeText": MessageLookupByLibrary.simpleMessage("عودا حميدا !"),
+        "yes": MessageLookupByLibrary.simpleMessage("نعم")
       };
 }

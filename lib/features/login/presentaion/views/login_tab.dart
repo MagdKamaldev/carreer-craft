@@ -5,9 +5,9 @@ import 'package:career_craft/features/forgotPassword/presentation/views/forgot_p
 import 'package:career_craft/features/login/data/repositories/login_repository_implementation.dart';
 import 'package:career_craft/features/login/presentaion/manager/login_cubit/login_cubit.dart';
 import 'package:career_craft/features/login/presentaion/views/login_button.dart';
+import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 
 class LoginTab extends StatelessWidget {
   const LoginTab({super.key});
@@ -34,7 +34,7 @@ class LoginTab extends StatelessWidget {
                     height: size.height * 0.06,
                   ),
                   Text(
-                    "Welcome Back !",
+                    S.of(context).welcomeText,
                     style: theme.headlineMedium!
                         .copyWith(fontWeight: FontWeight.bold),
                   ),
@@ -48,7 +48,7 @@ class LoginTab extends StatelessWidget {
                           defaultTextField(
                               controller: emailcontroller,
                               type: TextInputType.emailAddress,
-                              label: "Email",
+                              label: S.of(context).email,
                               theme: theme,
                               context: context,
                               validate: (String value) {
@@ -63,7 +63,7 @@ class LoginTab extends StatelessWidget {
                           defaultTextField(
                             controller: passwordcontroller,
                             type: TextInputType.visiblePassword,
-                            label: "password",
+                            label: S.of(context).password,
                             theme: theme,
                             context: context,
                             suffix: LoginCubit.get(context).suffix,
@@ -98,7 +98,7 @@ class LoginTab extends StatelessWidget {
                       navigateTo(context, const ForgotPasswordView());
                     },
                     child: Text(
-                      "Forgot password",
+                      S.of(context).forgotPasswordq,
                       style: theme.bodyMedium!.copyWith(
                           color: secondary, fontWeight: FontWeight.bold),
                     ),

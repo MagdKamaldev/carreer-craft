@@ -31,7 +31,7 @@ class SignUpCubit extends Cubit<SignUpState> {
   TextEditingController monthController = TextEditingController();
   TextEditingController yearController = TextEditingController();
   DateTime selectedDate = DateTime.now();
-  List<String> dropList = <String>['Yes', 'No', 'Maybe', 'I dont know'];
+  
   String ? selectedValue;
   void changeSelectedValue(String value) {
     selectedValue = value;

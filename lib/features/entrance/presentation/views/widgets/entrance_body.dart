@@ -1,6 +1,7 @@
 import 'package:career_craft/core/colors.dart';
 import 'package:career_craft/features/login/presentaion/views/login_tab.dart';
 import 'package:career_craft/features/signup/presentation/views/signup_tab.dart';
+import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class EntranceBody extends StatefulWidget {
@@ -51,7 +52,7 @@ class _EntranceBodyState extends State<EntranceBody>
               tabs: [
                 Tab(
                   child: Text(
-                    "Login",
+                    S.of(context).login,
                     style: theme.bodyMedium!.copyWith(
                       color: _tabController.index == 0
                           ? secondary.shade400
@@ -63,7 +64,7 @@ class _EntranceBodyState extends State<EntranceBody>
                 ),
                 Tab(
                   child: Text(
-                    "Create an account",
+                    S.of(context).createAccount,
                     style: theme.bodyMedium!.copyWith(
                       color: _tabController.index == 1
                           ? secondary.shade400

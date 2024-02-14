@@ -3,6 +3,7 @@ import 'package:career_craft/core/errors/error_snackbar.dart';
 import 'package:career_craft/core/utils/components.dart';
 import 'package:career_craft/features/home/presentation/views/home_view.dart';
 import 'package:career_craft/features/signup/presentation/manager/sign_up_cubit/sign_up_cubit.dart';
+import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -34,7 +35,7 @@ class SignUpButton extends StatelessWidget {
           return defaultButton(
             function: onPressed,
             context: context,
-            text: "Sign in",
+            text: S.of(context).createAccount,
             height: size.height * 0.06,
           );
         }
