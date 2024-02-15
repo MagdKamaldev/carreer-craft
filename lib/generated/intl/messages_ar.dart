@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "appName": MessageLookupByLibrary.simpleMessage("كاريير كرافت"),
         "checkMail":
             MessageLookupByLibrary.simpleMessage("تحقق من بريدك الإلكتروني"),
+        "companies": MessageLookupByLibrary.simpleMessage("شركات"),
         "confirmCode": MessageLookupByLibrary.simpleMessage("تأكيد الرمز"),
         "confirmNewPass":
             MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور الجديدة"),
@@ -47,9 +48,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "forgotPasswordq":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "hirePlan": MessageLookupByLibrary.simpleMessage("هل تخطط للتوظيف؟"),
+        "jobs": MessageLookupByLibrary.simpleMessage("وظائف"),
         "lastName": MessageLookupByLibrary.simpleMessage("الاسم الأخير"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "maybe": MessageLookupByLibrary.simpleMessage("ربما"),
+        "news": MessageLookupByLibrary.simpleMessage("أخبار"),
         "no": MessageLookupByLibrary.simpleMessage("لا"),
         "onBoardingButton": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
         "onBoardingText1": MessageLookupByLibrary.simpleMessage(
@@ -59,9 +62,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "onBoardingText3": MessageLookupByLibrary.simpleMessage(
             "انضم إلى مجتمع كبير من الموظفين وأصحاب العمل."),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
-        "passwordChanged":
-            MessageLookupByLibrary.simpleMessage("تم تغيير كلمة المرور بنجاح"),
+        "passwordChanged": MessageLookupByLibrary.simpleMessage(
+            "تم تغيير كلمة المرور بنجاح !"),
         "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+        "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
         "resetCode": MessageLookupByLibrary.simpleMessage("رمز التحقق"),
         "resetPassword":
             MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),

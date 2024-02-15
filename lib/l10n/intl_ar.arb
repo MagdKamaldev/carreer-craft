@@ -35,6 +35,9 @@
     "confirmNewPassText": "أدخل كلمة المرور الجديدة!",
     "resetPassword": "إعادة تعيين كلمة المرور",
     "success": "نجاح",
-    "passwordChanged": "تم تغيير كلمة المرور بنجاح"
-
+    "passwordChanged": "تم تغيير كلمة المرور بنجاح !",
+    "jobs": "وظائف",
+    "companies": "شركات",
+    "profile": "الملف الشخصي",
+    "news": "أخبار"
 }

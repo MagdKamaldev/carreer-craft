@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "appName": MessageLookupByLibrary.simpleMessage("Career Craft"),
         "checkMail": MessageLookupByLibrary.simpleMessage("Check Your Mail"),
+        "companies": MessageLookupByLibrary.simpleMessage("Companies"),
         "confirmCode": MessageLookupByLibrary.simpleMessage("Confirm Code"),
         "confirmNewPass":
             MessageLookupByLibrary.simpleMessage("Confirm New Password"),
@@ -51,9 +52,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "forgotPasswordq":
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
         "hirePlan": MessageLookupByLibrary.simpleMessage("planning To hire ?"),
+        "jobs": MessageLookupByLibrary.simpleMessage("Jobs"),
         "lastName": MessageLookupByLibrary.simpleMessage("Last Name"),
         "login": MessageLookupByLibrary.simpleMessage("login"),
         "maybe": MessageLookupByLibrary.simpleMessage("Maybe"),
+        "news": MessageLookupByLibrary.simpleMessage("News"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
         "onBoardingButton": MessageLookupByLibrary.simpleMessage("Start Now"),
         "onBoardingText1": MessageLookupByLibrary.simpleMessage(
@@ -64,8 +67,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Join a big community of employees and employers."),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordChanged": MessageLookupByLibrary.simpleMessage(
-            "Password Changed Successfully"),
+            "Password Changed Successfully !"),
         "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone Number"),
+        "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "resetCode": MessageLookupByLibrary.simpleMessage("Reset Code"),
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
         "sendCode": MessageLookupByLibrary.simpleMessage("Send Code"),

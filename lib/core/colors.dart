@@ -28,3 +28,17 @@ const MaterialColor secondary =
   900: Color(0xFF191359),
 });
 const int _secondaryPrimaryValue = 0xFF382ACC;
+
+const MaterialColor gam3a = MaterialColor(_gam3aValue, <int, Color>{
+  50: Color(0xFF40E0D0),
+  100: Color(0xFFF2F1FA),
+  200: Color(0xFFE1E0F1),
+  300: Color(0xFFC7C5DE),
+  400: Color(0xFFAEACCA),
+  500: Color(0xFF8885AC),
+  600: Color(0xFF64618A),
+  700: Color(0xFF484473),
+  800: Color(0xFF231E58),
+  900: Color(_primaryPrimaryValue),
+});
+const int _gam3aValue = 0xFF15104D;

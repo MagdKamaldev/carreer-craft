@@ -430,11 +430,51 @@ class S {
     );
   }
 
-  /// `Password Changed Successfully`
+  /// `Password Changed Successfully !`
   String get passwordChanged {
     return Intl.message(
-      'Password Changed Successfully',
+      'Password Changed Successfully !',
       name: 'passwordChanged',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Jobs`
+  String get jobs {
+    return Intl.message(
+      'Jobs',
+      name: 'jobs',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Companies`
+  String get companies {
+    return Intl.message(
+      'Companies',
+      name: 'companies',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Profile`
+  String get profile {
+    return Intl.message(
+      'Profile',
+      name: 'profile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `News`
+  String get news {
+    return Intl.message(
+      'News',
+      name: 'news',
       desc: '',
       args: [],
     );

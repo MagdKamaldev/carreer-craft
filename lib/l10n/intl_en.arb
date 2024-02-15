@@ -37,7 +37,9 @@
     "confirmNewPassText":"Enter your new password !",
     "resetPassword":"Reset Password",
     "success" : "Success",
-    "passwordChanged":"Password Changed Successfully"
-
-
+    "passwordChanged":"Password Changed Successfully !",
+    "jobs": "Jobs",
+    "companies": "Companies",
+    "profile": "Profile",
+    "news": "News"
 }
