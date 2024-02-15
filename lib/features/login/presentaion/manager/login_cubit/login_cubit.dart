@@ -1,4 +1,4 @@
-import 'package:career_craft/features/login/data/models/user_model.dart';
+import 'package:career_craft/core/models/user_model.dart';
 import 'package:career_craft/features/login/data/repositories/login_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

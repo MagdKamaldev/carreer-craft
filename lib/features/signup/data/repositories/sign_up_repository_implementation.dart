@@ -4,7 +4,7 @@ import 'package:career_craft/core/constants.dart';
 import 'package:career_craft/core/errors/failures.dart';
 import 'package:career_craft/core/utils/api_services.dart';
 import 'package:career_craft/core/utils/end_points.dart';
-import 'package:career_craft/features/login/data/models/user_model.dart';
+import 'package:career_craft/core/models/user_model.dart';
 import 'package:career_craft/features/signup/data/repositories/sign_up_repository.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
