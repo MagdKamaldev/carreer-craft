@@ -1,4 +1,3 @@
-import 'package:bloc/bloc.dart';
 import 'package:career_craft/features/companies/presentation/views/companies_view.dart';
 import 'package:career_craft/features/jobs/presentaion/views/jobs_view.dart';
 import 'package:career_craft/features/news/presentation/views/news_view.dart';

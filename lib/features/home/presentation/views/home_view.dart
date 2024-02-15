@@ -13,7 +13,7 @@ class HomeView extends StatelessWidget {
     return BlocBuilder<HomeCubit, HomeState>(
       builder: (context, state) {
         return Scaffold(
-          appBar: homeAppBar(size),
+          appBar: homeAppBar(size, context),
           body: HomeCubit.get(context)
               .screens[HomeCubit.get(context).screensIndex],
           bottomNavigationBar: homeBottomNav(context),

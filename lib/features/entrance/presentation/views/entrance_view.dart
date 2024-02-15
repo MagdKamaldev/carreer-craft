@@ -9,7 +9,7 @@ class EntranceView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: defaultAppBar(context),
-      body: EntranceBody(),
+      body: const EntranceBody(),
     );
   }
 }

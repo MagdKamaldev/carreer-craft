@@ -1,4 +1,6 @@
+import 'package:career_craft/core/constants.dart';
 import 'package:career_craft/core/models/user_model.dart';
+import 'package:career_craft/core/utils/functions/hive_functions.dart';
 import 'package:career_craft/features/login/data/repositories/login_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -15,6 +17,8 @@ class LoginCubit extends Cubit<LoginStates> {
     result.fold((failure) {
       emit(LoginFailure(failure.message));
     }, (user) {
+      HiveFunctions.saveUserToHive(user, kUserBox);
+      //HiveFunctions.getUserFromHive(kUserBox);
       emit(LoginSuccess(user));
     });
   }

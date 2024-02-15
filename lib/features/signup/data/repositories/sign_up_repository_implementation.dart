@@ -39,6 +39,7 @@ class SignUpRepositoryImplementation implements SignUpRepository {
         },
       );
       token = response["token"];
+      kTokenBox.put(kTokenBoxString, token);
       return Right(UserModel.fromJson(response["user"]));
     } catch (e) {
       if (e is DioError) {

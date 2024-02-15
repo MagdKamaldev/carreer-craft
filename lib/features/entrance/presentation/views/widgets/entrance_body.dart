@@ -5,6 +5,8 @@ import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class EntranceBody extends StatefulWidget {
+  const EntranceBody({super.key});
+
   @override
   State<EntranceBody> createState() => _EntranceBodyState();
 }

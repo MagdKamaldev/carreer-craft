@@ -8,7 +8,6 @@ import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
 
@@ -23,6 +22,8 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   @override
   void initState() {
+    // token = "";
+    token = kTokenBox.get(kTokenBoxString);
     initSlidingAnimation();
     navigateToHome();
     super.initState();
@@ -60,7 +61,10 @@ class _SplashViewBodyState extends State<SplashViewBody>
   void navigateToHome() {
     Future.delayed(const Duration(seconds: 3), () {
       navigateTo(
-          context, token == "" ? const OnBoradingView() : const HomeView());
+          context,
+          token == "" || token == null
+              ? const OnBoradingView()
+              : const HomeView());
     });
   }
 

@@ -64,6 +64,7 @@ class ForgotPasswordRepositoryImplementation
         },
       );
       token = response["token"];
+      kTokenBox.put(kTokenBoxString, token);
       return Right(response["token"]);
     } catch (e) {
       if (e is DioError) {
