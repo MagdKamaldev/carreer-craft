@@ -1,5 +1,4 @@
 import 'package:career_craft/core/colors.dart';
-import 'package:career_craft/core/utils/functions/logout.dart';
 import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
