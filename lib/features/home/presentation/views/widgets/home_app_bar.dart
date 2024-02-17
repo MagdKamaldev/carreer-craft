@@ -1,11 +1,11 @@
 import 'package:career_craft/core/colors.dart';
-import 'package:career_craft/core/utils/functions/logout.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 PreferredSizeWidget homeAppBar(
   Size size,
   BuildContext context,
+  GlobalKey<ScaffoldState> scaffoldKey,
 ) =>
     AppBar(
       toolbarHeight: size.height * 0.1,
@@ -14,7 +14,7 @@ PreferredSizeWidget homeAppBar(
         padding: EdgeInsets.all(size.width * 0.03),
         child: GestureDetector(
             onTap: () {
-              logout(context);
+              scaffoldKey.currentState!.openDrawer();
             },
             child: SvgPicture.asset("assets/images/drawer.svg")),
       ),

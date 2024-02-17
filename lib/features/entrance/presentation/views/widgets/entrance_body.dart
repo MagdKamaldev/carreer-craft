@@ -59,7 +59,7 @@ class _EntranceBodyState extends State<EntranceBody>
                       color: _tabController.index == 0
                           ? secondary.shade400
                           : primary.shade400,
-                      fontSize: 16,
+                      fontSize: size.width * 0.03,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -71,7 +71,7 @@ class _EntranceBodyState extends State<EntranceBody>
                       color: _tabController.index == 1
                           ? secondary.shade400
                           : primary.shade400,
-                      fontSize: 16,
+                      fontSize: size.width * 0.03,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

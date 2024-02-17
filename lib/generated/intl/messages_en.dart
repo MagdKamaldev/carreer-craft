@@ -22,6 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Bio": MessageLookupByLibrary.simpleMessage("Bio"),
         "appName": MessageLookupByLibrary.simpleMessage("Career Craft"),
         "checkMail": MessageLookupByLibrary.simpleMessage("Check Your Mail"),
         "companies": MessageLookupByLibrary.simpleMessage("Companies"),
@@ -55,6 +56,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "jobs": MessageLookupByLibrary.simpleMessage("Jobs"),
         "lastName": MessageLookupByLibrary.simpleMessage("Last Name"),
         "login": MessageLookupByLibrary.simpleMessage("login"),
+        "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "maybe": MessageLookupByLibrary.simpleMessage("Maybe"),
         "news": MessageLookupByLibrary.simpleMessage("News"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
@@ -73,6 +75,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetCode": MessageLookupByLibrary.simpleMessage("Reset Code"),
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
         "sendCode": MessageLookupByLibrary.simpleMessage("Send Code"),
+        "settings": MessageLookupByLibrary.simpleMessage("Settings"),
         "slogan": MessageLookupByLibrary.simpleMessage("Your Career Compass !"),
         "success": MessageLookupByLibrary.simpleMessage("Success"),
         "terms": MessageLookupByLibrary.simpleMessage("Terms and Conditions"),

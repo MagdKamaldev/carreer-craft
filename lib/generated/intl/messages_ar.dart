@@ -22,6 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Bio": MessageLookupByLibrary.simpleMessage("نبذة"),
         "appName": MessageLookupByLibrary.simpleMessage("كاريير كرافت"),
         "checkMail":
             MessageLookupByLibrary.simpleMessage("تحقق من بريدك الإلكتروني"),
@@ -51,6 +52,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "jobs": MessageLookupByLibrary.simpleMessage("وظائف"),
         "lastName": MessageLookupByLibrary.simpleMessage("الاسم الأخير"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "maybe": MessageLookupByLibrary.simpleMessage("ربما"),
         "news": MessageLookupByLibrary.simpleMessage("أخبار"),
         "no": MessageLookupByLibrary.simpleMessage("لا"),
@@ -70,6 +72,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword":
             MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
         "sendCode": MessageLookupByLibrary.simpleMessage("إرسال الرمز"),
+        "settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),
         "slogan": MessageLookupByLibrary.simpleMessage("بوصلتك المهنية !"),
         "success": MessageLookupByLibrary.simpleMessage("نجاح"),
         "terms": MessageLookupByLibrary.simpleMessage("الشروط والأحكام"),

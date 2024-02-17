@@ -41,5 +41,8 @@
     "jobs": "Jobs",
     "companies": "Companies",
     "profile": "Profile",
-    "news": "News"
+    "news": "News",
+    "Bio" : "Bio",
+    "settings": "Settings",
+    "logout": "Logout"
 }
