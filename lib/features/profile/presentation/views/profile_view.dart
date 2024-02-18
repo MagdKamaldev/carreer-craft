@@ -3,7 +3,6 @@ import 'package:career_craft/features/profile/presentation/views/widgets/cover_p
 import 'package:career_craft/features/profile/presentation/views/widgets/profile_picture.dart';
 import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class ProfileView extends StatelessWidget {
   const ProfileView({super.key});

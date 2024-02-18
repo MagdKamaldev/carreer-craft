@@ -1,3 +1,4 @@
+import 'package:career_craft/core/colors.dart';
 import 'package:career_craft/features/news/data/models/article/article.dart';
 import 'package:flutter/material.dart';
 
@@ -7,29 +8,30 @@ class ArticleItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    TextTheme textTheme = Theme.of(context).textTheme;
     return Padding(
-      padding: const EdgeInsets.all(20.0),
+      padding: EdgeInsets.all(size.height * 0.02),
       child: Row(
         children: [
-          Container(
-            width: 120.0,
-            height: 120.0,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(
-                10.0,
-              ),
-              image: DecorationImage(
-                image: NetworkImage(article.urlToImage!),
-                fit: BoxFit.cover,
+          if (article.urlToImage != null)
+            ClipRRect(
+              borderRadius: BorderRadius.circular(13),
+              child: SizedBox(
+                height: size.height * 0.14,
+                width: size.width * 0.3,
+                child: Image.network(
+                  article.urlToImage!,
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
-          ),
           SizedBox(
-            width: 20.0,
+            width: size.width * 0.05,
           ),
           Expanded(
-            child: Container(
-              height: 120.0,
+            child: SizedBox(
+              height: size.height * 0.14,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -37,23 +39,19 @@ class ArticleItem extends StatelessWidget {
                   Expanded(
                     child: Text(
                       article.title!,
-                      style: Theme.of(context).textTheme.bodyText1,
+                      style: Theme.of(context).textTheme.titleLarge,
                       maxLines: 3,
                       overflow: TextOverflow.ellipsis,
                     ),
                   ),
                   Text(
                     article.publishedAt!,
-                    style: TextStyle(
-                      color: Colors.grey,
-                    ),
+                    style:
+                        textTheme.titleSmall!.copyWith(color: primary.shade500),
                   ),
                 ],
               ),
             ),
-          ),
-          SizedBox(
-            width: 15.0,
           ),
         ],
       ),

@@ -1,5 +1,6 @@
+import 'package:career_craft/core/colors.dart';
 import 'package:career_craft/features/news/data/models/article/article.dart';
-import 'package:career_craft/features/news/presentation/views/widgets/article_builder.dart';
+import 'package:career_craft/features/news/presentation/views/widgets/article_item.dart';
 import 'package:flutter/material.dart';
 
 class ArticleBuilder extends StatelessWidget {
@@ -11,21 +12,16 @@ class ArticleBuilder extends StatelessWidget {
     return ListView.separated(
       physics: const BouncingScrollPhysics(),
       itemBuilder: (context, index) => ArticleItem(
-        article:  articles[index],
+        article: articles[index],
       ),
       separatorBuilder: (context, index) => myDivider(),
-      itemCount: 10,
+      itemCount: articles.length,
     );
   }
 
-  Widget myDivider() => Padding(
-        padding: const EdgeInsetsDirectional.only(
-          start: 20.0,
-        ),
-        child: Container(
-          width: double.infinity,
-          height: 1.0,
-          color: Colors.grey[300],
-        ),
+  Widget myDivider() => Container(
+        width: double.infinity,
+        height: 1.0,
+        color: secondary,
       );
 }

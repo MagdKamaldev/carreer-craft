@@ -15,7 +15,9 @@ class NewsRepositoryImplementation implements NewsRepository {
   Future<Either<Failure, List<Article>>> getNews() async {
     try {
       final response = await newsApiServices.getData(query: {
-        "country": "eg",
+        "country": "us",
+        "category": "business",
+        "Accept-Language":"en",
         "apiKey": "d965aeb7b50b4b58877e29092d6c4165",
       });
       return Right((response.data["articles"] as List)
