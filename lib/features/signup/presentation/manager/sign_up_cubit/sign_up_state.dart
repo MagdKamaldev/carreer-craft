@@ -1,6 +1,5 @@
 part of 'sign_up_cubit.dart';
 
-
 abstract class SignUpState {}
 
 final class SignUpInitial extends SignUpState {}
@@ -9,7 +8,7 @@ class SignUpLoading extends SignUpState {}
 
 class SignUpSuccess extends SignUpState {
   final UserModel user;
- SignUpSuccess(this.user);
+  SignUpSuccess(this.user);
 }
 
 class SignUpFailure extends SignUpState {
@@ -18,10 +17,8 @@ class SignUpFailure extends SignUpState {
   SignUpFailure(this.message);
 }
 
-class SignUpChangePasswordVisibilityState extends SignUpState{}
+class SignUpChangePasswordVisibilityState extends SignUpState {}
 
-class SignUpSelectDateState extends SignUpState{}
+class SignUpSelectDateState extends SignUpState {}
 
-class SignUpSelectValueState extends SignUpState{}
-
-
+class SignUpSelectValueState extends SignUpState {}

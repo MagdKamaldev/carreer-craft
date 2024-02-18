@@ -24,8 +24,8 @@ class SignUpRepositoryImplementation implements SignUpRepository {
       String password,
       String dob,
       String mobileNumber,
-      String role) async{
-       try {
+      String role) async {
+    try {
       final response = await apiServices.post(
         endPoint: Endpoints.signUp,
         data: {
@@ -48,6 +48,5 @@ class SignUpRepositoryImplementation implements SignUpRepository {
         return Left(ServerFailure(e.toString()));
       }
     }
-    
   }
 }

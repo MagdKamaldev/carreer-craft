@@ -1,6 +1,5 @@
 part of 'forgot_password_cubit.dart';
 
-
 abstract class ForgotPasswordState {}
 
 final class ForgotPasswordInitial extends ForgotPasswordState {}

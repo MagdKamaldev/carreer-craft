@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 class ProfilePicture extends StatelessWidget {
   final int bigRadius;
   final int radius;
-  const ProfilePicture({super.key, required this.radius, required this.bigRadius});
+  const ProfilePicture(
+      {super.key, required this.radius, required this.bigRadius});
 
   @override
   Widget build(BuildContext context) {

@@ -1,4 +1,5 @@
 part of 'login_cubit.dart';
+
 abstract class LoginStates {}
 
 final class LoginInitial extends LoginStates {}
@@ -7,7 +8,7 @@ class LoginLoading extends LoginStates {}
 
 class LoginSuccess extends LoginStates {
   final UserModel user;
- LoginSuccess(this.user);
+  LoginSuccess(this.user);
 }
 
 class LoginFailure extends LoginStates {
@@ -16,4 +17,4 @@ class LoginFailure extends LoginStates {
   LoginFailure(this.message);
 }
 
-class ChangePasswordVisibilityState extends LoginStates{}
+class ChangePasswordVisibilityState extends LoginStates {}

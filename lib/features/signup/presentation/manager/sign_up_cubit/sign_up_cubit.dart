@@ -31,8 +31,8 @@ class SignUpCubit extends Cubit<SignUpState> {
   TextEditingController monthController = TextEditingController();
   TextEditingController yearController = TextEditingController();
   DateTime selectedDate = DateTime.now();
-  
-  String ? selectedValue;
+
+  String? selectedValue;
   void changeSelectedValue(String value) {
     selectedValue = value;
     emit(SignUpSelectValueState());

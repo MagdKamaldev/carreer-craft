@@ -7,7 +7,6 @@ import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-
 class SignUpButton extends StatelessWidget {
   final void Function() onPressed;
   const SignUpButton({super.key, required this.onPressed});

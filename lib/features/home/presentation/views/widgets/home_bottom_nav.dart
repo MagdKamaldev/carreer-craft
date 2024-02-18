@@ -12,7 +12,7 @@ Widget homeBottomNav(context) => BlocBuilder<HomeCubit, HomeState>(
           selectedLabelStyle: theme.textTheme.titleSmall,
           selectedItemColor: primary,
           currentIndex: HomeCubit.get(context).screensIndex,
-          onTap: (value){
+          onTap: (value) {
             HomeCubit.get(context).changeScreen(value);
           },
           items: [

@@ -1,14 +1,15 @@
 import 'package:career_craft/core/colors.dart';
 import 'package:flutter/material.dart';
 
-Widget resetCodeContainer(Size size, BuildContext context,TextEditingController controller) => Container(
+Widget resetCodeContainer(
+        Size size, BuildContext context, TextEditingController controller) =>
+    Container(
       height: size.height * 0.06,
       width: size.width * 0.12,
       decoration: BoxDecoration(
         border: Border.all(color: primary, width: 1.5),
         borderRadius: BorderRadius.circular(8),
       ),
-      
       child: TextFormField(
         controller: controller,
         onSaved: (pin2) {},

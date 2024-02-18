@@ -21,7 +21,9 @@ class ResetPasswordButton extends StatelessWidget {
           );
         } else {
           return defaultButton(
-              function: onPressed, context: context, text: S.of(context).resetPassword);
+              function: onPressed,
+              context: context,
+              text: S.of(context).resetPassword);
         }
       },
     );

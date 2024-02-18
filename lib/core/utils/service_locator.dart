@@ -16,14 +16,13 @@ void setupLocator() {
     () => LoginRepositoryImplementation(
       apiServices: getIt<ApiServices>(),
     ),
-    
   );
-   getIt.registerLazySingleton<SignUpRepositoryImplementation>(
+  getIt.registerLazySingleton<SignUpRepositoryImplementation>(
     () => SignUpRepositoryImplementation(
       apiServices: getIt<ApiServices>(),
     ),
   );
-   getIt.registerLazySingleton<ForgotPasswordRepositoryImplementation>(
+  getIt.registerLazySingleton<ForgotPasswordRepositoryImplementation>(
     () => ForgotPasswordRepositoryImplementation(
       apiServices: getIt<ApiServices>(),
     ),

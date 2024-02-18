@@ -21,7 +21,10 @@ class ResetCodeButton extends StatelessWidget {
           );
         } else {
           return defaultButton(
-              function: onPressed, context: context, text: S.of(context).confirmCode, height: 50.0);
+              function: onPressed,
+              context: context,
+              text: S.of(context).confirmCode,
+              height: 50.0);
         }
       },
     );
