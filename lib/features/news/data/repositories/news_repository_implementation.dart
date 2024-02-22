@@ -17,7 +17,7 @@ class NewsRepositoryImplementation implements NewsRepository {
       final response = await newsApiServices.getData(query: {
         "country": "us",
         "category": "business",
-        "Accept-Language":"en",
+        "Accept-Language": "en",
         "apiKey": "d965aeb7b50b4b58877e29092d6c4165",
       });
       return Right((response.data["articles"] as List)

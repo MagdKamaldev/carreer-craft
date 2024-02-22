@@ -44,6 +44,16 @@ class ProfileView extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Text(
+                "User",
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+            ),
+            SizedBox(
+              height: size.height * 0.02,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Text(
                 S.of(context).Bio,
                 style: Theme.of(context).textTheme.bodyLarge,
               ),
