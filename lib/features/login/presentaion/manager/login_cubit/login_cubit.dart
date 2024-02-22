@@ -18,7 +18,7 @@ class LoginCubit extends Cubit<LoginStates> {
       emit(LoginFailure(failure.message));
     }, (user) {
       HiveFunctions.saveUserToHive(user, kUserBox);
-      //HiveFunctions.getUserFromHive(kUserBox);
+ 
       emit(LoginSuccess(user));
     });
   }
