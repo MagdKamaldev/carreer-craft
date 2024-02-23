@@ -1,5 +1,7 @@
+// ignore_for_file: deprecated_member_use
 import 'package:career_craft/core/constants.dart';
 import 'package:career_craft/core/models/user_model.dart';
+import 'package:career_craft/core/utils/locale.dart';
 import 'package:career_craft/core/utils/service_locator.dart';
 import 'package:career_craft/core/utils/themes.dart';
 import 'package:career_craft/features/home/presentation/manager/home_cubit/home_cubit.dart';
@@ -24,6 +26,7 @@ class CareerCraft extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return MultiBlocProvider(
       providers: [
         BlocProvider(
@@ -31,7 +34,7 @@ class CareerCraft extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
-        locale: const Locale("ar"),
+        locale: Locale(langCode),
         title: 'Career Craft',
         theme: theme,
         debugShowCheckedModeBanner: false,

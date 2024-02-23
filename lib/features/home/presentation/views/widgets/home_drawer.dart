@@ -1,4 +1,5 @@
 import 'package:career_craft/core/colors.dart';
+import 'package:career_craft/core/utils/functions/logout.dart';
 import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -46,15 +47,20 @@ class AppDrawer extends StatelessWidget {
                   SizedBox(
                     height: size.height * 0.05,
                   ),
-                  Row(
-                    children: [
-                      Text(
-                        S.of(context).logout,
-                        style: theme.bodyLarge,
-                      ),
-                      const Spacer(),
-                      SvgPicture.asset("assets/images/Logout.svg")
-                    ],
+                  GestureDetector(
+                    onTap: () {
+                      logout(context);
+                    },
+                    child: Row(
+                      children: [
+                        Text(
+                          S.of(context).logout,
+                          style: theme.bodyLarge,
+                        ),
+                        const Spacer(),
+                        SvgPicture.asset("assets/images/Logout.svg")
+                      ],
+                    ),
                   ),
                 ],
               ),
