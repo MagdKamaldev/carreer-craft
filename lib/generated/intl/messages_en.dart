@@ -23,6 +23,9 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Bio": MessageLookupByLibrary.simpleMessage("Bio"),
+        "RateUs": MessageLookupByLibrary.simpleMessage("Rate Us in Play Store"),
+        "accountSettings":
+            MessageLookupByLibrary.simpleMessage("Account Settings"),
         "appName": MessageLookupByLibrary.simpleMessage("Career Craft"),
         "checkMail": MessageLookupByLibrary.simpleMessage("Check Your Mail"),
         "companies": MessageLookupByLibrary.simpleMessage("Companies"),
@@ -35,6 +38,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
         "confirmpasValidation": MessageLookupByLibrary.simpleMessage(
             "Password and Confirm Password must be same"),
+        "contactSupport":
+            MessageLookupByLibrary.simpleMessage("Contact Support"),
         "createAccount":
             MessageLookupByLibrary.simpleMessage("Create an account"),
         "creatingAcc": MessageLookupByLibrary.simpleMessage(
@@ -54,12 +59,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
         "hirePlan": MessageLookupByLibrary.simpleMessage("planning To hire ?"),
         "jobs": MessageLookupByLibrary.simpleMessage("Jobs"),
+        "language": MessageLookupByLibrary.simpleMessage("Language"),
         "lastName": MessageLookupByLibrary.simpleMessage("Last Name"),
         "login": MessageLookupByLibrary.simpleMessage("login"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "maybe": MessageLookupByLibrary.simpleMessage("Maybe"),
         "news": MessageLookupByLibrary.simpleMessage("News"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
+        "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
         "onBoardingButton": MessageLookupByLibrary.simpleMessage("Start Now"),
         "onBoardingText1": MessageLookupByLibrary.simpleMessage(
             "Feeling overwhelmed by the job market?"),
@@ -71,9 +78,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "passwordChanged": MessageLookupByLibrary.simpleMessage(
             "Password Changed Successfully !"),
         "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone Number"),
+        "preferences": MessageLookupByLibrary.simpleMessage("Preferences"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "resetCode": MessageLookupByLibrary.simpleMessage("Reset Code"),
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
+        "resources": MessageLookupByLibrary.simpleMessage("Resources"),
         "sendCode": MessageLookupByLibrary.simpleMessage("Send Code"),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),
         "slogan": MessageLookupByLibrary.simpleMessage("Your Career Compass !"),

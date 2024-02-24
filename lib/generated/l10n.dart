@@ -509,6 +509,76 @@ class S {
       args: [],
     );
   }
+
+  /// `Account Settings`
+  String get accountSettings {
+    return Intl.message(
+      'Account Settings',
+      name: 'accountSettings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Preferences`
+  String get preferences {
+    return Intl.message(
+      'Preferences',
+      name: 'preferences',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Notifications`
+  String get notifications {
+    return Intl.message(
+      'Notifications',
+      name: 'notifications',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Resources`
+  String get resources {
+    return Intl.message(
+      'Resources',
+      name: 'resources',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Language`
+  String get language {
+    return Intl.message(
+      'Language',
+      name: 'language',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contact Support`
+  String get contactSupport {
+    return Intl.message(
+      'Contact Support',
+      name: 'contactSupport',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rate Us in Play Store`
+  String get RateUs {
+    return Intl.message(
+      'Rate Us in Play Store',
+      name: 'RateUs',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

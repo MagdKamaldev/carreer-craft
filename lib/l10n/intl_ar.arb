@@ -42,5 +42,12 @@
     "news": "أخبار",
     "Bio":"نبذة",
     "settings": "الإعدادات",
-    "logout": "تسجيل الخروج"
+    "logout": "تسجيل الخروج",
+    "accountSettings": "اعدادت الحساب",
+    "preferences": "التفضيلات",
+    "notifications": "الإشعارات",
+    "Resources": "الموارد",
+    "language": "اللغة",
+    "contactSupport": "الاتصال بالدعم",
+    "RateUs": "قيمنا في المتجر"
 }

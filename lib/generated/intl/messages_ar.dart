@@ -23,6 +23,9 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Bio": MessageLookupByLibrary.simpleMessage("نبذة"),
+        "RateUs": MessageLookupByLibrary.simpleMessage("قيمنا في المتجر"),
+        "accountSettings":
+            MessageLookupByLibrary.simpleMessage("اعدادت الحساب"),
         "appName": MessageLookupByLibrary.simpleMessage("كاريير كرافت"),
         "checkMail":
             MessageLookupByLibrary.simpleMessage("تحقق من بريدك الإلكتروني"),
@@ -34,6 +37,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("أدخل كلمة المرور الجديدة!"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
+        "contactSupport":
+            MessageLookupByLibrary.simpleMessage("الاتصال بالدعم"),
         "createAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
         "creatingAcc":
             MessageLookupByLibrary.simpleMessage("بإنشاء حساب، أنت توافق على "),
@@ -50,12 +55,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "hirePlan": MessageLookupByLibrary.simpleMessage("هل تخطط للتوظيف؟"),
         "jobs": MessageLookupByLibrary.simpleMessage("وظائف"),
+        "language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "lastName": MessageLookupByLibrary.simpleMessage("الاسم الأخير"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "maybe": MessageLookupByLibrary.simpleMessage("ربما"),
         "news": MessageLookupByLibrary.simpleMessage("أخبار"),
         "no": MessageLookupByLibrary.simpleMessage("لا"),
+        "notifications": MessageLookupByLibrary.simpleMessage("الإشعارات"),
         "onBoardingButton": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
         "onBoardingText1": MessageLookupByLibrary.simpleMessage(
             "هل تشعر بالإرهاق من سوق العمل؟"),
@@ -67,6 +74,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "passwordChanged": MessageLookupByLibrary.simpleMessage(
             "تم تغيير كلمة المرور بنجاح !"),
         "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+        "preferences": MessageLookupByLibrary.simpleMessage("التفضيلات"),
         "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
         "resetCode": MessageLookupByLibrary.simpleMessage("رمز التحقق"),
         "resetPassword":

@@ -44,5 +44,12 @@
     "news": "News",
     "Bio" : "Bio",
     "settings": "Settings",
-    "logout": "Logout"
+    "logout": "Logout",
+    "accountSettings": "Account Settings",
+    "preferences": "Preferences",
+    "notifications": "Notifications",
+    "resources": "Resources",
+    "language": "Language",
+    "contactSupport":"Contact Support",
+    "RateUs": "Rate Us in Play Store"
 }

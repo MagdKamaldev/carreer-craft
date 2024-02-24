@@ -1,7 +1,10 @@
 import 'package:career_craft/core/colors.dart';
+import 'package:career_craft/core/utils/components.dart';
 import 'package:career_craft/core/utils/functions/logout.dart';
+import 'package:career_craft/features/settings/presentation/views/settings_view.dart';
 import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 
 class AppDrawer extends StatelessWidget {
@@ -34,15 +37,20 @@ class AppDrawer extends StatelessWidget {
               padding: EdgeInsets.symmetric(vertical: size.height * 0.05),
               child: Column(
                 children: [
-                  Row(
-                    children: [
-                      Text(
-                        S.of(context).settings,
-                        style: theme.bodyLarge,
-                      ),
-                      const Spacer(),
-                      SvgPicture.asset("assets/images/settings.svg")
-                    ],
+                  GestureDetector(
+                    onTap: () {
+                      navigateTo(context, const SettingsView());
+                    },
+                    child: Row(
+                      children: [
+                        Text(
+                          S.of(context).settings,
+                          style: theme.bodyLarge,
+                        ),
+                        const Spacer(),
+                        SvgPicture.asset("assets/images/settings.svg")
+                      ],
+                    ),
                   ),
                   SizedBox(
                     height: size.height * 0.05,
