@@ -1,4 +1,6 @@
 import 'package:career_craft/core/colors.dart';
+import 'package:career_craft/core/utils/components.dart';
+import 'package:career_craft/features/profile/presentation/views/profile_view.dart';
 import 'package:career_craft/features/profile/presentation/views/widgets/profile_picture.dart';
 import 'package:flutter/material.dart';
 
@@ -24,21 +26,26 @@ class ProfileNavigator extends StatelessWidget {
             SizedBox(
               height: size.height * 0.005,
             ),
-            Row(
-              children: [
-                Text(
-                  "profile",
-                  style: theme.bodyLarge!.copyWith(color: primary[500]),
-                ),
-                SizedBox(
-                  width: size.width * 0.05,
-                ),
-                Icon(
-                  Icons.arrow_forward_ios,
-                  size: size.width * 0.045,
-                  color: primary[500],
-                )
-              ],
+            GestureDetector(
+              onTap: () {
+                navigateTo(context, const ProfileView());
+              },
+              child: Row(
+                children: [
+                  Text(
+                    "profile",
+                    style: theme.bodyLarge!.copyWith(color: primary[500]),
+                  ),
+                  SizedBox(
+                    width: size.width * 0.05,
+                  ),
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    size: size.width * 0.045,
+                    color: primary[500],
+                  )
+                ],
+              ),
             )
           ],
         ),
