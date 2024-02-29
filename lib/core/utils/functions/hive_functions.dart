@@ -8,7 +8,7 @@ class HiveFunctions {
   }
 
   static UserModel getUserFromHive(String boxName) {
-    var box = Hive.box<UserModel>(boxName);
+    var box = Hive.box(boxName);
     return box.getAt(0)!;
   }
 }

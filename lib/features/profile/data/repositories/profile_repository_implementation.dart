@@ -12,9 +12,16 @@ class ProfileRepositoryImplementation implements ProfileRepository {
   ProfileRepositoryImplementation({required this.apiServices});
 
   @override
-  UserModel getUser() {
-    UserModel user = HiveFunctions.getUserFromHive(kUserBox);
+  Future<UserModel> getUser() async{
+    try{
+    final response = await apiServices.get(endPoint: Endpoints.users, jwt: token,);
+    UserModel user = UserModel.fromJson(response["user"]);
+    HiveFunctions.saveUserToHive(user, kUserBox);
     return user;
+    }on Exception catch (e) {
+      throw ServerFailure(e.toString());
+    }
+    
   }
 
   @override
