@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 part 'news_state.dart';
 
 class NewsCubit extends Cubit<NewsState> {
-   final NewsRepositoryImplementation newsRepository;
+  final NewsRepositoryImplementation newsRepository;
   NewsCubit(this.newsRepository) : super(NewsInitial());
   static NewsCubit get(context) => BlocProvider.of(context);
 
@@ -17,6 +17,4 @@ class NewsCubit extends Cubit<NewsState> {
       emit(NewsSuccess(news));
     });
   }
-
- 
 }

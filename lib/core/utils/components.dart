@@ -117,4 +117,3 @@ void navigateAndFinish(context, widget) => Navigator.pushAndRemoveUntil(
         context, CupertinoPageRoute(builder: (context) => widget), (route) {
       return false;
     });
-    

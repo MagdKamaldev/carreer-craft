@@ -1,6 +1,5 @@
 // ignore_for_file: deprecated_member_use
 import 'package:career_craft/core/constants.dart';
-import 'package:career_craft/core/models/user_model.dart';
 import 'package:career_craft/core/utils/locale.dart';
 import 'package:career_craft/core/utils/service_locator.dart';
 import 'package:career_craft/core/utils/themes.dart';
@@ -15,8 +14,6 @@ import 'package:hive_flutter/hive_flutter.dart';
 void main() async {
   setupLocator();
   await Hive.initFlutter();
-  Hive.registerAdapter(UserModelAdapter());
-  await Hive.openBox(kUserBox);
   await Hive.openBox(kTokenBoxString);
   runApp(const CareerCraft());
 }
@@ -26,7 +23,6 @@ class CareerCraft extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return MultiBlocProvider(
       providers: [
         BlocProvider(

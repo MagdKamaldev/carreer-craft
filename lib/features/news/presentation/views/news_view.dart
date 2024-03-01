@@ -13,7 +13,8 @@ class NewsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => NewsCubit(getIt<NewsRepositoryImplementation>())..getNews(),
+      create: (context) =>
+          NewsCubit(getIt<NewsRepositoryImplementation>())..getNews(),
       child: BlocConsumer<NewsCubit, NewsState>(
         listener: (context, state) {
           if (state is NewsFailure) {

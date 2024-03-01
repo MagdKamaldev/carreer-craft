@@ -38,7 +38,7 @@ void setupLocator() {
   );
   getIt.registerLazySingleton<ProfileRepositoryImplementation>(
     () => ProfileRepositoryImplementation(
-     apiServices: getIt<ApiServices>(),
+      apiServices: getIt<ApiServices>(),
     ),
   );
   //news
@@ -47,5 +47,4 @@ void setupLocator() {
       newsApiServices: getIt<NewsApiServices>(),
     ),
   );
-  
 }
