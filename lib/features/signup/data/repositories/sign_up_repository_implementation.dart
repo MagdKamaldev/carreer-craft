@@ -22,6 +22,7 @@ class SignUpRepositoryImplementation implements SignUpRepository {
       String lastName,
       String email,
       String password,
+      String bio,
       String dob,
       String mobileNumber,
       String role) async {
@@ -34,6 +35,7 @@ class SignUpRepositoryImplementation implements SignUpRepository {
           "email": email,
           "password": password,
           "DOB": dob,
+          "bio":bio,
           "mobileNumber": mobileNumber,
           "role": role,
         },

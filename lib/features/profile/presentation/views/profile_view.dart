@@ -56,7 +56,7 @@ class ProfileView extends StatelessWidget {
                               width: size.width * 0.03,
                             ),
                             Text(
-                              "(Flutter Developer)",
+                              state.user.status!,
                               style: Theme.of(context).textTheme.bodySmall,
                             ),
                           ],
@@ -78,7 +78,7 @@ class ProfileView extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 16),
                         child: Text(
-                          "${S.of(context).Bio}  ${state.user.email}",
+                          "${S.of(context).Bio} : ${state.user.bio.toString()}",
                           style: Theme.of(context).textTheme.bodyLarge,
                         ),
                       ),

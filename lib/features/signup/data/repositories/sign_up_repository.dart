@@ -9,6 +9,7 @@ abstract class SignUpRepository {
       String email,
       String password,
       String dob,
+      String bio,
       String mobileNumber,
       String role);
 }

@@ -21,6 +21,7 @@ class SignUpTab extends StatelessWidget {
     TextEditingController firstNameController = TextEditingController();
     TextEditingController lastNameController = TextEditingController();
     TextEditingController phoneController = TextEditingController();
+    TextEditingController bioController = TextEditingController();
     TextTheme theme = Theme.of(context).textTheme;
     Size size = MediaQuery.of(context).size;
     GlobalKey<FormState> formKey = GlobalKey<FormState>();
@@ -83,6 +84,20 @@ class SignUpTab extends StatelessWidget {
                       controller: emailcontroller,
                       type: TextInputType.emailAddress,
                       label: S.of(context).email,
+                      theme: theme,
+                      context: context,
+                      validate: (String value) {
+                        if (value.isEmpty) {
+                          return S.of(context).emptyValidation;
+                        }
+                      }),
+                  SizedBox(
+                    height: size.height * 0.02,
+                  ),
+                  defaultTextField(
+                      controller: bioController,
+                      type: TextInputType.name,
+                      label: S.of(context).Bio,
                       theme: theme,
                       context: context,
                       validate: (String value) {
@@ -161,6 +176,7 @@ class SignUpTab extends StatelessWidget {
                         SignUpCubit.get(context).signUp(
                             firstName: firstNameController.text,
                             lastName: lastNameController.text,
+                            bio: bioController.text,
                             email: emailcontroller.text,
                             password: passwordcontroller.text,
                             dob:
