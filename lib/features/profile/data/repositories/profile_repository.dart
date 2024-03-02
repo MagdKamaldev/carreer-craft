@@ -14,4 +14,10 @@ abstract class ProfileRepository {
     required String dob,
     required String bio,
   });
+
+  Future<Either<Failure, UserModel>> changePassword({
+    required String currentPassword,
+    required String newPassword,
+    required String confirmPassword,
+  });
 }

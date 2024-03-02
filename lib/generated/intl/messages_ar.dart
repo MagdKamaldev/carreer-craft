@@ -27,6 +27,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "accountSettings":
             MessageLookupByLibrary.simpleMessage("اعدادت الحساب"),
         "appName": MessageLookupByLibrary.simpleMessage("كاريير كرافت"),
+        "changePassword":
+            MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
         "checkMail":
             MessageLookupByLibrary.simpleMessage("تحقق من بريدك الإلكتروني"),
         "companies": MessageLookupByLibrary.simpleMessage("شركات"),
@@ -42,6 +44,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
         "creatingAcc":
             MessageLookupByLibrary.simpleMessage("بإنشاء حساب، أنت توافق على "),
+        "currentPassword":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور الحالية"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "enterCode": MessageLookupByLibrary.simpleMessage(
             "الرجاء إدخال الرمز المرسل إلى بريدك الإلكتروني!"),
@@ -60,6 +64,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "maybe": MessageLookupByLibrary.simpleMessage("ربما"),
+        "newPassword":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور الجديدة"),
         "news": MessageLookupByLibrary.simpleMessage("أخبار"),
         "no": MessageLookupByLibrary.simpleMessage("لا"),
         "notifications": MessageLookupByLibrary.simpleMessage("الإشعارات"),

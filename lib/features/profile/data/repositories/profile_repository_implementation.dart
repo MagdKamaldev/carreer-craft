@@ -54,4 +54,28 @@ class ProfileRepositoryImplementation implements ProfileRepository {
       return Left(ServerFailure(e.toString()));
     }
   }
+
+  @override
+  Future<Either<Failure, UserModel>> changePassword(
+      {required String currentPassword,
+      required String newPassword,
+      required String confirmPassword}) async {
+    try {
+      final response = await apiServices.put(
+        endPoint: Endpoints.changePassword,
+        data: {
+          "currentPassword": currentPassword,
+          "newPassword": newPassword,
+          "confirmPassword": confirmPassword,
+        },
+        jwt: token,
+      );
+      UserModel user = UserModel.fromJson(response["user"]);
+      token = response["token"];
+      kTokenBox.put(kTokenBoxString, token);
+      return Right(user);
+    } catch (e) {
+      return Left(ServerFailure(e.toString()));
+    }
+  }
 }

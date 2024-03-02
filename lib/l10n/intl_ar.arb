@@ -51,5 +51,8 @@
     "contactSupport": "الاتصال بالدعم",
     "RateUs": "قيمنا في المتجر",
     "recoveryEmail": "البريد الإلكتروني للإسترداد",
-    "updateAccount": "تحديث الحساب"
+    "updateAccount": "تحديث الحساب",
+    "changePassword": "تغيير كلمة المرور",
+    "currentPassword": "كلمة المرور الحالية",
+    "newPassword": "كلمة المرور الجديدة"
 }

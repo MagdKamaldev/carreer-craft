@@ -53,5 +53,8 @@
     "contactSupport":"Contact Support",
     "RateUs": "Rate Us in Play Store",
     "recoveryEmail": "Recovery Email",
-    "updateAccount": "Update Account"
+    "updateAccount": "Update Account",
+    "changePassword": "Change Password",
+    "currentPassword": "Current Password",
+    "newPassword": "New Password"
 }

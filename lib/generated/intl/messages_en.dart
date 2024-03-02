@@ -27,6 +27,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "accountSettings":
             MessageLookupByLibrary.simpleMessage("Account Settings"),
         "appName": MessageLookupByLibrary.simpleMessage("Career Craft"),
+        "changePassword":
+            MessageLookupByLibrary.simpleMessage("Change Password"),
         "checkMail": MessageLookupByLibrary.simpleMessage("Check Your Mail"),
         "companies": MessageLookupByLibrary.simpleMessage("Companies"),
         "confirmCode": MessageLookupByLibrary.simpleMessage("Confirm Code"),
@@ -44,6 +46,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Create an account"),
         "creatingAcc": MessageLookupByLibrary.simpleMessage(
             "By creating an account, you accept our "),
+        "currentPassword":
+            MessageLookupByLibrary.simpleMessage("Current Password"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "emptyValidation":
             MessageLookupByLibrary.simpleMessage("field must not be empty"),
@@ -64,6 +68,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "login": MessageLookupByLibrary.simpleMessage("login"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "maybe": MessageLookupByLibrary.simpleMessage("Maybe"),
+        "newPassword": MessageLookupByLibrary.simpleMessage("New Password"),
         "news": MessageLookupByLibrary.simpleMessage("News"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
         "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),

@@ -28,6 +28,18 @@ class UpdateUserError extends UserState {
   UpdateUserError({required this.message});
 }
 
+class ResetPasswordLoading extends UserState {}
+
+class ResetPasswordLoaded extends UserState {
+  final UserModel user;
+  ResetPasswordLoaded({required this.user});
+}
+
+class ResetPasswordError extends UserState {
+  final String message;
+  ResetPasswordError({required this.message});
+}
+
 class SelectValueState extends UserState {}
 
 class SelectDateState extends UserState {}

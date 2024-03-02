@@ -46,6 +46,23 @@ class UserCubit extends Cubit<UserState> {
     );
   }
 
+  Future<void> resetPassword({
+    required String currentPassword,
+    required String newPassword,
+    required String confirmPassword,
+  }) async {
+    emit(UserLoading());
+    final response = await profileRepositoryImplementation.changePassword(
+      currentPassword: currentPassword,
+      newPassword: newPassword,
+      confirmPassword: confirmPassword,
+    );
+    response.fold(
+      (failure) => emit(ResetPasswordError(message: failure.message.toString())),
+      (user) => emit(ResetPasswordLoaded(user: user)),
+    );
+  }
+
   TextEditingController dayController = TextEditingController();
   TextEditingController monthController = TextEditingController();
   TextEditingController yearController = TextEditingController();

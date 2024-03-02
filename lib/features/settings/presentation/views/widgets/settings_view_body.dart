@@ -5,8 +5,8 @@ import 'package:career_craft/features/settings/presentation/views/widgets/profil
 import 'package:career_craft/features/settings/presentation/views/widgets/settings_item.dart';
 import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
+import '../../../categories/change_password/presentation/views/change_password_view.dart';
 
 class SettingsViewBody extends StatelessWidget {
   const SettingsViewBody({super.key});
@@ -40,6 +40,16 @@ class SettingsViewBody extends StatelessWidget {
               },
               child: settingsItem(size, theme, "assets/images/User.svg",
                   S.of(context).accountSettings),
+            ),
+            SizedBox(
+              height: size.height * 0.035,
+            ),
+            GestureDetector(
+              onTap: () {
+                navigateTo(context, const ChangePasswordView());
+              },
+              child: settingsItem(size, theme, "assets/images/Key.svg",
+                  S.of(context).changePassword),
             ),
             SizedBox(
               height: size.height * 0.035,

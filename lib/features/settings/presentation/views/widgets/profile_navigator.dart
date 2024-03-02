@@ -2,6 +2,7 @@ import 'package:career_craft/core/colors.dart';
 import 'package:career_craft/core/utils/components.dart';
 import 'package:career_craft/features/profile/presentation/views/profile_view.dart';
 import 'package:career_craft/features/profile/presentation/views/widgets/profile_picture.dart';
+import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class ProfileNavigator extends StatelessWidget {
@@ -20,7 +21,7 @@ class ProfileNavigator extends StatelessWidget {
         Column(
           children: [
             Text(
-              "Hi I'm Magd",
+              S.of(context).welcomeText,
               style: theme.titleMedium,
             ),
             SizedBox(
@@ -33,7 +34,7 @@ class ProfileNavigator extends StatelessWidget {
               child: Row(
                 children: [
                   Text(
-                    "profile",
+                    S.of(context).profile,
                     style: theme.bodyLarge!.copyWith(color: primary[500]),
                   ),
                   SizedBox(

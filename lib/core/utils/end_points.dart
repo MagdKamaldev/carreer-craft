@@ -5,4 +5,5 @@ class Endpoints {
   static const String resetCode = "/auth/verifyResetCode";
   static const String resetPassword = "/auth/resetPassword";
   static const String users = "/users";
+  static const String changePassword = "/users/changePassword";
 }
