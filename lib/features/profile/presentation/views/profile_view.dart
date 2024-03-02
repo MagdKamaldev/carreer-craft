@@ -35,11 +35,21 @@ class ProfileView extends StatelessWidget {
           } else if (state is UserLoaded) {
             return Scaffold(
               body: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const CoverPhoto(),
                   SizedBox(
                     height: size.height * 0.02,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    child: Text(
+                      state.user.role.toString(),
+                      style: Theme.of(context).textTheme.titleMedium,
+                    ),
+                  ),
+                  SizedBox(
+                    height: size.height * 0.03,
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -53,11 +63,16 @@ class ProfileView extends StatelessWidget {
                               style: Theme.of(context).textTheme.titleLarge,
                             ),
                             SizedBox(
-                              width: size.width * 0.03,
+                              width: size.width * 0.05,
                             ),
                             Text(
                               state.user.status!,
-                              style: Theme.of(context).textTheme.bodySmall,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodySmall!
+                                  .copyWith(
+                                    color: secondary,
+                                  ),
                             ),
                           ],
                         ),
@@ -68,17 +83,7 @@ class ProfileView extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 16),
                         child: Text(
-                          state.user.role.toString(),
-                          style: Theme.of(context).textTheme.titleMedium,
-                        ),
-                      ),
-                      SizedBox(
-                        height: size.height * 0.02,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16),
-                        child: Text(
-                          "${S.of(context).Bio} : ${state.user.bio.toString()}",
+                          state.user.bio.toString(),
                           style: Theme.of(context).textTheme.bodyLarge,
                         ),
                       ),
@@ -103,7 +108,7 @@ class ProfileView extends StatelessWidget {
                               style: Theme.of(context).textTheme.headlineSmall,
                             ),
                             SizedBox(
-                              height: size.height * 0.02,
+                              height: size.height * 0.05,
                             ),
                           ],
                         ),

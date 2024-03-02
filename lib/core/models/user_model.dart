@@ -1,4 +1,5 @@
 class UserModel {
+  String? id;
   String? firstName;
   String? lastName;
   String? username;
@@ -9,12 +10,13 @@ class UserModel {
   String? mobileNumber;
   String? role;
   String? status;
-  String? id;
   DateTime? createdAt;
   DateTime? updatedAt;
   int? v;
+  String? recoveryEmail;
 
   UserModel({
+    this.id,
     this.firstName,
     this.lastName,
     this.username,
@@ -25,13 +27,14 @@ class UserModel {
     this.mobileNumber,
     this.role,
     this.status,
-    this.id,
     this.createdAt,
     this.updatedAt,
     this.v,
+    this.recoveryEmail,
   });
 
   factory UserModel.fromJson(Map<String, dynamic> json) => UserModel(
+        id: json['_id'] as String?,
         firstName: json['firstName'] as String?,
         lastName: json['lastName'] as String?,
         username: json['username'] as String?,
@@ -42,7 +45,6 @@ class UserModel {
         mobileNumber: json['mobileNumber'] as String?,
         role: json['role'] as String?,
         status: json['status'] as String?,
-        id: json['_id'] as String?,
         createdAt: json['createdAt'] == null
             ? null
             : DateTime.parse(json['createdAt'] as String),
@@ -50,9 +52,11 @@ class UserModel {
             ? null
             : DateTime.parse(json['updatedAt'] as String),
         v: json['__v'] as int?,
+        recoveryEmail: json['recoveryEmail'] as String?,
       );
 
   Map<String, dynamic> toJson() => {
+        '_id': id,
         'firstName': firstName,
         'lastName': lastName,
         'username': username,
@@ -63,9 +67,9 @@ class UserModel {
         'mobileNumber': mobileNumber,
         'role': role,
         'status': status,
-        '_id': id,
         'createdAt': createdAt?.toIso8601String(),
         'updatedAt': updatedAt?.toIso8601String(),
         '__v': v,
+        'recoveryEmail': recoveryEmail,
       };
 }

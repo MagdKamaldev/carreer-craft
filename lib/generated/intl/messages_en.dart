@@ -80,6 +80,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone Number"),
         "preferences": MessageLookupByLibrary.simpleMessage("Preferences"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "recoveryEmail": MessageLookupByLibrary.simpleMessage("Recovery Email"),
         "resetCode": MessageLookupByLibrary.simpleMessage("Reset Code"),
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
         "resources": MessageLookupByLibrary.simpleMessage("Resources"),
@@ -88,6 +89,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "slogan": MessageLookupByLibrary.simpleMessage("Your Career Compass !"),
         "success": MessageLookupByLibrary.simpleMessage("Success"),
         "terms": MessageLookupByLibrary.simpleMessage("Terms and Conditions"),
+        "updateAccount": MessageLookupByLibrary.simpleMessage("Update Account"),
         "validationFailed":
             MessageLookupByLibrary.simpleMessage("Validation Error"),
         "weWillSend": MessageLookupByLibrary.simpleMessage(

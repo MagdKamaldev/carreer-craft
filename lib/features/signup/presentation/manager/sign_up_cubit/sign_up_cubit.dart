@@ -20,7 +20,15 @@ class SignUpCubit extends Cubit<SignUpState> {
       required String role}) async {
     emit(SignUpLoading());
     var result = await signUpRepository.signUp(
-        firstName, lastName, email, password, dob, bio,mobileNumber, role,);
+      firstName,
+      lastName,
+      email,
+      password,
+      dob,
+      bio,
+      mobileNumber,
+      role,
+    );
     result.fold((failure) {
       emit(SignUpFailure(failure.message));
     }, (user) {

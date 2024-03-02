@@ -35,7 +35,7 @@ class SignUpRepositoryImplementation implements SignUpRepository {
           "email": email,
           "password": password,
           "DOB": dob,
-          "bio":bio,
+          "bio": bio,
           "mobileNumber": mobileNumber,
           "role": role,
         },

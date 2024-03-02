@@ -51,5 +51,7 @@
     "resources": "Resources",
     "language": "Language",
     "contactSupport":"Contact Support",
-    "RateUs": "Rate Us in Play Store"
+    "RateUs": "Rate Us in Play Store",
+    "recoveryEmail": "Recovery Email",
+    "updateAccount": "Update Account"
 }

@@ -579,6 +579,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Recovery Email`
+  String get recoveryEmail {
+    return Intl.message(
+      'Recovery Email',
+      name: 'recoveryEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Update Account`
+  String get updateAccount {
+    return Intl.message(
+      'Update Account',
+      name: 'updateAccount',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

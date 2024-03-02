@@ -76,6 +76,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "preferences": MessageLookupByLibrary.simpleMessage("التفضيلات"),
         "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
+        "recoveryEmail":
+            MessageLookupByLibrary.simpleMessage("البريد الإلكتروني للإسترداد"),
         "resetCode": MessageLookupByLibrary.simpleMessage("رمز التحقق"),
         "resetPassword":
             MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
@@ -84,6 +86,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "slogan": MessageLookupByLibrary.simpleMessage("بوصلتك المهنية !"),
         "success": MessageLookupByLibrary.simpleMessage("نجاح"),
         "terms": MessageLookupByLibrary.simpleMessage("الشروط والأحكام"),
+        "updateAccount": MessageLookupByLibrary.simpleMessage("تحديث الحساب"),
         "validationFailed":
             MessageLookupByLibrary.simpleMessage("خطأ في التحقق"),
         "weWillSend": MessageLookupByLibrary.simpleMessage(

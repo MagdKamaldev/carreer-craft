@@ -25,26 +25,26 @@ class ProfileRepositoryImplementation implements ProfileRepository {
   }
 
   @override
-  Future<Either<Failure, UserModel>> updateProfile(
-      {required String token,
-      required String firsName,
-      required String lastName,
-      required String email,
-      required String recoveryEmail,
-      required String password,
-      required String dob,
-      required String mobileNumber}) async {
+  Future<Either<Failure, UserModel>> updateProfile({
+    required String token,
+    required String firstName,
+    required String lastName,
+    required String email,
+    required String bio,
+    required String recoveryEmail,
+    required String password,
+    required String dob,
+  }) async {
     try {
       final response = await apiServices.put(
         endPoint: Endpoints.users,
         data: {
-          "firstName": firsName,
+          "firstName": firstName,
           "lastName": lastName,
           "email": email,
           "recoveryEmail": recoveryEmail,
           "password": password,
           "dob": dob,
-          "mobileNumber": mobileNumber,
         },
         jwt: token,
       );

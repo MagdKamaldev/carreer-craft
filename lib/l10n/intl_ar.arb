@@ -49,5 +49,7 @@
     "Resources": "الموارد",
     "language": "اللغة",
     "contactSupport": "الاتصال بالدعم",
-    "RateUs": "قيمنا في المتجر"
+    "RateUs": "قيمنا في المتجر",
+    "recoveryEmail": "البريد الإلكتروني للإسترداد",
+    "updateAccount": "تحديث الحساب"
 }

@@ -15,3 +15,21 @@ class UserError extends UserState {
   final String message;
   UserError({required this.message});
 }
+
+class UpdateUserLoading extends UserState {}
+
+class UpdateUserLoaded extends UserState {
+  final UserModel user;
+  UpdateUserLoaded({required this.user});
+}
+
+class UpdateUserError extends UserState {
+  final String message;
+  UpdateUserError({required this.message});
+}
+
+class SelectValueState extends UserState {}
+
+class SelectDateState extends UserState {}
+
+class ChangePasswordVisibilityState extends UserState {}
