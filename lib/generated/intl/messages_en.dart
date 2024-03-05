@@ -27,7 +27,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "accountSettings":
             MessageLookupByLibrary.simpleMessage("Account Settings"),
         "addCompany": MessageLookupByLibrary.simpleMessage("Add Company"),
-        "adress": MessageLookupByLibrary.simpleMessage("Adress"),
+        "adress": MessageLookupByLibrary.simpleMessage("Address"),
         "appName": MessageLookupByLibrary.simpleMessage("Career Craft"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("Change Password"),

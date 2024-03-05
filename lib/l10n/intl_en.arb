@@ -64,7 +64,7 @@
     "companyEmail" : "Company Email",
     "companyDescription" : "Company Description",
     "industry" : "Industry",
-    "adress" : "Adress",
+    "adress" : "Address",
     "minimumEmployees":"Min Employees",
     "maximumEmployees":"Max Employees"
 }

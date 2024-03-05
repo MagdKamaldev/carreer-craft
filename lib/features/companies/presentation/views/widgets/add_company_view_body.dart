@@ -38,44 +38,31 @@ class AddCompanyViewBody extends StatelessWidget {
                   SizedBox(
                     height: size.height * 0.06,
                   ),
+                  defaultTextField(
+                      controller: nameController,
+                      type: TextInputType.name,
+                      label: S.of(context).companyName,
+                      theme: theme,
+                      context: context,
+                      validate: (String value) {
+                        if (value.isEmpty) {
+                          return S.of(context).emptyValidation;
+                        }
+                      }),
                   SizedBox(
-                    width: size.width * 0.9,
-                    child: Row(
-                      children: [
-                        SizedBox(
-                          width: size.width * 0.42,
-                          child: defaultTextField(
-                              controller: nameController,
-                              type: TextInputType.name,
-                              label: S.of(context).companyName,
-                              theme: theme,
-                              context: context,
-                              validate: (String value) {
-                                if (value.isEmpty) {
-                                  return S.of(context).emptyValidation;
-                                }
-                              }),
-                        ),
-                        SizedBox(
-                          width: size.width * 0.05,
-                        ),
-                        SizedBox(
-                          width: size.width * 0.42,
-                          child: defaultTextField(
-                              controller: emailController,
-                              type: TextInputType.emailAddress,
-                              label: S.of(context).companyEmail,
-                              theme: theme,
-                              context: context,
-                              validate: (String value) {
-                                if (value.isEmpty) {
-                                  return S.of(context).emptyValidation;
-                                }
-                              }),
-                        ),
-                      ],
-                    ),
+                    height: size.height * 0.02,
                   ),
+                  defaultTextField(
+                      controller: emailController,
+                      type: TextInputType.emailAddress,
+                      label: S.of(context).companyEmail,
+                      theme: theme,
+                      context: context,
+                      validate: (String value) {
+                        if (value.isEmpty) {
+                          return S.of(context).emptyValidation;
+                        }
+                      }),
                   SizedBox(
                     height: size.height * 0.02,
                   ),
@@ -160,7 +147,7 @@ class AddCompanyViewBody extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: size.height * 0.07,
+                    height: size.height * 0.04,
                   ),
                   AddCompanyButton(onPressed: () {
                     if (formKey.currentState!.validate()) {
@@ -175,7 +162,7 @@ class AddCompanyViewBody extends StatelessWidget {
                     }
                   }),
                   SizedBox(
-                    height: size.height * 0.12,
+                    height: size.height * 0.08,
                   ),
                   Text(
                     S.of(context).creatingCompany,

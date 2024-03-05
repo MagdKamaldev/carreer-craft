@@ -700,10 +700,10 @@ class S {
     );
   }
 
-  /// `Adress`
+  /// `Address`
   String get adress {
     return Intl.message(
-      'Adress',
+      'Address',
       name: 'adress',
       desc: '',
       args: [],
