@@ -67,7 +67,8 @@ class UserCubit extends Cubit<UserState> {
       confirmPassword: confirmPassword,
     );
     response.fold(
-      (failure) => emit(ResetPasswordError(message: failure.message.toString())),
+      (failure) =>
+          emit(ResetPasswordError(message: failure.message.toString())),
       (user) => emit(ResetPasswordLoaded(user: user)),
     );
   }
@@ -120,6 +121,4 @@ class UserCubit extends Cubit<UserState> {
         : Icons.visibility_off_outlined;
     emit(ChangePasswordVisibilityState());
   }
-
-  
 }
