@@ -26,12 +26,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "RateUs": MessageLookupByLibrary.simpleMessage("قيمنا في المتجر"),
         "accountSettings":
             MessageLookupByLibrary.simpleMessage("اعدادت الحساب"),
+        "addCompany": MessageLookupByLibrary.simpleMessage("إضافة شركة"),
+        "adress": MessageLookupByLibrary.simpleMessage("العنوان"),
         "appName": MessageLookupByLibrary.simpleMessage("كاريير كرافت"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
         "checkMail":
             MessageLookupByLibrary.simpleMessage("تحقق من بريدك الإلكتروني"),
         "companies": MessageLookupByLibrary.simpleMessage("شركات"),
+        "companyDescription":
+            MessageLookupByLibrary.simpleMessage("وصف الشركة"),
+        "companyEmail":
+            MessageLookupByLibrary.simpleMessage("البريد الإلكتروني للشركة"),
+        "companyName": MessageLookupByLibrary.simpleMessage("اسم الشركة"),
         "confirmCode": MessageLookupByLibrary.simpleMessage("تأكيد الرمز"),
         "confirmNewPass":
             MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور الجديدة"),
@@ -44,6 +51,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
         "creatingAcc":
             MessageLookupByLibrary.simpleMessage("بإنشاء حساب، أنت توافق على "),
+        "creatingCompany": MessageLookupByLibrary.simpleMessage(
+            "بإنشاء حساب الشركة، أنت توافق على"),
         "currentPassword":
             MessageLookupByLibrary.simpleMessage("كلمة المرور الحالية"),
         "deleteAccount": MessageLookupByLibrary.simpleMessage("حذف الحساب"),
@@ -59,12 +68,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "forgotPasswordq":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "hirePlan": MessageLookupByLibrary.simpleMessage("هل تخطط للتوظيف؟"),
+        "industry": MessageLookupByLibrary.simpleMessage("الصناعة"),
         "jobs": MessageLookupByLibrary.simpleMessage("وظائف"),
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "lastName": MessageLookupByLibrary.simpleMessage("الاسم الأخير"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
+        "maximumEmployees":
+            MessageLookupByLibrary.simpleMessage("الحد الأقصى للموظفين"),
         "maybe": MessageLookupByLibrary.simpleMessage("ربما"),
+        "minimumEmployees":
+            MessageLookupByLibrary.simpleMessage("الحد الأدنى للموظفين"),
         "newPassword":
             MessageLookupByLibrary.simpleMessage("كلمة المرور الجديدة"),
         "news": MessageLookupByLibrary.simpleMessage("أخبار"),

@@ -21,6 +21,7 @@
     "no":"No",
     "maybe" : "Maybe",
     "creatingAcc":"By creating an account, you accept our ",
+    "creatingCompany":"By creating a Company, you accept our ",
     "terms":"Terms and Conditions",
     "emptyValidation" :"field must not be empty",
     "confirmpasValidation" :"Password and Confirm Password must be same",
@@ -57,5 +58,13 @@
     "changePassword": "Change Password",
     "currentPassword": "Current Password",
     "newPassword": "New Password",
-    "deleteAccount" : "Delete Account"
+    "deleteAccount" : "Delete Account",
+    "addCompany": "Add Company",
+    "companyName" : "Company Name",
+    "companyEmail" : "Company Email",
+    "companyDescription" : "Company Description",
+    "industry" : "Industry",
+    "adress" : "Adress",
+    "minimumEmployees":"Min Employees",
+    "maximumEmployees":"Max Employees"
 }

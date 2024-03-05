@@ -23,7 +23,8 @@ class CompaniesView extends StatelessWidget {
             SizedBox(
               height: size.height * 0.03,
             ),
-            const CompanyItem()
+            const CompanyItem(),
+            SizedBox(height: size.height,),
           ],
         ),
       ),

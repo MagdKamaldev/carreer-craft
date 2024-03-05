@@ -270,6 +270,16 @@ class S {
     );
   }
 
+  /// `By creating a Company, you accept our `
+  String get creatingCompany {
+    return Intl.message(
+      'By creating a Company, you accept our ',
+      name: 'creatingCompany',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Terms and Conditions`
   String get terms {
     return Intl.message(
@@ -635,6 +645,86 @@ class S {
     return Intl.message(
       'Delete Account',
       name: 'deleteAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Company`
+  String get addCompany {
+    return Intl.message(
+      'Add Company',
+      name: 'addCompany',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Company Name`
+  String get companyName {
+    return Intl.message(
+      'Company Name',
+      name: 'companyName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Company Email`
+  String get companyEmail {
+    return Intl.message(
+      'Company Email',
+      name: 'companyEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Company Description`
+  String get companyDescription {
+    return Intl.message(
+      'Company Description',
+      name: 'companyDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Industry`
+  String get industry {
+    return Intl.message(
+      'Industry',
+      name: 'industry',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Adress`
+  String get adress {
+    return Intl.message(
+      'Adress',
+      name: 'adress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Min Employees`
+  String get minimumEmployees {
+    return Intl.message(
+      'Min Employees',
+      name: 'minimumEmployees',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Max Employees`
+  String get maximumEmployees {
+    return Intl.message(
+      'Max Employees',
+      name: 'maximumEmployees',
       desc: '',
       args: [],
     );

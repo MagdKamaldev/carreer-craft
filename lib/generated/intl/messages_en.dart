@@ -26,11 +26,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "RateUs": MessageLookupByLibrary.simpleMessage("Rate Us in Play Store"),
         "accountSettings":
             MessageLookupByLibrary.simpleMessage("Account Settings"),
+        "addCompany": MessageLookupByLibrary.simpleMessage("Add Company"),
+        "adress": MessageLookupByLibrary.simpleMessage("Adress"),
         "appName": MessageLookupByLibrary.simpleMessage("Career Craft"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("Change Password"),
         "checkMail": MessageLookupByLibrary.simpleMessage("Check Your Mail"),
         "companies": MessageLookupByLibrary.simpleMessage("Companies"),
+        "companyDescription":
+            MessageLookupByLibrary.simpleMessage("Company Description"),
+        "companyEmail": MessageLookupByLibrary.simpleMessage("Company Email"),
+        "companyName": MessageLookupByLibrary.simpleMessage("Company Name"),
         "confirmCode": MessageLookupByLibrary.simpleMessage("Confirm Code"),
         "confirmNewPass":
             MessageLookupByLibrary.simpleMessage("Confirm New Password"),
@@ -46,6 +52,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Create an account"),
         "creatingAcc": MessageLookupByLibrary.simpleMessage(
             "By creating an account, you accept our "),
+        "creatingCompany": MessageLookupByLibrary.simpleMessage(
+            "By creating a Company, you accept our "),
         "currentPassword":
             MessageLookupByLibrary.simpleMessage("Current Password"),
         "deleteAccount": MessageLookupByLibrary.simpleMessage("Delete Account"),
@@ -63,12 +71,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "forgotPasswordq":
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
         "hirePlan": MessageLookupByLibrary.simpleMessage("planning To hire ?"),
+        "industry": MessageLookupByLibrary.simpleMessage("Industry"),
         "jobs": MessageLookupByLibrary.simpleMessage("Jobs"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "lastName": MessageLookupByLibrary.simpleMessage("Last Name"),
         "login": MessageLookupByLibrary.simpleMessage("login"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
+        "maximumEmployees":
+            MessageLookupByLibrary.simpleMessage("Max Employees"),
         "maybe": MessageLookupByLibrary.simpleMessage("Maybe"),
+        "minimumEmployees":
+            MessageLookupByLibrary.simpleMessage("Min Employees"),
         "newPassword": MessageLookupByLibrary.simpleMessage("New Password"),
         "news": MessageLookupByLibrary.simpleMessage("News"),
         "no": MessageLookupByLibrary.simpleMessage("No"),

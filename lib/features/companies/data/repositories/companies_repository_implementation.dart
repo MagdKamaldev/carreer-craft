@@ -51,7 +51,7 @@ class CompaniesRepositoryImplementation implements CompaniesRepository {
 
   @override
   Future<Either<Failure, CompanyModel>> getCompanyByName() {
-    // TODO: implement getCompanyByName
+    
     throw UnimplementedError();
   }
 

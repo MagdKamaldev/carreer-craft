@@ -21,6 +21,7 @@
     "no": "لا",
     "maybe": "ربما",
     "creatingAcc": "بإنشاء حساب، أنت توافق على ",
+    "creatingCompany":"بإنشاء حساب الشركة، أنت توافق على",
     "terms": "الشروط والأحكام",
     "sendCode": "إرسال الرمز",
     "forgotPasswordText": "نسيت كلمة المرور",
@@ -55,5 +56,13 @@
     "changePassword": "تغيير كلمة المرور",
     "currentPassword": "كلمة المرور الحالية",
     "newPassword": "كلمة المرور الجديدة",
-    "deleteAccount" : "حذف الحساب"
+    "deleteAccount" : "حذف الحساب",
+    "addCompany": "إضافة شركة",
+    "companyName" : "اسم الشركة",
+    "companyEmail" : "البريد الإلكتروني للشركة",
+    "companyDescription" : "وصف الشركة",
+    "industry" : "الصناعة",
+    "adress" : "العنوان",
+    "minimumEmployees":"الحد الأدنى للموظفين",
+    "maximumEmployees":"الحد الأقصى للموظفين"
 }

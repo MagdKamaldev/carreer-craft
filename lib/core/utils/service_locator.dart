@@ -1,5 +1,6 @@
 import 'package:career_craft/core/utils/api_services.dart';
 import 'package:career_craft/core/utils/news_api_service.dart';
+import 'package:career_craft/features/companies/data/repositories/companies_repository_implementation.dart';
 import 'package:career_craft/features/forgotPassword/data/repositories/forgot_password_repository_implementation.dart';
 import 'package:career_craft/features/login/data/repositories/login_repository_implementation.dart';
 import 'package:career_craft/features/news/data/repositories/news_repository_implementation.dart';
@@ -38,6 +39,11 @@ void setupLocator() {
   );
   getIt.registerLazySingleton<ProfileRepositoryImplementation>(
     () => ProfileRepositoryImplementation(
+      apiServices: getIt<ApiServices>(),
+    ),
+  );
+  getIt.registerLazySingleton<CompaniesRepositoryImplementation>(
+    () => CompaniesRepositoryImplementation(
       apiServices: getIt<ApiServices>(),
     ),
   );

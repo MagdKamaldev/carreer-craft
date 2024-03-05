@@ -1,3 +1,6 @@
+import 'package:career_craft/core/colors.dart';
+import 'package:career_craft/core/utils/components.dart';
+import 'package:career_craft/features/companies/presentation/views/add_company_view.dart';
 import 'package:career_craft/features/home/presentation/manager/home_cubit/home_cubit.dart';
 import 'package:career_craft/features/home/presentation/views/widgets/home_app_bar.dart';
 import 'package:career_craft/features/home/presentation/views/widgets/home_bottom_nav.dart';
@@ -21,6 +24,18 @@ class HomeView extends StatelessWidget {
           body: HomeCubit.get(context)
               .screens[HomeCubit.get(context).screensIndex],
           bottomNavigationBar: homeBottomNav(context),
+          floatingActionButton: (HomeCubit.get(context).screensIndex == 1)
+              ? FloatingActionButton(
+                  onPressed: () {
+                    navigateTo(context, const AddCompanyView());
+                  },
+                  backgroundColor: primary[500],
+                  child: Icon(
+                    Icons.add,
+                    color: primary[100],
+                  ),
+                )
+              : null,
         );
       },
     );
