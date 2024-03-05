@@ -54,5 +54,6 @@
     "updateAccount": "تحديث الحساب",
     "changePassword": "تغيير كلمة المرور",
     "currentPassword": "كلمة المرور الحالية",
-    "newPassword": "كلمة المرور الجديدة"
+    "newPassword": "كلمة المرور الجديدة",
+    "deleteAccount" : "حذف الحساب"
 }

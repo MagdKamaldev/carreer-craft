@@ -2,7 +2,6 @@ import 'package:career_craft/core/colors.dart';
 import 'package:career_craft/core/utils/components.dart';
 import 'package:career_craft/features/settings/presentation/views/settings_view.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 
 PreferredSizeWidget homeAppBar(

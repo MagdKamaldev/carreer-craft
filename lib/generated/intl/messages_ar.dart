@@ -46,6 +46,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("بإنشاء حساب، أنت توافق على "),
         "currentPassword":
             MessageLookupByLibrary.simpleMessage("كلمة المرور الحالية"),
+        "deleteAccount": MessageLookupByLibrary.simpleMessage("حذف الحساب"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "enterCode": MessageLookupByLibrary.simpleMessage(
             "الرجاء إدخال الرمز المرسل إلى بريدك الإلكتروني!"),

@@ -4,6 +4,7 @@ import 'package:dartz/dartz.dart';
 
 abstract class ProfileRepository {
   Future<Either<Failure, UserModel>> getUser();
+
   Future<Either<Failure, UserModel>> updateProfile({
     required String token,
     required String firstName,
@@ -20,4 +21,6 @@ abstract class ProfileRepository {
     required String newPassword,
     required String confirmPassword,
   });
+
+  Future<Either<Failure, String>> deleteUser();
 }

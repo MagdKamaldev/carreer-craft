@@ -16,6 +16,7 @@ class SignUpTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextEditingController emailcontroller = TextEditingController();
+    TextEditingController recoveryEmailController = TextEditingController();
     TextEditingController passwordcontroller = TextEditingController();
     TextEditingController confirmPasswordcontroller = TextEditingController();
     TextEditingController firstNameController = TextEditingController();
@@ -84,6 +85,20 @@ class SignUpTab extends StatelessWidget {
                       controller: emailcontroller,
                       type: TextInputType.emailAddress,
                       label: S.of(context).email,
+                      theme: theme,
+                      context: context,
+                      validate: (String value) {
+                        if (value.isEmpty) {
+                          return S.of(context).emptyValidation;
+                        }
+                      }),
+                  SizedBox(
+                    height: size.height * 0.02,
+                  ),
+                  defaultTextField(
+                      controller: recoveryEmailController,
+                      type: TextInputType.emailAddress,
+                      label: S.of(context).recoveryEmail,
                       theme: theme,
                       context: context,
                       validate: (String value) {
@@ -174,6 +189,7 @@ class SignUpTab extends StatelessWidget {
                     onPressed: () {
                       if (formKey.currentState!.validate()) {
                         SignUpCubit.get(context).signUp(
+                            recoveryEmail: recoveryEmailController.text,
                             firstName: firstNameController.text,
                             lastName: lastNameController.text,
                             bio: bioController.text,

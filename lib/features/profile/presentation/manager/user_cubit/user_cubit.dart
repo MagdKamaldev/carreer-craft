@@ -46,6 +46,15 @@ class UserCubit extends Cubit<UserState> {
     );
   }
 
+  Future<void> deleteAccount() async {
+    emit(UserLoading());
+    final response = profileRepositoryImplementation.deleteUser();
+    response.then(
+      (failure) => emit(DeleteUserError(message: failure.toString())),
+      onError: (message) => emit(DeleteUserLoaded(message: message.toString())),
+    );
+  }
+
   Future<void> resetPassword({
     required String currentPassword,
     required String newPassword,
@@ -111,4 +120,6 @@ class UserCubit extends Cubit<UserState> {
         : Icons.visibility_off_outlined;
     emit(ChangePasswordVisibilityState());
   }
+
+  
 }

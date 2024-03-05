@@ -78,4 +78,18 @@ class ProfileRepositoryImplementation implements ProfileRepository {
       return Left(ServerFailure(e.toString()));
     }
   }
+  
+  @override
+  Future<Either<Failure, String>> deleteUser() async{
+    try{
+      await apiServices.delete(
+        endPoint: Endpoints.users,
+        jwt: token,
+      );
+      return const Right("User Deleted Successfuly");
+    }on Exception catch(e){
+      return Left(ServerFailure(e.toString()));
+    }
+
+  }
 }

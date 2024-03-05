@@ -48,6 +48,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "By creating an account, you accept our "),
         "currentPassword":
             MessageLookupByLibrary.simpleMessage("Current Password"),
+        "deleteAccount": MessageLookupByLibrary.simpleMessage("Delete Account"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "emptyValidation":
             MessageLookupByLibrary.simpleMessage("field must not be empty"),

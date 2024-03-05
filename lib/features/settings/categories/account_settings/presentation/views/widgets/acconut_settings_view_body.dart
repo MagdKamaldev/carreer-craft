@@ -1,9 +1,11 @@
 import 'package:career_craft/core/constants.dart';
 import 'package:career_craft/core/utils/components.dart';
 import 'package:career_craft/core/utils/service_locator.dart';
+import 'package:career_craft/features/entrance/presentation/views/entrance_view.dart';
 import 'package:career_craft/features/profile/data/repositories/profile_repository_implementation.dart';
 import 'package:career_craft/features/profile/presentation/manager/user_cubit/user_cubit.dart';
 import 'package:career_craft/features/settings/categories/account_settings/presentation/views/widgets/date_widget.dart';
+import 'package:career_craft/features/settings/categories/account_settings/presentation/views/widgets/delete_account_buttom.dart';
 import 'package:career_craft/features/settings/categories/account_settings/presentation/views/widgets/update_account_button.dart';
 import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -175,6 +177,16 @@ class AcconutSettingViewBody extends StatelessWidget {
                     SizedBox(
                       height: size.height * 0.04,
                     ),
+                    DeleteAccountButton(onPressed: () {
+                      showDeleteAccountDialog(context, () {
+                        UserCubit.get(context).deleteAccount().then((value) {
+                          navigateAndFinish(context, const EntranceView());
+                        });
+                      }, theme);
+                    }),
+                    SizedBox(
+                      height: size.height * 0.04,
+                    ),
                   ],
                 ),
               ),
@@ -182,6 +194,46 @@ class AcconutSettingViewBody extends StatelessWidget {
           );
         }
       }),
+    );
+  }
+
+  void showDeleteAccountDialog(
+      BuildContext context, void Function() onPressed, TextTheme theme) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text(
+            'Delete Account',
+            style: theme.titleLarge,
+          ),
+          content: Text(
+            'Are you sure you want to delete this account?',
+            style: theme.titleSmall,
+          ),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: Text(
+                'Cancel',
+                style: theme.titleSmall,
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                onPressed();
+                Navigator.of(context).pop();
+              },
+              child: Text(
+                'Delete',
+                style: theme.titleLarge,
+              ),
+            ),
+          ],
+        );
+      },
     );
   }
 }

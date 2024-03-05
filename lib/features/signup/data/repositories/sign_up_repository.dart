@@ -7,6 +7,7 @@ abstract class SignUpRepository {
       String firstName,
       String lastName,
       String email,
+      String recoveryEmail,
       String password,
       String dob,
       String bio,

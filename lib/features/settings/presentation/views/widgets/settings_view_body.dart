@@ -1,10 +1,12 @@
 import 'package:career_craft/core/colors.dart';
 import 'package:career_craft/core/utils/components.dart';
+import 'package:career_craft/core/utils/functions/logout.dart';
 import 'package:career_craft/features/settings/categories/account_settings/presentation/views/acccount_settings_view.dart';
 import 'package:career_craft/features/settings/presentation/views/widgets/profile_navigator.dart';
 import 'package:career_craft/features/settings/presentation/views/widgets/settings_item.dart';
 import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../../categories/change_password/presentation/views/change_password_view.dart';
 
@@ -83,8 +85,13 @@ class SettingsViewBody extends StatelessWidget {
             SizedBox(
               height: size.height * 0.035,
             ),
-            settingsItem(
-                size, theme, "assets/images/Logout.svg", S.of(context).logout),
+            GestureDetector(
+              onTap: () {
+                logout(context);
+              },
+              child: settingsItem(size, theme, "assets/images/Logout.svg",
+                  S.of(context).logout),
+            ),
             SizedBox(
               height: size.height * 0.06,
             ),

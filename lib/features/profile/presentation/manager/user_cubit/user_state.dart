@@ -45,3 +45,15 @@ class SelectValueState extends UserState {}
 class SelectDateState extends UserState {}
 
 class ChangePasswordVisibilityState extends UserState {}
+
+class DeleteUserLoading extends UserState {}
+
+class DeleteUserLoaded extends UserState {
+  final String message;
+  DeleteUserLoaded({required this.message});
+}
+
+class DeleteUserError extends UserState {
+  final String message;
+  DeleteUserError({required this.message});
+}

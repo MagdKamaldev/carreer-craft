@@ -56,5 +56,6 @@
     "updateAccount": "Update Account",
     "changePassword": "Change Password",
     "currentPassword": "Current Password",
-    "newPassword": "New Password"
+    "newPassword": "New Password",
+    "deleteAccount" : "Delete Account"
 }
