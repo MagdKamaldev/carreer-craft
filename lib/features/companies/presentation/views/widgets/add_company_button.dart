@@ -20,7 +20,7 @@ class AddCompanyButton extends StatelessWidget {
           showErrorSnackbar(
               context: context,
               title: "success",
-              body: "your Company has been Deleted successfully !",
+              body: "your Company has been Created successfully !",
               icon: "assets/images/true.svg");
         } else if (state is CreateCompanyError) {
           showErrorSnackbar(

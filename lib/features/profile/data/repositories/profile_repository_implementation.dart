@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:career_craft/core/constants.dart';
 import 'package:career_craft/core/errors/failures.dart';
 import 'package:career_craft/core/models/user_model.dart';
@@ -5,6 +7,7 @@ import 'package:career_craft/core/utils/api_services.dart';
 import 'package:career_craft/core/utils/end_points.dart';
 import 'package:career_craft/features/profile/data/repositories/profile_repository.dart';
 import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
 
 class ProfileRepositoryImplementation implements ProfileRepository {
   final ApiServices apiServices;
@@ -19,7 +22,10 @@ class ProfileRepositoryImplementation implements ProfileRepository {
       );
       UserModel user = UserModel.fromJson(response["user"]);
       return Right(user);
-    } on Exception catch (e) {
+    }on DioError catch (error) {
+      return Left(ServerFailure.fromDioError(error));
+    }
+     on Exception catch (e) {
       return Left(ServerFailure(e.toString()));
     }
   }
@@ -50,7 +56,10 @@ class ProfileRepositoryImplementation implements ProfileRepository {
       );
       UserModel user = UserModel.fromJson(response["user"]);
       return Right(user);
-    } catch (e) {
+    }on DioError catch (error) {
+      return Left(ServerFailure.fromDioError(error));
+    } 
+    catch (e) {
       return Left(ServerFailure(e.toString()));
     }
   }
@@ -74,7 +83,10 @@ class ProfileRepositoryImplementation implements ProfileRepository {
       token = response["token"];
       kTokenBox.put(kTokenBoxString, token);
       return Right(user);
-    } catch (e) {
+    }on DioError catch (error) {
+      return Left(ServerFailure.fromDioError(error));
+    } 
+    catch (e) {
       return Left(ServerFailure(e.toString()));
     }
   }
@@ -87,7 +99,10 @@ class ProfileRepositoryImplementation implements ProfileRepository {
         jwt: token,
       );
       return const Right("User Deleted Successfuly");
-    } on Exception catch (e) {
+    }on DioError catch (error) {
+      return Left(ServerFailure.fromDioError(error));
+    }
+     on Exception catch (e) {
       return Left(ServerFailure(e.toString()));
     }
   }
