@@ -1,9 +1,11 @@
 import 'package:career_craft/core/colors.dart';
 import 'package:career_craft/core/utils/themes.dart';
+import 'package:career_craft/features/companies/data/models/company_model/company_model.dart';
 import 'package:flutter/material.dart';
 
 class CompanyItem extends StatelessWidget {
-  const CompanyItem({super.key});
+  final CompanyModel company;
+  const CompanyItem({super.key, required this.company});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +31,7 @@ class CompanyItem extends StatelessWidget {
                     width: size.width * 0.1,
                   ),
                   Text(
-                    "ABC inc",
+                    company.companyName!,
                     style: theme.textTheme.titleLarge,
                   ),
                 ],

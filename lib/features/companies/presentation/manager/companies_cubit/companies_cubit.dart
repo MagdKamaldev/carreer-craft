@@ -34,4 +34,13 @@ class CompaniesCubit extends Cubit<CompaniesState> {
       (company) => emit(CreateCompanyLoaded(company: company)),
     );
   }
+
+  Future<void> getAllCompanies()async{
+    emit(GetAllCompaniesLoading());
+    final response = await companiesRepositoryImplementation.getAllCompanies();
+    response.fold(
+      (failure) => emit(GetAllCompaniesError(message: failure.message.toString())),
+      (companies) => emit(GetAllCompaniesLoaded(companies: companies)),
+    );
+  }
 }

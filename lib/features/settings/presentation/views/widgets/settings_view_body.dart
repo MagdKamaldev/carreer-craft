@@ -6,7 +6,6 @@ import 'package:career_craft/features/settings/presentation/views/widgets/profil
 import 'package:career_craft/features/settings/presentation/views/widgets/settings_item.dart';
 import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../../categories/change_password/presentation/views/change_password_view.dart';
 

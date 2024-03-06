@@ -12,6 +12,10 @@ abstract class CompaniesRepository {
     required int maxNumberOfEmployees,
     required String companyEmail,
   });
+  
+
+  Future<Either<Failure,List<CompanyModel>>> getAllCompanies();
+
 
   Future<Either<Failure, CompanyModel>> getCompanyByName();
 

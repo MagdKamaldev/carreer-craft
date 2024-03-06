@@ -16,4 +16,15 @@ class CreateCompanyError extends CompaniesState {
   CreateCompanyError({required this.message});
 }
 
+class GetAllCompaniesLoading extends CompaniesState {}
+
+class GetAllCompaniesLoaded extends CompaniesState {
+  final List<CompanyModel> companies;
+  GetAllCompaniesLoaded({required this.companies});
+}
+
+class GetAllCompaniesError extends CompaniesState {
+  final String message;
+  GetAllCompaniesError({required this.message});
+}
 
