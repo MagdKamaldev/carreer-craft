@@ -17,7 +17,7 @@ abstract class CompaniesRepository {
   Future<Either<Failure,List<CompanyModel>>> getAllCompanies();
 
 
-  Future<Either<Failure, CompanyModel>> getCompanyByName();
+  Future<Either<Failure, CompanyModel>> getCompanyByName(String name);
 
   Future<Either<Failure, CompanyModel>> updateCompany({
     required String companyName,

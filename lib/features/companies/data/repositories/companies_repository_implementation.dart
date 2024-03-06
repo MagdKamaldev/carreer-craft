@@ -92,14 +92,14 @@ class CompaniesRepositoryImplementation implements CompaniesRepository {
   @override
   Future<Either<Failure, List<CompanyModel>>> getAllCompanies() async {
     try {
-    final response = await apiServices.get(
-      endPoint: Endpoints.company,
-    );
-    List<CompanyModel> companies = [];
-    for (var company in response["companies"]) {
-      companies.add(CompanyModel.fromJson(company));
-    }
-    return Right(companies);
+      final response = await apiServices.get(
+        endPoint: Endpoints.company,
+      );
+      List<CompanyModel> companies = [];
+      for (var company in response["companies"]) {
+        companies.add(CompanyModel.fromJson(company));
+      }
+      return Right(companies);
     } on DioError catch (error) {
       return Left(ServerFailure.fromDioError(error));
     } on Exception catch (e) {
@@ -108,7 +108,16 @@ class CompaniesRepositoryImplementation implements CompaniesRepository {
   }
 
   @override
-  Future<Either<Failure, CompanyModel>> getCompanyByName() {
-    throw UnimplementedError();
+  Future<Either<Failure, CompanyModel>> getCompanyByName(String name) async {
+    try {
+      final response = await apiServices.get(
+        endPoint: "${Endpoints.company}?name=$name",
+      );
+      return Right(CompanyModel.fromJson(response["companies"][0]));
+    } on DioError catch (error) {
+      return Left(ServerFailure.fromDioError(error));
+    } on Exception catch (e) {
+      return Left(ServerFailure(e.toString()));
+    }
   }
 }

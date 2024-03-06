@@ -28,3 +28,15 @@ class GetAllCompaniesError extends CompaniesState {
   GetAllCompaniesError({required this.message});
 }
 
+class GetCompanyByNameLoading extends CompaniesState {}
+
+class GetCompanyByNameLoaded extends CompaniesState {
+  final CompanyModel company;
+  GetCompanyByNameLoaded({required this.company});
+}
+
+class GetCompanyByNameError extends CompaniesState {
+  final String message;
+  GetCompanyByNameError({required this.message});
+}
+

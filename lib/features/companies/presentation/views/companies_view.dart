@@ -1,6 +1,8 @@
+import 'package:career_craft/core/utils/components.dart';
 import 'package:career_craft/core/utils/service_locator.dart';
 import 'package:career_craft/features/companies/data/repositories/companies_repository_implementation.dart';
 import 'package:career_craft/features/companies/presentation/manager/companies_cubit/companies_cubit.dart';
+import 'package:career_craft/features/companies/presentation/views/comany_details_view.dart';
 import 'package:career_craft/features/companies/presentation/views/widgets/company_item.dart';
 import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -47,8 +49,13 @@ class CompaniesView extends StatelessWidget {
                         return SizedBox(height: size.height * 0.02);
                       },
                       itemBuilder: (BuildContext context, int index) {
-                        return CompanyItem(
-                          company: state.companies[index],
+                        return GestureDetector(
+                          onTap: () {
+                            navigateTo(context, CompanyDetailsView(name: state.companies[index].companyName!,));
+                          },
+                          child: CompanyItem(
+                            company: state.companies[index],
+                          ),
                         );
                       },
                     ),
