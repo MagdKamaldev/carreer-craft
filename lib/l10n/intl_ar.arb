@@ -63,6 +63,8 @@
     "companyDescription" : "وصف الشركة",
     "industry" : "الصناعة",
     "adress" : "العنوان",
+    "employees":"عدد الموظفين",
+    "viewJobs":"عرض الوظائف",
     "minimumEmployees":"الحد الأدنى للموظفين",
     "maximumEmployees":"الحد الأقصى للموظفين"
 }

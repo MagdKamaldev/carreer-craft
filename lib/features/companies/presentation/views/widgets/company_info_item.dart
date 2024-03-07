@@ -2,8 +2,8 @@ import 'package:career_craft/core/colors.dart';
 import 'package:flutter/material.dart';
 
 class CompanyInfoItem extends StatelessWidget {
-  final String label;
   final String value;
+  final String title;
   final Color labelColor;
   final Color valueColor;
   final Size size;
@@ -11,8 +11,8 @@ class CompanyInfoItem extends StatelessWidget {
 
   const CompanyInfoItem({
     super.key,
-    required this.label,
     required this.value,
+    required this.title,
     required this.labelColor,
     required this.valueColor,
     required this.size,
@@ -40,17 +40,18 @@ class CompanyInfoItem extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(label,
-                    style: theme.titleMedium!.copyWith(
-                      color: secondary[600],
-                    )),
-                SizedBox(
-                  height: size.height * 0.02,
+                Text(
+                  title,
+                  style: theme.bodyLarge!.copyWith(
+                    fontWeight: FontWeight.bold,
+                    color: labelColor,
+                  ),
                 ),
                 Text(
                   value,
                   style: theme.bodyLarge!.copyWith(
                     fontWeight: FontWeight.bold,
+                    color: valueColor,
                   ),
                 ),
               ],

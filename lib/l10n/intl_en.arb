@@ -65,6 +65,8 @@
     "companyDescription" : "Company Description",
     "industry" : "Industry",
     "adress" : "Address",
+    "employees" :"Employees",
+    "viewJobs":"View Jobs",
     "minimumEmployees":"Min Employees",
     "maximumEmployees":"Max Employees"
 }

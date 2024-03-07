@@ -57,6 +57,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("كلمة المرور الحالية"),
         "deleteAccount": MessageLookupByLibrary.simpleMessage("حذف الحساب"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "employees": MessageLookupByLibrary.simpleMessage("عدد الموظفين"),
         "enterCode": MessageLookupByLibrary.simpleMessage(
             "الرجاء إدخال الرمز المرسل إلى بريدك الإلكتروني!"),
         "enterLogin": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
@@ -110,6 +111,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateAccount": MessageLookupByLibrary.simpleMessage("تحديث الحساب"),
         "validationFailed":
             MessageLookupByLibrary.simpleMessage("خطأ في التحقق"),
+        "viewJobs": MessageLookupByLibrary.simpleMessage("عرض الوظائف"),
         "weWillSend": MessageLookupByLibrary.simpleMessage(
             "سنقوم بإرسال رمز لمساعدتنا في الحفاظ على أمان حسابك."),
         "welcomeText": MessageLookupByLibrary.simpleMessage("عودا حميدا !"),

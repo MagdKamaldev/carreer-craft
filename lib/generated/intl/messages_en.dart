@@ -58,6 +58,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Current Password"),
         "deleteAccount": MessageLookupByLibrary.simpleMessage("Delete Account"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "employees": MessageLookupByLibrary.simpleMessage("Employees"),
         "emptyValidation":
             MessageLookupByLibrary.simpleMessage("field must not be empty"),
         "enterCode": MessageLookupByLibrary.simpleMessage(
@@ -111,6 +112,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateAccount": MessageLookupByLibrary.simpleMessage("Update Account"),
         "validationFailed":
             MessageLookupByLibrary.simpleMessage("Validation Error"),
+        "viewJobs": MessageLookupByLibrary.simpleMessage("View Jobs"),
         "weWillSend": MessageLookupByLibrary.simpleMessage(
             "We will send you a code, it help us keep your account secure."),
         "welcomeText": MessageLookupByLibrary.simpleMessage("Welcome Back !"),

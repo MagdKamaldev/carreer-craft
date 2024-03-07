@@ -710,6 +710,26 @@ class S {
     );
   }
 
+  /// `Employees`
+  String get employees {
+    return Intl.message(
+      'Employees',
+      name: 'employees',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `View Jobs`
+  String get viewJobs {
+    return Intl.message(
+      'View Jobs',
+      name: 'viewJobs',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Min Employees`
   String get minimumEmployees {
     return Intl.message(
