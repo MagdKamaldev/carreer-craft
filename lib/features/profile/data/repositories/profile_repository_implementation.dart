@@ -21,11 +21,12 @@ class ProfileRepositoryImplementation implements ProfileRepository {
         jwt: token,
       );
       UserModel user = UserModel.fromJson(response["user"]);
+      //make the id in hive value this user id
+      kIdBox.put(kIdBoxString, response["user"]["_id"]);
       return Right(user);
-    }on DioError catch (error) {
+    } on DioError catch (error) {
       return Left(ServerFailure.fromDioError(error));
-    }
-     on Exception catch (e) {
+    } on Exception catch (e) {
       return Left(ServerFailure(e.toString()));
     }
   }
@@ -56,10 +57,9 @@ class ProfileRepositoryImplementation implements ProfileRepository {
       );
       UserModel user = UserModel.fromJson(response["user"]);
       return Right(user);
-    }on DioError catch (error) {
+    } on DioError catch (error) {
       return Left(ServerFailure.fromDioError(error));
-    } 
-    catch (e) {
+    } catch (e) {
       return Left(ServerFailure(e.toString()));
     }
   }
@@ -83,10 +83,9 @@ class ProfileRepositoryImplementation implements ProfileRepository {
       token = response["token"];
       kTokenBox.put(kTokenBoxString, token);
       return Right(user);
-    }on DioError catch (error) {
+    } on DioError catch (error) {
       return Left(ServerFailure.fromDioError(error));
-    } 
-    catch (e) {
+    } catch (e) {
       return Left(ServerFailure(e.toString()));
     }
   }
@@ -99,10 +98,9 @@ class ProfileRepositoryImplementation implements ProfileRepository {
         jwt: token,
       );
       return const Right("User Deleted Successfuly");
-    }on DioError catch (error) {
+    } on DioError catch (error) {
       return Left(ServerFailure.fromDioError(error));
-    }
-     on Exception catch (e) {
+    } on Exception catch (e) {
       return Left(ServerFailure(e.toString()));
     }
   }

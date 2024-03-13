@@ -6,29 +6,31 @@ import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class AddCompanyButton extends StatelessWidget {
+class UpdateCompanyButton extends StatelessWidget {
   final void Function() onPressed;
-  const AddCompanyButton({super.key, required this.onPressed});
+  const UpdateCompanyButton({super.key, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return BlocConsumer<CompaniesCubit, CompaniesState>(
       listener: (context, state) {
-        if (state is CreateCompanyLoaded) {
+        if (state is UpdateCompanyLoaded) {
+          Navigator.pop(context);
+          Navigator.pop(context);
           Navigator.pop(context);
           showErrorSnackbar(
               context: context,
               title: "success",
-              body: "your Company has been Created successfully !",
+              body: "your Company has been Updated successfully !",
               icon: "assets/images/true.svg");
-        } else if (state is CreateCompanyError) {
+        } else if (state is UpdateCompanyError) {
           showErrorSnackbar(
-              context: context, title: "Creation Error", body: state.message);
+              context: context, title: "Delete Error", body: state.message);
         }
       },
       builder: (context, state) {
-        if (state is CreateCompanyLoading) {
+        if (state is UpdateCompanyLoading) {
           return const Center(
             child: CircularProgressIndicator(
               backgroundColor: secondary,
@@ -38,7 +40,7 @@ class AddCompanyButton extends StatelessWidget {
           return defaultButton(
             function: onPressed,
             context: context,
-            text: S.of(context).addCompany,
+            text: S.of(context).editCompany,
             height: size.height * 0.06,
           );
         }

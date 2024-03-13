@@ -30,9 +30,22 @@ class CompanyItem extends StatelessWidget {
                   SizedBox(
                     width: size.width * 0.1,
                   ),
-                  Text(
-                    company.companyName!,
-                    style: theme.textTheme.titleLarge,
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        company.companyName!,
+                        style: theme.textTheme.titleLarge,
+                      ),
+                      Text(
+                        (company.address != null &&
+                                company.address!.length > 20)
+                            ? "${company.address!.substring(0, 20)}.."
+                            : company.address!,
+                        style: theme.textTheme.bodyLarge!
+                            .copyWith(color: primary[700]),
+                      ),
+                    ],
                   ),
                 ],
               ),

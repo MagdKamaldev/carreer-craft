@@ -66,5 +66,6 @@
     "employees":"عدد الموظفين",
     "viewJobs":"عرض الوظائف",
     "minimumEmployees":"الحد الأدنى للموظفين",
-    "maximumEmployees":"الحد الأقصى للموظفين"
+    "maximumEmployees":"الحد الأقصى للموظفين",
+    "editCompany":"تعديل الشركة"
 }

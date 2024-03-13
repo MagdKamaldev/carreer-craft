@@ -40,3 +40,27 @@ class GetCompanyByNameError extends CompaniesState {
   GetCompanyByNameError({required this.message});
 }
 
+class UpdateCompanyLoading extends CompaniesState {}
+
+class UpdateCompanyLoaded extends CompaniesState {
+  final CompanyModel company;
+  UpdateCompanyLoaded({required this.company});
+}
+
+class UpdateCompanyError extends CompaniesState {
+  final String message;
+  UpdateCompanyError({required this.message});
+}
+
+class DeleteCompanyLoading extends CompaniesState {}
+
+class DeleteCompanyLoaded extends CompaniesState {
+  final String message;
+  DeleteCompanyLoaded({required this.message});
+}
+
+class DeleteCompanyError extends CompaniesState {
+  final String message;
+  DeleteCompanyError({required this.message});
+}
+

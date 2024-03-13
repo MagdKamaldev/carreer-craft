@@ -24,6 +24,7 @@ class LoginRepositoryImplementation implements LoginRepository {
         },
       );
       token = response["token"];
+      kIdBox.put(kIdBoxString, response["user"]["_id"]);
       kTokenBox.put(kTokenBoxString, token);
       return Right(UserModel.fromJson(response["user"]));
     } catch (e) {

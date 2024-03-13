@@ -749,6 +749,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Edit Company`
+  String get editCompany {
+    return Intl.message(
+      'Edit Company',
+      name: 'editCompany',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

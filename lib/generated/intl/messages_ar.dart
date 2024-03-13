@@ -56,6 +56,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "currentPassword":
             MessageLookupByLibrary.simpleMessage("كلمة المرور الحالية"),
         "deleteAccount": MessageLookupByLibrary.simpleMessage("حذف الحساب"),
+        "editCompany": MessageLookupByLibrary.simpleMessage("تعديل الشركة"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "employees": MessageLookupByLibrary.simpleMessage("عدد الموظفين"),
         "enterCode": MessageLookupByLibrary.simpleMessage(

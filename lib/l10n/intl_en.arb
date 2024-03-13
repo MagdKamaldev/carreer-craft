@@ -68,5 +68,6 @@
     "employees" :"Employees",
     "viewJobs":"View Jobs",
     "minimumEmployees":"Min Employees",
-    "maximumEmployees":"Max Employees"
+    "maximumEmployees":"Max Employees",
+    "editCompany":"Edit Company"
 }
