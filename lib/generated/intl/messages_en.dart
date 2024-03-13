@@ -27,6 +27,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "accountSettings":
             MessageLookupByLibrary.simpleMessage("Account Settings"),
         "addCompany": MessageLookupByLibrary.simpleMessage("Add Company"),
+        "addJob": MessageLookupByLibrary.simpleMessage("Add Job"),
         "adress": MessageLookupByLibrary.simpleMessage("Address"),
         "appName": MessageLookupByLibrary.simpleMessage("Career Craft"),
         "areYouSure":
@@ -53,10 +54,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Contact Support"),
         "createAccount":
             MessageLookupByLibrary.simpleMessage("Create an account"),
+        "createJob": MessageLookupByLibrary.simpleMessage("Create Job"),
         "creatingAcc": MessageLookupByLibrary.simpleMessage(
             "By creating an account, you accept our "),
         "creatingCompany": MessageLookupByLibrary.simpleMessage(
             "By creating a Company, you accept our "),
+        "creatingJob": MessageLookupByLibrary.simpleMessage(
+            "By creating a Job, you accept our "),
+        "cto": MessageLookupByLibrary.simpleMessage("CTO"),
         "currentPassword":
             MessageLookupByLibrary.simpleMessage("Current Password"),
         "deleteAccount": MessageLookupByLibrary.simpleMessage("Delete Account"),
@@ -76,9 +81,16 @@ class MessageLookup extends MessageLookupByLibrary {
             "Please enter your email address !"),
         "forgotPasswordq":
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
+        "fullTime": MessageLookupByLibrary.simpleMessage("Full-Time"),
         "hirePlan": MessageLookupByLibrary.simpleMessage("planning To hire ?"),
+        "hybrid": MessageLookupByLibrary.simpleMessage("Hybrid"),
         "industry": MessageLookupByLibrary.simpleMessage("Industry"),
+        "jobDescription":
+            MessageLookupByLibrary.simpleMessage("Job Description"),
+        "jobLocation": MessageLookupByLibrary.simpleMessage("Job Location"),
+        "jobTitle": MessageLookupByLibrary.simpleMessage("Job Title"),
         "jobs": MessageLookupByLibrary.simpleMessage("Jobs"),
+        "junior": MessageLookupByLibrary.simpleMessage("Junior"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "lastName": MessageLookupByLibrary.simpleMessage("Last Name"),
         "login": MessageLookupByLibrary.simpleMessage("login"),
@@ -86,6 +98,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "maximumEmployees":
             MessageLookupByLibrary.simpleMessage("Max Employees"),
         "maybe": MessageLookupByLibrary.simpleMessage("Maybe"),
+        "midLevel": MessageLookupByLibrary.simpleMessage("Mid-Level"),
         "minimumEmployees":
             MessageLookupByLibrary.simpleMessage("Min Employees"),
         "newPassword": MessageLookupByLibrary.simpleMessage("New Password"),
@@ -99,6 +112,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Your career\'s next step isn\'t that far."),
         "onBoardingText3": MessageLookupByLibrary.simpleMessage(
             "Join a big community of employees and employers."),
+        "onsite": MessageLookupByLibrary.simpleMessage("Onsite"),
+        "partTime": MessageLookupByLibrary.simpleMessage("Part-Time"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordChanged": MessageLookupByLibrary.simpleMessage(
             "Password Changed Successfully !"),
@@ -106,13 +121,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "preferences": MessageLookupByLibrary.simpleMessage("Preferences"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "recoveryEmail": MessageLookupByLibrary.simpleMessage("Recovery Email"),
+        "remotely": MessageLookupByLibrary.simpleMessage("Remotely"),
         "resetCode": MessageLookupByLibrary.simpleMessage("Reset Code"),
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
         "resources": MessageLookupByLibrary.simpleMessage("Resources"),
         "sendCode": MessageLookupByLibrary.simpleMessage("Send Code"),
+        "senior": MessageLookupByLibrary.simpleMessage("Senior"),
+        "seniorityLevel":
+            MessageLookupByLibrary.simpleMessage("Seniority Level"),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),
         "slogan": MessageLookupByLibrary.simpleMessage("Your Career Compass !"),
+        "softSkills": MessageLookupByLibrary.simpleMessage("Soft Skills"),
         "success": MessageLookupByLibrary.simpleMessage("Success"),
+        "teamLead": MessageLookupByLibrary.simpleMessage("Team-Lead"),
+        "technicalSkills":
+            MessageLookupByLibrary.simpleMessage("Technical Skills"),
         "terms": MessageLookupByLibrary.simpleMessage("Terms and Conditions"),
         "updateAccount": MessageLookupByLibrary.simpleMessage("Update Account"),
         "validationFailed":
@@ -121,6 +144,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "weWillSend": MessageLookupByLibrary.simpleMessage(
             "We will send you a code, it help us keep your account secure."),
         "welcomeText": MessageLookupByLibrary.simpleMessage("Welcome Back !"),
+        "workingTime": MessageLookupByLibrary.simpleMessage("Working Time"),
         "yes": MessageLookupByLibrary.simpleMessage("Yes")
       };
 }

@@ -5,6 +5,7 @@ import 'package:career_craft/features/home/presentation/manager/home_cubit/home_
 import 'package:career_craft/features/home/presentation/views/widgets/home_app_bar.dart';
 import 'package:career_craft/features/home/presentation/views/widgets/home_bottom_nav.dart';
 import 'package:career_craft/features/home/presentation/views/widgets/home_drawer.dart';
+import 'package:career_craft/features/jobs/presentaion/views/add_job_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -24,10 +25,15 @@ class HomeView extends StatelessWidget {
           body: HomeCubit.get(context)
               .screens[HomeCubit.get(context).screensIndex],
           bottomNavigationBar: homeBottomNav(context),
-          floatingActionButton: (HomeCubit.get(context).screensIndex == 1)
+          floatingActionButton: (HomeCubit.get(context).screensIndex == 0 ||
+                  HomeCubit.get(context).screensIndex == 1)
               ? FloatingActionButton(
                   onPressed: () {
-                    navigateTo(context, const AddCompanyView());
+                    if (HomeCubit.get(context).screensIndex == 0) {
+                      navigateTo(context, const AddJobView());
+                    } else if (HomeCubit.get(context).screensIndex == 1) {
+                      navigateTo(context, const AddCompanyView());
+                    }
                   },
                   backgroundColor: primary[500],
                   child: Icon(

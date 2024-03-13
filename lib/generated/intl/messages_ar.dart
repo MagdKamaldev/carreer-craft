@@ -27,6 +27,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "accountSettings":
             MessageLookupByLibrary.simpleMessage("اعدادت الحساب"),
         "addCompany": MessageLookupByLibrary.simpleMessage("إضافة شركة"),
+        "addJob": MessageLookupByLibrary.simpleMessage("إضافة وظيفة"),
         "adress": MessageLookupByLibrary.simpleMessage("العنوان"),
         "appName": MessageLookupByLibrary.simpleMessage("كاريير كرافت"),
         "areYouSure":
@@ -52,10 +53,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "contactSupport":
             MessageLookupByLibrary.simpleMessage("الاتصال بالدعم"),
         "createAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
+        "createJob": MessageLookupByLibrary.simpleMessage("إنشاء وظيفة"),
         "creatingAcc":
             MessageLookupByLibrary.simpleMessage("بإنشاء حساب، أنت توافق على "),
         "creatingCompany": MessageLookupByLibrary.simpleMessage(
             "بإنشاء حساب الشركة، أنت توافق على"),
+        "creatingJob": MessageLookupByLibrary.simpleMessage(
+            "بإنشاء الوظيفة، أنت توافق على"),
+        "cto": MessageLookupByLibrary.simpleMessage("مدير التكنولوجيا"),
         "currentPassword":
             MessageLookupByLibrary.simpleMessage("كلمة المرور الحالية"),
         "deleteAccount": MessageLookupByLibrary.simpleMessage("حذف الحساب"),
@@ -73,9 +78,15 @@ class MessageLookup extends MessageLookupByLibrary {
             "الرجاء إدخال عنوان بريدك الإلكتروني!"),
         "forgotPasswordq":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+        "fullTime": MessageLookupByLibrary.simpleMessage("دوام كامل"),
         "hirePlan": MessageLookupByLibrary.simpleMessage("هل تخطط للتوظيف؟"),
+        "hybrid": MessageLookupByLibrary.simpleMessage("هجين"),
         "industry": MessageLookupByLibrary.simpleMessage("الصناعة"),
+        "jobDescription": MessageLookupByLibrary.simpleMessage("وصف الوظيفة"),
+        "jobLocation": MessageLookupByLibrary.simpleMessage("موقع العمل"),
+        "jobTitle": MessageLookupByLibrary.simpleMessage("عنوان الوظيفة"),
         "jobs": MessageLookupByLibrary.simpleMessage("وظائف"),
+        "junior": MessageLookupByLibrary.simpleMessage("مبتدئ"),
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "lastName": MessageLookupByLibrary.simpleMessage("الاسم الأخير"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
@@ -83,6 +94,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "maximumEmployees":
             MessageLookupByLibrary.simpleMessage("الحد الأقصى للموظفين"),
         "maybe": MessageLookupByLibrary.simpleMessage("ربما"),
+        "midLevel": MessageLookupByLibrary.simpleMessage("متوسط المستوى"),
         "minimumEmployees":
             MessageLookupByLibrary.simpleMessage("الحد الأدنى للموظفين"),
         "newPassword":
@@ -97,6 +109,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "الخطوة التالية في مسارك المهني ليست بعيدة."),
         "onBoardingText3": MessageLookupByLibrary.simpleMessage(
             "انضم إلى مجتمع كبير من الموظفين وأصحاب العمل."),
+        "onsite": MessageLookupByLibrary.simpleMessage("في الموقع"),
+        "partTime": MessageLookupByLibrary.simpleMessage("دوام جزئي"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "passwordChanged": MessageLookupByLibrary.simpleMessage(
             "تم تغيير كلمة المرور بنجاح !"),
@@ -105,13 +119,20 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
         "recoveryEmail":
             MessageLookupByLibrary.simpleMessage("البريد الإلكتروني للإسترداد"),
+        "remotely": MessageLookupByLibrary.simpleMessage("عن بعد"),
         "resetCode": MessageLookupByLibrary.simpleMessage("رمز التحقق"),
         "resetPassword":
             MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
         "sendCode": MessageLookupByLibrary.simpleMessage("إرسال الرمز"),
+        "senior": MessageLookupByLibrary.simpleMessage("كبار الخبراء"),
+        "seniorityLevel": MessageLookupByLibrary.simpleMessage("مستوى الخبرة"),
         "settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),
         "slogan": MessageLookupByLibrary.simpleMessage("بوصلتك المهنية !"),
+        "softSkills": MessageLookupByLibrary.simpleMessage("المهارات الشخصية"),
         "success": MessageLookupByLibrary.simpleMessage("نجاح"),
+        "teamLead": MessageLookupByLibrary.simpleMessage("قائد الفريق"),
+        "technicalSkills":
+            MessageLookupByLibrary.simpleMessage("المهارات التقنية"),
         "terms": MessageLookupByLibrary.simpleMessage("الشروط والأحكام"),
         "updateAccount": MessageLookupByLibrary.simpleMessage("تحديث الحساب"),
         "validationFailed":
@@ -120,6 +141,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "weWillSend": MessageLookupByLibrary.simpleMessage(
             "سنقوم بإرسال رمز لمساعدتنا في الحفاظ على أمان حسابك."),
         "welcomeText": MessageLookupByLibrary.simpleMessage("عودا حميدا !"),
+        "workingTime": MessageLookupByLibrary.simpleMessage("وقت العمل"),
         "yes": MessageLookupByLibrary.simpleMessage("نعم")
       };
 }

@@ -2,62 +2,38 @@ class JobModel {
   String? jobTitle;
   String? jobLocation;
   String? workingTime;
-  String? seniortyLevel;
+  String? seniorityLevel;
   String? jobDescription;
-  List<String>? technicalSkills;
-  List<String>? softSkills;
-  String? addedBy;
-  String? id;
-  DateTime? createdAt;
-  DateTime? updatedAt;
-  int? v;
+  List<dynamic>? technicalSkills;
+  List<dynamic>? softSkills;
 
   JobModel({
     this.jobTitle,
     this.jobLocation,
     this.workingTime,
-    this.seniortyLevel,
+    this.seniorityLevel,
     this.jobDescription,
     this.technicalSkills,
     this.softSkills,
-    this.addedBy,
-    this.id,
-    this.createdAt,
-    this.updatedAt,
-    this.v,
   });
 
   factory JobModel.fromJson(Map<String, dynamic> json) => JobModel(
         jobTitle: json['jobTitle'] as String?,
         jobLocation: json['jobLocation'] as String?,
         workingTime: json['workingTime'] as String?,
-        seniortyLevel: json['seniortyLevel'] as String?,
+        seniorityLevel: json['seniorityLevel'] as String?,
         jobDescription: json['jobDescription'] as String?,
-        technicalSkills: json['technicalSkills'] as List<String>?,
-        softSkills: json['softSkills'] as List<String>?,
-        addedBy: json['addedBy'] as String?,
-        id: json['_id'] as String?,
-        createdAt: json['createdAt'] == null
-            ? null
-            : DateTime.parse(json['createdAt'] as String),
-        updatedAt: json['updatedAt'] == null
-            ? null
-            : DateTime.parse(json['updatedAt'] as String),
-        v: json['__v'] as int?,
+        technicalSkills: json['technicalSkills'] as List<dynamic>?,
+        softSkills: json['softSkills'] as List<dynamic>?,
       );
 
   Map<String, dynamic> toJson() => {
         'jobTitle': jobTitle,
         'jobLocation': jobLocation,
         'workingTime': workingTime,
-        'seniortyLevel': seniortyLevel,
+        'seniortyLevel': seniorityLevel,
         'jobDescription': jobDescription,
         'technicalSkills': technicalSkills,
         'softSkills': softSkills,
-        'addedBy': addedBy,
-        '_id': id,
-        'createdAt': createdAt?.toIso8601String(),
-        'updatedAt': updatedAt?.toIso8601String(),
-        '__v': v,
       };
 }

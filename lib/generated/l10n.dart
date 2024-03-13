@@ -789,6 +789,206 @@ class S {
       args: [],
     );
   }
+
+  /// `Add Job`
+  String get addJob {
+    return Intl.message(
+      'Add Job',
+      name: 'addJob',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Job Title`
+  String get jobTitle {
+    return Intl.message(
+      'Job Title',
+      name: 'jobTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Job Location`
+  String get jobLocation {
+    return Intl.message(
+      'Job Location',
+      name: 'jobLocation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Working Time`
+  String get workingTime {
+    return Intl.message(
+      'Working Time',
+      name: 'workingTime',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Seniority Level`
+  String get seniorityLevel {
+    return Intl.message(
+      'Seniority Level',
+      name: 'seniorityLevel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Job Description`
+  String get jobDescription {
+    return Intl.message(
+      'Job Description',
+      name: 'jobDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Technical Skills`
+  String get technicalSkills {
+    return Intl.message(
+      'Technical Skills',
+      name: 'technicalSkills',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Soft Skills`
+  String get softSkills {
+    return Intl.message(
+      'Soft Skills',
+      name: 'softSkills',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `By creating a Job, you accept our `
+  String get creatingJob {
+    return Intl.message(
+      'By creating a Job, you accept our ',
+      name: 'creatingJob',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Junior`
+  String get junior {
+    return Intl.message(
+      'Junior',
+      name: 'junior',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mid-Level`
+  String get midLevel {
+    return Intl.message(
+      'Mid-Level',
+      name: 'midLevel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Senior`
+  String get senior {
+    return Intl.message(
+      'Senior',
+      name: 'senior',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Team-Lead`
+  String get teamLead {
+    return Intl.message(
+      'Team-Lead',
+      name: 'teamLead',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `CTO`
+  String get cto {
+    return Intl.message(
+      'CTO',
+      name: 'cto',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Onsite`
+  String get onsite {
+    return Intl.message(
+      'Onsite',
+      name: 'onsite',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Remotely`
+  String get remotely {
+    return Intl.message(
+      'Remotely',
+      name: 'remotely',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hybrid`
+  String get hybrid {
+    return Intl.message(
+      'Hybrid',
+      name: 'hybrid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Full-Time`
+  String get fullTime {
+    return Intl.message(
+      'Full-Time',
+      name: 'fullTime',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Part-Time`
+  String get partTime {
+    return Intl.message(
+      'Part-Time',
+      name: 'partTime',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create Job`
+  String get createJob {
+    return Intl.message(
+      'Create Job',
+      name: 'createJob',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
