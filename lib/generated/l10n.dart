@@ -660,6 +660,16 @@ class S {
     );
   }
 
+  /// `Delete Company`
+  String get deleteCompany {
+    return Intl.message(
+      'Delete Company',
+      name: 'deleteCompany',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Company Name`
   String get companyName {
     return Intl.message(
@@ -755,6 +765,26 @@ class S {
     return Intl.message(
       'Edit Company',
       name: 'editCompany',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to`
+  String get areYouSure {
+    return Intl.message(
+      'Are you sure you want to',
+      name: 'areYouSure',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `cancel`
+  String get cancel {
+    return Intl.message(
+      'cancel',
+      name: 'cancel',
       desc: '',
       args: [],
     );

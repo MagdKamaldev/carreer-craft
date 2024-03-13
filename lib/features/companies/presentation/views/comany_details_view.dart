@@ -9,6 +9,7 @@ import 'package:career_craft/core/utils/app_bars.dart';
 import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../../../core/utils/alert.dart';
 
 class CompanyDetailsView extends StatelessWidget {
   final String name;
@@ -16,6 +17,7 @@ class CompanyDetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextTheme theme = Theme.of(context).textTheme;
     return BlocProvider(
       create: (context) =>
           CompaniesCubit(getIt<CompaniesRepositoryImplementation>())
@@ -46,6 +48,18 @@ class CompanyDetailsView extends StatelessWidget {
                               },
                               icon: const Icon(
                                 Icons.edit,
+                              )),
+                          IconButton(
+                              onPressed: () {
+                                showappDialog(context, () {
+                                  CompaniesCubit.get(context).deleteCompany();
+                                  Navigator.pop(context);
+                                }, S.of(context).deleteCompany,
+                                    S.of(context).deleteCompany, theme);
+                              },
+                              icon: const Icon(
+                                Icons.delete,
+                                color: Colors.red,
                               ))
                         ]
                       : []),

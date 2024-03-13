@@ -29,6 +29,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "addCompany": MessageLookupByLibrary.simpleMessage("Add Company"),
         "adress": MessageLookupByLibrary.simpleMessage("Address"),
         "appName": MessageLookupByLibrary.simpleMessage("Career Craft"),
+        "areYouSure":
+            MessageLookupByLibrary.simpleMessage("Are you sure you want to"),
+        "cancel": MessageLookupByLibrary.simpleMessage("cancel"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("Change Password"),
         "checkMail": MessageLookupByLibrary.simpleMessage("Check Your Mail"),
@@ -57,6 +60,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "currentPassword":
             MessageLookupByLibrary.simpleMessage("Current Password"),
         "deleteAccount": MessageLookupByLibrary.simpleMessage("Delete Account"),
+        "deleteCompany": MessageLookupByLibrary.simpleMessage("Delete Company"),
         "editCompany": MessageLookupByLibrary.simpleMessage("Edit Company"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "employees": MessageLookupByLibrary.simpleMessage("Employees"),

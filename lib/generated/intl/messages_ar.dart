@@ -29,6 +29,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "addCompany": MessageLookupByLibrary.simpleMessage("إضافة شركة"),
         "adress": MessageLookupByLibrary.simpleMessage("العنوان"),
         "appName": MessageLookupByLibrary.simpleMessage("كاريير كرافت"),
+        "areYouSure":
+            MessageLookupByLibrary.simpleMessage("هل انت متأكد انك تريد "),
+        "cancel": MessageLookupByLibrary.simpleMessage("الغاء"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
         "checkMail":
@@ -56,6 +59,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "currentPassword":
             MessageLookupByLibrary.simpleMessage("كلمة المرور الحالية"),
         "deleteAccount": MessageLookupByLibrary.simpleMessage("حذف الحساب"),
+        "deleteCompany": MessageLookupByLibrary.simpleMessage("حذف الشركة"),
         "editCompany": MessageLookupByLibrary.simpleMessage("تعديل الشركة"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "employees": MessageLookupByLibrary.simpleMessage("عدد الموظفين"),

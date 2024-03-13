@@ -60,6 +60,7 @@
     "newPassword": "New Password",
     "deleteAccount" : "Delete Account",
     "addCompany": "Add Company",
+    "deleteCompany": "Delete Company",
     "companyName" : "Company Name",
     "companyEmail" : "Company Email",
     "companyDescription" : "Company Description",
@@ -69,5 +70,7 @@
     "viewJobs":"View Jobs",
     "minimumEmployees":"Min Employees",
     "maximumEmployees":"Max Employees",
-    "editCompany":"Edit Company"
+    "editCompany":"Edit Company",
+    "areYouSure" : "Are you sure you want to",
+    "cancel" : "cancel"
 }

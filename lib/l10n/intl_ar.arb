@@ -58,6 +58,7 @@
     "newPassword": "كلمة المرور الجديدة",
     "deleteAccount" : "حذف الحساب",
     "addCompany": "إضافة شركة",
+    "deleteCompany": "حذف الشركة",
     "companyName" : "اسم الشركة",
     "companyEmail" : "البريد الإلكتروني للشركة",
     "companyDescription" : "وصف الشركة",
@@ -67,5 +68,7 @@
     "viewJobs":"عرض الوظائف",
     "minimumEmployees":"الحد الأدنى للموظفين",
     "maximumEmployees":"الحد الأقصى للموظفين",
-    "editCompany":"تعديل الشركة"
+    "editCompany":"تعديل الشركة",
+    "areYouSure": "هل انت متأكد انك تريد ",
+    "cancel" : "الغاء"
 }
