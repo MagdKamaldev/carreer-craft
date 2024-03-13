@@ -1,8 +1,8 @@
 import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
-void showappDialog(BuildContext context, VoidCallback onPressed,
-    String title, String item, TextTheme theme) {
+void showappDialog(BuildContext context, VoidCallback onPressed, String title,
+    String item, TextTheme theme) {
   showDialog(
     context: context,
     builder: (BuildContext context) {

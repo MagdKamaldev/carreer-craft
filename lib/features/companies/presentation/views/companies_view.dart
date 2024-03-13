@@ -51,7 +51,11 @@ class CompaniesView extends StatelessWidget {
                       itemBuilder: (BuildContext context, int index) {
                         return GestureDetector(
                           onTap: () {
-                            navigateTo(context, CompanyDetailsView(name: state.companies[index].companyName!,));
+                            navigateTo(
+                                context,
+                                CompanyDetailsView(
+                                  name: state.companies[index].companyName!,
+                                ));
                           },
                           child: CompanyItem(
                             company: state.companies[index],

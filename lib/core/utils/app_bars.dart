@@ -13,7 +13,8 @@ PreferredSizeWidget settingsAppBar(BuildContext context, String title) {
   );
 }
 
-PreferredSizeWidget companyAppBar(BuildContext context, String title,List<Widget> ? actions ) {
+PreferredSizeWidget companyAppBar(
+    BuildContext context, String title, List<Widget>? actions) {
   return AppBar(
     backgroundColor: Colors.transparent,
     elevation: 0,

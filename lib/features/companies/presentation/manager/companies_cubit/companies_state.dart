@@ -63,4 +63,3 @@ class DeleteCompanyError extends CompaniesState {
   final String message;
   DeleteCompanyError({required this.message});
 }
-

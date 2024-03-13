@@ -7,4 +7,5 @@ class Endpoints {
   static const String users = "/users";
   static const String company = "/company";
   static const String changePassword = "/users/changePassword";
+  static const String jobs = "/jobs";
 }

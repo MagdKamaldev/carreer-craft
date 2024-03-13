@@ -3,14 +3,13 @@ import 'package:flutter/material.dart';
 import '../../../../../core/colors.dart';
 
 Widget editCompanyItem(
-        Size size, TextTheme theme,String title,void Function() onPressed) =>
+        Size size, TextTheme theme, String title, void Function() onPressed) =>
     GestureDetector(
       onTap: onPressed,
       child: Column(
         children: [
           Row(
             children: [
-            
               Text(
                 title,
                 style: theme.bodyLarge,
