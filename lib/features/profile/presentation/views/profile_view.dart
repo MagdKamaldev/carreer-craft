@@ -51,6 +51,16 @@ class ProfileView extends StatelessWidget {
                   SizedBox(
                     height: size.height * 0.03,
                   ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    child: Text(
+                      state.user.mobileNumber!,
+                      style: Theme.of(context).textTheme.titleMedium,
+                    ),
+                  ),
+                  SizedBox(
+                    height: size.height * 0.03,
+                  ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
