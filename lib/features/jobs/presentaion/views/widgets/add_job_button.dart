@@ -17,12 +17,10 @@ class AddJobButton extends StatelessWidget {
       listener: (context, state) {
         if (state is CreateJobLoaded) {
           Navigator.pop(context);
-          Navigator.pop(context);
-          Navigator.pop(context);
           showErrorSnackbar(
               context: context,
               title: "success",
-              body: "your Company has been Updated successfully !",
+              body: "your Company has been Added successfully !",
               icon: "assets/images/true.svg");
         } else if (state is CreateJobError) {
           showErrorSnackbar(

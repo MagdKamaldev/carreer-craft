@@ -5,7 +5,7 @@ class JobModel {
   String? seniorityLevel;
   String? jobDescription;
   List<dynamic>? technicalSkills;
-  List<dynamic>? softSkills;
+  List<String>? softSkills;
 
   JobModel({
     this.jobTitle,
@@ -17,15 +17,21 @@ class JobModel {
     this.softSkills,
   });
 
-  factory JobModel.fromJson(Map<String, dynamic> json) => JobModel(
-        jobTitle: json['jobTitle'] as String?,
-        jobLocation: json['jobLocation'] as String?,
-        workingTime: json['workingTime'] as String?,
-        seniorityLevel: json['seniorityLevel'] as String?,
-        jobDescription: json['jobDescription'] as String?,
-        technicalSkills: json['technicalSkills'] as List<dynamic>?,
-        softSkills: json['softSkills'] as List<dynamic>?,
-      );
+  factory JobModel.fromJson(Map<String, dynamic> json) {
+    return JobModel(
+      jobTitle: json['jobTitle'] as String?,
+      jobLocation: json['jobLocation'] as String?,
+      workingTime: json['workingTime'] as String?,
+      seniorityLevel: json['seniorityLevel'] as String?,
+      jobDescription: json['jobDescription'] as String?,
+      technicalSkills: (json['technicalSkills'] as List<dynamic>?)
+          ?.map((skill) => skill.toString())
+          .toList(),
+      softSkills: (json['softSkills'] as List<dynamic>?)
+          ?.map((skill) => skill.toString())
+          .toList(),
+    );
+  }
 
   Map<String, dynamic> toJson() => {
         'jobTitle': jobTitle,

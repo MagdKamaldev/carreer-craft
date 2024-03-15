@@ -15,20 +15,20 @@ class JobsRepositoryImplementation extends JobsRepository {
   @override
   Future<Either<Failure, JobModel>> createJob(JobModel jobModel) async {
     try {
-    final response = await apiServices.post(
-      endPoint: Endpoints.jobs,
-      data: {
-        "jobTitle": jobModel.jobTitle,
-        "jobLocation": jobModel.jobLocation,
-        "workingTime": jobModel.workingTime,
-        "seniortyLevel": jobModel.seniorityLevel,
-        "jobDescription": jobModel.jobDescription,
-        "technicalSkills": jobModel.technicalSkills,
-        "softSkills": jobModel.softSkills,
-      },
-      jwt: token,
-    );
-    return Right(JobModel.fromJson(response["job"]));
+      final response = await apiServices.post(
+        endPoint: Endpoints.jobs,
+        data: {
+          "jobTitle": jobModel.jobTitle,
+          "jobLocation": jobModel.jobLocation,
+          "workingTime": jobModel.workingTime,
+          "seniortyLevel": jobModel.seniorityLevel,
+          "jobDescription": jobModel.jobDescription,
+          "technicalSkills": jobModel.technicalSkills,
+          "softSkills": jobModel.softSkills,
+        },
+        jwt: token,
+      );
+      return Right(JobModel.fromJson(response["job"]));
     } catch (e) {
       if (e is DioError) {
         return Left(ServerFailure.fromDioError(e));
