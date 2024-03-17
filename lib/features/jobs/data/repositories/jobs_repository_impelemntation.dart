@@ -40,14 +40,27 @@ class JobsRepositoryImplementation extends JobsRepository {
 
   @override
   Future<Either<Failure, JobModel>> deleteJob(String id) {
-    // TODO: implement deleteJob
     throw UnimplementedError();
   }
 
   @override
-  Future<Either<Failure, List<JobModel>>> getAllJobs() {
-    // TODO: implement getAllJobs
-    throw UnimplementedError();
+  Future<Either<Failure, List<JobModel>>> getAllJobs(
+      {int? pageNumber, int limit = 8}) async {
+    try {
+      final response = await apiServices.get(
+        endPoint: "${Endpoints.jobs}?limit=$limit&page=$pageNumber",
+        jwt: token,
+      );
+      final List<JobModel> jobs = [];
+      for (var job in response["jobs"]) {
+        jobs.add(JobModel.fromJson(job));
+      }
+      return Right(jobs);
+    } on DioError catch (e) {
+      return Left(ServerFailure.fromDioError(e));
+    } catch (e) {
+      return Left(ServerFailure(e.toString()));
+    }
   }
 
   @override

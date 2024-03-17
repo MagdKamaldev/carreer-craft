@@ -1,9 +1,11 @@
 import 'package:career_craft/core/colors.dart';
 import 'package:career_craft/core/utils/themes.dart';
+import 'package:career_craft/features/jobs/data/models/job_model.dart';
 import 'package:flutter/material.dart';
 
 class JobItem extends StatelessWidget {
-  const JobItem({super.key});
+  final JobModel job;
+  const JobItem({super.key, required this.job});
 
   @override
   Widget build(BuildContext context) {
@@ -32,17 +34,17 @@ class JobItem extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "ABC inc",
+                        job.jobTitle!,
                         style: theme.textTheme.titleLarge,
                       ),
                       Text(
-                        "Flutter developer",
+                        job.seniorityLevel ?? job.workingTime ?? "",
                         style: theme.textTheme.titleSmall!.copyWith(
                           color: primary.shade700,
                         ),
                       ),
                       Text(
-                        "2 years",
+                        job.workingTime!,
                         style: theme.textTheme.titleSmall!.copyWith(
                           color: primary.shade600,
                         ),

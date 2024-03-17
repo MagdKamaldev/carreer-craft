@@ -16,6 +16,24 @@ class JobsCubit extends Cubit<JobsState> {
       (job) => emit(CreateJobLoaded(job: job)),
     );
   }
-}
 
-class JobRepositoryImplementation {}
+  Future<void> getAllJobs({int? pageNumber, int limit = 8}) async {
+    if (pageNumber == 0) {
+      emit(GetAllJobsLoading());
+    } else {
+      emit(GetAllJobsPaginationLoading());
+    }
+    final response = await jobRepositoryImplementation.getAllJobs(
+        pageNumber: pageNumber!, limit: limit);
+    response.fold(
+      (failure) {
+        if(pageNumber == 0) {
+          emit(GetAllJobsError(message: failure.message.toString()));
+        } else {
+          emit(GetAllJobsPaginationFailure(message: failure.message.toString()));
+        }
+      }, 
+      (jobs) => emit(GetAllJobsLoaded(jobs: jobs)),
+    );
+  }
+}

@@ -15,7 +15,6 @@ class ArticleBuilder extends StatelessWidget {
         myDivider(),
         Expanded(
           child: ListView.separated(
-            physics: const BouncingScrollPhysics(),
             itemBuilder: (context, index) => ArticleItem(
               article: articles[index],
             ),
