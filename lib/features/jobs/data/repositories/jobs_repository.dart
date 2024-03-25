@@ -5,7 +5,7 @@ import 'package:dartz/dartz.dart';
 abstract class JobsRepository {
   Future<Either<Failure, List<JobModel>>> getAllJobs(
       {int pageNumber, int limit});
-  Future<Either<Failure, List<JobModel>>> getCompanyJobs();
+  Future<Either<Failure, List<JobModel>>> getCompanyJobs(String companyName);
   Future<Either<Failure, JobModel>> createJob(JobModel jobModel);
   Future<Either<Failure, JobModel>> updateJob(JobModel jobModel);
   Future<Either<Failure, JobModel>> deleteJob(String id);

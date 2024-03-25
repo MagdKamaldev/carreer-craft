@@ -34,3 +34,16 @@ class GetAllJobsError extends JobsState {
   final String message;
   GetAllJobsError({required this.message});
 }
+
+class GetCompanyJobsLoading extends JobsState {}
+
+class GetCompanyJobsLoaded extends JobsState {
+  final List<JobModel> jobs;
+  GetCompanyJobsLoaded({required this.jobs});
+}
+
+class GetCompanyJobsError extends JobsState {
+  final String message;
+  GetCompanyJobsError({required this.message});
+}
+

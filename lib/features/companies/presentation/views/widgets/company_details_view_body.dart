@@ -1,6 +1,7 @@
 import 'package:career_craft/core/colors.dart';
 import 'package:career_craft/core/utils/components.dart';
 import 'package:career_craft/features/companies/data/models/company_model/company_model.dart';
+import 'package:career_craft/features/companies/presentation/views/company_jobs_view.dart';
 import 'package:career_craft/features/companies/presentation/views/widgets/company_info_item.dart';
 import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -100,7 +101,9 @@ class CompanyDetailsViewBody extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: defaultButton(
-                  function: () {},
+                  function: () {
+                    navigateTo(context, CompanyJobsView(company: company));
+                  },
                   context: context,
                   text: S.of(context).viewJobs,
                   height: size.height * 0.07),

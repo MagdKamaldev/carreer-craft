@@ -37,4 +37,14 @@ class JobsCubit extends Cubit<JobsState> {
       (jobs) => emit(GetAllJobsLoaded(jobs: jobs)),
     );
   }
+
+  Future<void> getCompanyJobs(String companyName) async {
+    emit(GetCompanyJobsLoading());
+    final response =
+        await jobRepositoryImplementation.getCompanyJobs(companyName);
+    response.fold(
+      (failure) => emit(GetCompanyJobsError(message: failure.message.toString())),
+      (jobs) => emit(GetCompanyJobsLoaded(jobs: jobs)),
+    );
+  }
 }

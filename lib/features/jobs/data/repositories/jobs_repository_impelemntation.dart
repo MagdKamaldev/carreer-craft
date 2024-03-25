@@ -64,9 +64,23 @@ class JobsRepositoryImplementation extends JobsRepository {
   }
 
   @override
-  Future<Either<Failure, List<JobModel>>> getCompanyJobs() {
-    // TODO: implement getCompanyJobs
-    throw UnimplementedError();
+  Future<Either<Failure, List<JobModel>>> getCompanyJobs(String companyName) async{
+    try{
+      final response = await apiServices.get(
+        endPoint: "${Endpoints.jobs}?company=$companyName",
+        jwt: token,
+      );
+      final List<JobModel> jobs = [];
+      for (var job in response["jobs"]) {
+        jobs.add(JobModel.fromJson(job));
+      }
+      return Right(jobs);
+    } on DioError catch (e) {
+      return Left(ServerFailure.fromDioError(e));
+    } catch (e) {
+      return Left(ServerFailure(e.toString()));
+    
+    }
   }
 
   @override
