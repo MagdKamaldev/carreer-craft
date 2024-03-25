@@ -8,5 +8,5 @@ abstract class JobsRepository {
   Future<Either<Failure, List<JobModel>>> getCompanyJobs(String companyName);
   Future<Either<Failure, JobModel>> createJob(JobModel jobModel);
   Future<Either<Failure, JobModel>> updateJob(JobModel jobModel);
-  Future<Either<Failure, JobModel>> deleteJob(String id);
+  Future<Either<Failure, String>> deleteJob(String id);
 }

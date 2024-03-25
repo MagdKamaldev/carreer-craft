@@ -39,8 +39,19 @@ class JobsRepositoryImplementation extends JobsRepository {
   }
 
   @override
-  Future<Either<Failure, JobModel>> deleteJob(String id) {
-    throw UnimplementedError();
+  Future<Either<Failure, String>> deleteJob(String id) async{
+    try{
+      final response = await apiServices.delete(
+        endPoint: "${Endpoints.jobs}/$id",
+        jwt: token,
+      );
+      return Right(response.toString());
+    } on DioError catch (e) {
+      return Left(ServerFailure.fromDioError(e));
+    } catch (e) {
+      return Left(ServerFailure(e.toString()));
+    }
+   
   }
 
   @override

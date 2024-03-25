@@ -93,5 +93,6 @@
     "fullTime": "Full-Time",
     "partTime": "Part-Time",
     "createJob": "Create Job",
-    "applyNow" : "Apply Now"
+    "applyNow" : "Apply Now",
+    "deleteJob" : "Delete Job"
 }

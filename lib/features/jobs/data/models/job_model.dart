@@ -8,6 +8,7 @@ class JobModel {
   String? jobDescription;
   String? id;
   List<dynamic>? technicalSkills;
+  String? addedBy;
   List<String>? softSkills;
   CompanyModel? company;
 
@@ -19,12 +20,14 @@ class JobModel {
       this.jobDescription,
       this.technicalSkills,
       this.softSkills,
+      this.addedBy,
       this.id,
       this.company});
 
   factory JobModel.fromJson(Map<String, dynamic> json) {
     return JobModel(
       id: json['_id'] as String?,
+      addedBy: json['addedBy'] as String?,
       jobTitle: json['jobTitle'] as String?,
       jobLocation: json['jobLocation'] as String?,
       workingTime: json['workingTime'] as String?,

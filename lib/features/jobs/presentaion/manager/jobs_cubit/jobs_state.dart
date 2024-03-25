@@ -47,3 +47,29 @@ class GetCompanyJobsError extends JobsState {
   GetCompanyJobsError({required this.message});
 }
 
+class UpdateJobLoading extends JobsState {}
+
+class UpdateJobLoaded extends JobsState {
+  final JobModel job;
+  UpdateJobLoaded({required this.job});
+}
+
+class UpdateJobError extends JobsState {
+  final String message;
+  UpdateJobError({required this.message});
+}
+
+class DeleteJobLoading extends JobsState {}
+
+class DeleteJobLoaded extends JobsState {
+  final String message;
+  DeleteJobLoaded({required this.message});
+}
+
+class DeleteJobError extends JobsState {
+  final String message;
+  DeleteJobError({required this.message});
+}
+
+
+

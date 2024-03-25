@@ -47,4 +47,22 @@ class JobsCubit extends Cubit<JobsState> {
       (jobs) => emit(GetCompanyJobsLoaded(jobs: jobs)),
     );
   }
+
+  // Future<void> updateJob(JobModel model) async {
+  //   emit(UpdateJobLoading());
+  //   final response = await jobRepositoryImplementation.updateJob(model);
+  //   response.fold(
+  //     (failure) => emit(UpdateJobError(message: failure.message.toString())),
+  //     (job) => emit(UpdateJobLoaded(job: job)),
+  //   );
+  // }
+
+  Future<void> deleteJob(String id) async {
+    final response = await jobRepositoryImplementation.deleteJob(id);
+    response.fold(
+      (failure) => emit(DeleteJobError(message: failure.message.toString())),
+      (message) => emit(DeleteJobLoaded(message: message)),
+    );
+  }
+
 }

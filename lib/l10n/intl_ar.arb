@@ -91,5 +91,6 @@
     "fullTime": "دوام كامل",
     "partTime": "دوام جزئي",
     "createJob": "إنشاء وظيفة",
-    "applyNow" : "قدم الآن"
+    "applyNow" : "قدم الآن",
+    "deleteJob" : "حذف الوظيفة"
 }
