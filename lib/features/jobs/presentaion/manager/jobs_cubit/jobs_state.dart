@@ -24,6 +24,7 @@ class GetAllJobsPaginationFailure extends JobsState {
   final String message;
   GetAllJobsPaginationFailure({required this.message});
 }
+
 class GetAllJobsLoaded extends JobsState {
   final List<JobModel> jobs;
   GetAllJobsLoaded({required this.jobs});

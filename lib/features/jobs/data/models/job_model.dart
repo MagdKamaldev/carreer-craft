@@ -1,3 +1,5 @@
+import 'package:career_craft/features/companies/data/models/company_model/company_model.dart';
+
 class JobModel {
   String? jobTitle;
   String? jobLocation;
@@ -7,17 +9,18 @@ class JobModel {
   String? id;
   List<dynamic>? technicalSkills;
   List<String>? softSkills;
+  CompanyModel? company;
 
-  JobModel({
-    this.jobTitle,
-    this.jobLocation,
-    this.workingTime,
-    this.seniorityLevel,
-    this.jobDescription,
-    this.technicalSkills,
-    this.softSkills,
-    this.id,
-  });
+  JobModel(
+      {this.jobTitle,
+      this.jobLocation,
+      this.workingTime,
+      this.seniorityLevel,
+      this.jobDescription,
+      this.technicalSkills,
+      this.softSkills,
+      this.id,
+      this.company});
 
   factory JobModel.fromJson(Map<String, dynamic> json) {
     return JobModel(
@@ -33,6 +36,7 @@ class JobModel {
       softSkills: (json['softSkills'] as List<dynamic>?)
           ?.map((skill) => skill.toString())
           .toList(),
+      company: CompanyModel.fromJson(json['company'][0]) as CompanyModel?,
     );
   }
 

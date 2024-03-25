@@ -48,7 +48,7 @@ void setupLocator() {
       apiServices: getIt<ApiServices>(),
     ),
   );
-    getIt.registerLazySingleton<JobsRepositoryImplementation>(
+  getIt.registerLazySingleton<JobsRepositoryImplementation>(
     () => JobsRepositoryImplementation(
       apiServices: getIt<ApiServices>(),
     ),

@@ -90,5 +90,6 @@
     "hybrid": "هجين",
     "fullTime": "دوام كامل",
     "partTime": "دوام جزئي",
-    "createJob": "إنشاء وظيفة"
+    "createJob": "إنشاء وظيفة",
+    "applyNow" : "قدم الآن"
 }

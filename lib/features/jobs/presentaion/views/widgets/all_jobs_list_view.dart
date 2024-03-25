@@ -1,5 +1,7 @@
+import 'package:career_craft/core/utils/components.dart';
 import 'package:career_craft/features/jobs/data/models/job_model.dart';
 import 'package:career_craft/features/jobs/presentaion/manager/jobs_cubit/jobs_cubit.dart';
+import 'package:career_craft/features/jobs/presentaion/views/job_details_view.dart';
 import 'package:career_craft/features/jobs/presentaion/views/widgets/job_item.dart';
 import 'package:career_craft/features/jobs/presentaion/views/widgets/job_loading_item.dart';
 import 'package:flutter/material.dart';
@@ -65,14 +67,11 @@ class _AllJobListViewState extends State<AllJobListView> {
             scrollDirection: Axis.vertical,
             itemCount: 10,
             itemBuilder: (BuildContext context, int index) {
-              return GestureDetector(
-                onTap: () {},
-                child: Column(
-                  children: [
-                    const JobLoadingItem(),
-                    SizedBox(height: size.height * 0.02),
-                  ],
-                ),
+              return Column(
+                children: [
+                  const JobLoadingItem(),
+                  SizedBox(height: size.height * 0.02),
+                ],
               );
             },
           );
@@ -97,7 +96,10 @@ class _AllJobListViewState extends State<AllJobListView> {
                       );
                     } else {
                       return GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          navigateTo(context, JobDetailsView(job: jobs[index]));
+                          print(jobs[index].id);
+                        },
                         child: Column(
                           children: [
                             JobItem(job: jobs[index]),

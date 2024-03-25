@@ -27,12 +27,13 @@ class JobsCubit extends Cubit<JobsState> {
         pageNumber: pageNumber!, limit: limit);
     response.fold(
       (failure) {
-        if(pageNumber == 0) {
+        if (pageNumber == 0) {
           emit(GetAllJobsError(message: failure.message.toString()));
         } else {
-          emit(GetAllJobsPaginationFailure(message: failure.message.toString()));
+          emit(
+              GetAllJobsPaginationFailure(message: failure.message.toString()));
         }
-      }, 
+      },
       (jobs) => emit(GetAllJobsLoaded(jobs: jobs)),
     );
   }

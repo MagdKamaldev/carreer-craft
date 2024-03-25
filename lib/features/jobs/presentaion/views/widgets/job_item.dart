@@ -1,6 +1,7 @@
 import 'package:career_craft/core/colors.dart';
 import 'package:career_craft/core/utils/themes.dart';
 import 'package:career_craft/features/jobs/data/models/job_model.dart';
+
 import 'package:flutter/material.dart';
 
 class JobItem extends StatelessWidget {

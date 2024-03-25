@@ -30,6 +30,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "addJob": MessageLookupByLibrary.simpleMessage("Add Job"),
         "adress": MessageLookupByLibrary.simpleMessage("Address"),
         "appName": MessageLookupByLibrary.simpleMessage("Career Craft"),
+        "applyNow": MessageLookupByLibrary.simpleMessage("Apply Now"),
         "areYouSure":
             MessageLookupByLibrary.simpleMessage("Are you sure you want to"),
         "cancel": MessageLookupByLibrary.simpleMessage("cancel"),

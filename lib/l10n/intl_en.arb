@@ -92,5 +92,6 @@
     "hybrid": "Hybrid",
     "fullTime": "Full-Time",
     "partTime": "Part-Time",
-    "createJob": "Create Job"
+    "createJob": "Create Job",
+    "applyNow" : "Apply Now"
 }

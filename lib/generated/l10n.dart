@@ -989,6 +989,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Apply Now`
+  String get applyNow {
+    return Intl.message(
+      'Apply Now',
+      name: 'applyNow',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
