@@ -15,46 +15,35 @@ class JobsView extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return BlocProvider(
-        create: (context) => JobsCubit(getIt<JobsRepositoryImplementation>())
-          ..getAllJobs(pageNumber: 0),
-        child: BlocBuilder<JobsCubit, JobsState>(
-          builder: (context, state) => Padding(
-            padding: EdgeInsets.symmetric(horizontal: size.width * 0.05),
-            child: Column(
-              children: [
-                const HomeSearchBar(),
-                SizedBox(
-                  height: size.height * 0.02,
-                ),
-                Container(
-                  width: double.infinity,
-                  height: 0.5,
-                  color: primary,
-                ),
-                SizedBox(
-                  height: size.height * 0.02,
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      S.of(context).jobs,
-                      style:
-                          Theme.of(context).textTheme.headlineSmall!.copyWith(
-                                fontWeight: FontWeight.bold,
-                              ),
+      create: (context) => JobsCubit(getIt<JobsRepositoryImplementation>())
+        ..getAllJobs(pageNumber: 0),
+      child: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.all(size.height * 0.02),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const HomeSearchBar(),
+              SizedBox(height: size.height * 0.02),
+              Container(
+                width: double.infinity,
+                height: 0.5,
+                color: primary,
+              ),
+              SizedBox(height: size.height * 0.02),
+              Text(
+                S.of(context).jobs,
+                style: Theme.of(context).textTheme.headlineSmall!.copyWith(
+                      fontWeight: FontWeight.bold,
                     ),
-                    SizedBox(
-                      height: size.height * 0.03,
-                    ),
-                    SizedBox(
-                        height: size.height * 0.565,
-                        child: const AllJobListView()),
-                  ],
-                ),
-              ],
-            ),
+              ),
+              SizedBox(height: size.height * 0.03),
+              SizedBox(
+                  height: size.height * 0.56, child: const AllJobListView()),
+            ],
           ),
-        ));
+        ),
+      ),
+    );
   }
 }

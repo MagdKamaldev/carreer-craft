@@ -1,8 +1,8 @@
 class ApplicationModel {
   String? jobId;
   String? userId;
-  List<String>? userTechSkills;
-  List<String>? userSoftSkills;
+  List<dynamic>? userTechSkills;
+  List<dynamic>? userSoftSkills;
   String? userResume;
   String? id;
   DateTime? createdAt;
@@ -25,8 +25,8 @@ class ApplicationModel {
     return ApplicationModel(
       jobId: json['jobId'] as String?,
       userId: json['userId'] as String?,
-      userTechSkills: json['userTechSkills'] as List<String>?,
-      userSoftSkills: json['userSoftSkills'] as List<String>?,
+      userTechSkills: json['userTechSkills'] as List<dynamic>?,
+      userSoftSkills: json['userSoftSkills'] as List<dynamic>?,
       userResume: json['userResume'] as String?,
       id: json['_id'] as String?,
       createdAt: json['createdAt'] == null

@@ -92,8 +92,10 @@ class JobsCubit extends Cubit<JobsState> {
     emit(RemoveFile());
   }
 
-  Future<void> applyForJob(var pickedFile, List<String> technicalSkills,
-      List<String> softSkills, JobModel job, context) async {
+  List<String> technicalSkills = [];
+  List<String> softSkills = [];
+
+  Future<void> applyForJob(var pickedFile, JobModel job, context) async {
     emit(ApplicationLoading());
     final response = await jobRepositoryImplementation.applyForJob(
         pickedFile, technicalSkills, softSkills, job);

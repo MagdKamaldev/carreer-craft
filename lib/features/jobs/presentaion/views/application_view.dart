@@ -5,6 +5,7 @@ import 'package:career_craft/core/utils/service_locator.dart';
 import 'package:career_craft/features/jobs/data/models/job_model.dart';
 import 'package:career_craft/features/jobs/data/repositories/jobs_repository_impelemntation.dart';
 import 'package:career_craft/features/jobs/presentaion/manager/jobs_cubit/jobs_cubit.dart';
+import 'package:career_craft/features/jobs/presentaion/views/widgets/apply_now_button.dart';
 import 'package:career_craft/features/jobs/presentaion/views/widgets/ingredients_list_widget.dart';
 import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -30,9 +31,9 @@ class ApplicationView extends StatelessWidget {
               child: Column(
                 children: [
                   IngredientListWidget(
-                    ingredients: [],
+                    ingredients: JobsCubit.get(context).softSkills,
                     onIngredientsChanged: (values) {
-                      //softSkills = values.cast<String>();
+                      JobsCubit.get(context).softSkills = values.cast<String>();
                     },
                     title: S.of(context).softSkills,
                   ),
@@ -40,9 +41,10 @@ class ApplicationView extends StatelessWidget {
                     height: size.height * 0.04,
                   ),
                   IngredientListWidget(
-                    ingredients: [],
+                    ingredients: JobsCubit.get(context).technicalSkills,
                     onIngredientsChanged: (values) {
-                      // technicalSkills = values.cast<String>();
+                      JobsCubit.get(context).technicalSkills =
+                          values.cast<String>();
                     },
                     title: S.of(context).technicalSkills,
                   ),
@@ -55,8 +57,8 @@ class ApplicationView extends StatelessWidget {
                         JobsCubit.get(context).pickFile(context);
                       },
                       child: Container(
-                        width: size.width * 0.5,
-                        height: size.height * 0.2,
+                        width: size.width * 0.55,
+                        height: size.height * 0.25,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           color: secondary,
@@ -67,7 +69,7 @@ class ApplicationView extends StatelessWidget {
                             children: [
                               SizedBox(
                                 width: size.width * 0.3,
-                                height: size.height * 0.15,
+                                height: size.height * 0.18,
                                 child: SvgPicture.asset(
                                   "assets/images/upload.svg",
                                   color: primary.shade200,
@@ -85,8 +87,8 @@ class ApplicationView extends StatelessWidget {
                     ),
                   if (JobsCubit.get(context).file != null)
                     Container(
-                      width: size.width * 0.5,
-                      height: size.height * 0.2,
+                      width: size.width * 0.55,
+                      height: size.height * 0.25,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.green,
@@ -97,7 +99,7 @@ class ApplicationView extends StatelessWidget {
                           children: [
                             SizedBox(
                               width: size.width * 0.3,
-                              height: size.height * 0.15,
+                              height: size.height * 0.18,
                               child: SvgPicture.asset(
                                 "assets/images/true.svg",
                                 color: primary.shade200,
@@ -138,6 +140,17 @@ class ApplicationView extends StatelessWidget {
                         ],
                       ),
                     ),
+                  SizedBox(
+                    height: size.height * 0.04,
+                  ),
+                  ApplyForJobJobButton(onPressed: () {
+                    if (JobsCubit.get(context).technicalSkills.isNotEmpty &&
+                        JobsCubit.get(context).softSkills.isNotEmpty &&
+                        JobsCubit.get(context).file != null) {
+                      JobsCubit.get(context).applyForJob(
+                          JobsCubit.get(context).file, job, context);
+                    }
+                  })
                 ],
               ),
             ),

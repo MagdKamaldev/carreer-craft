@@ -147,7 +147,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateJob": MessageLookupByLibrary.simpleMessage("تعديل الوظيفة"),
         "uploadResume":
             MessageLookupByLibrary.simpleMessage("تحميل السيرة الذاتية"),
-        "uploaded": MessageLookupByLibrary.simpleMessage("! تم التحميل"),
+        "uploaded": MessageLookupByLibrary.simpleMessage(" ! تم التحميل"),
         "validationFailed":
             MessageLookupByLibrary.simpleMessage("خطأ في التحقق"),
         "viewJobs": MessageLookupByLibrary.simpleMessage("عرض الوظائف"),

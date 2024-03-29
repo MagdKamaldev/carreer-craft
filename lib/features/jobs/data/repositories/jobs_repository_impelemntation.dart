@@ -128,7 +128,7 @@ class JobsRepositoryImplementation extends JobsRepository {
     try {
       String filename = pickedFile.path.split('/').last;
       FormData formData = FormData.fromMap({
-        "image": await MultipartFile.fromFile(
+        "resume": await MultipartFile.fromFile(
           pickedFile.path,
           filename: filename,
           contentType: MediaType('application', 'pdf'),
@@ -141,6 +141,7 @@ class JobsRepositoryImplementation extends JobsRepository {
         data: formData,
         jwt: token,
       );
+
       return Right(ApplicationModel.fromJson(response["application"]));
     } on DioError catch (e) {
       return Left(ServerFailure.fromDioError(e));
