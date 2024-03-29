@@ -10,8 +10,8 @@ class UpdateJobView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: companyAppBar(context,job.jobTitle!,[]),
-      body: UpdateJobViewBody(job:job),
+      appBar: companyAppBar(context, job.jobTitle!, []),
+      body: UpdateJobViewBody(job: job),
     );
   }
 }

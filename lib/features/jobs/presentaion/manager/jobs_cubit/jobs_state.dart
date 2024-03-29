@@ -71,5 +71,28 @@ class DeleteJobError extends JobsState {
   DeleteJobError({required this.message});
 }
 
+class PickFileLoading extends JobsState {}  
 
+class PickFileLoaded extends JobsState {
+  final File file;
+  PickFileLoaded({required this.file});
+}
 
+class PickFileError extends JobsState {
+  final String message;
+  PickFileError({required this.message});
+}
+
+class RemoveFile extends JobsState {}
+
+class ApplicationLoading extends JobsState {}
+
+class ApplicationSuccess extends JobsState {
+  final ApplicationModel application;
+  ApplicationSuccess({required this.application});
+}
+
+class ApplicationError extends JobsState{
+  final String message;
+  ApplicationError({required this.message});
+}

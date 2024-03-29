@@ -3,10 +3,12 @@ import 'package:career_craft/core/constants.dart';
 import 'package:career_craft/core/errors/failures.dart';
 import 'package:career_craft/core/utils/api_services.dart';
 import 'package:career_craft/core/utils/end_points.dart';
+import 'package:career_craft/features/jobs/data/models/application_model.dart';
 import 'package:career_craft/features/jobs/data/models/job_model.dart';
 import 'package:career_craft/features/jobs/data/repositories/jobs_repository.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
+import 'package:http_parser/http_parser.dart';
 
 class JobsRepositoryImplementation extends JobsRepository {
   final ApiServices apiServices;
@@ -95,25 +97,55 @@ class JobsRepositoryImplementation extends JobsRepository {
 
   @override
   Future<Either<Failure, JobModel>> updateJob(JobModel jobModel) async {
-    // try{
-    final response = await apiServices.put(
-      endPoint: "${Endpoints.jobs}/${jobModel.id}",
-      data: {
-        "jobTitle": jobModel.jobTitle,
-        "jobLocation": jobModel.jobLocation,
-        "workingTime": jobModel.workingTime,
-        "seniortyLevel": jobModel.seniorityLevel,
-        "jobDescription": jobModel.jobDescription,
-        "technicalSkills": jobModel.technicalSkills,
-        "softSkills": jobModel.softSkills,
-      },
-      jwt: token,
-    );
-    return Right(JobModel.fromJson(response["job"]));
-    // } on DioError catch (e) {
-    //   return Left(ServerFailure.fromDioError(e));
-    // } catch (e) {
-    //   return Left(ServerFailure(e.toString()));
-    // }
+    try {
+      final response = await apiServices.put(
+        endPoint: "${Endpoints.jobs}/${jobModel.id}",
+        data: {
+          "jobTitle": jobModel.jobTitle,
+          "jobLocation": jobModel.jobLocation,
+          "workingTime": jobModel.workingTime,
+          "seniortyLevel": jobModel.seniorityLevel,
+          "jobDescription": jobModel.jobDescription,
+          "technicalSkills": jobModel.technicalSkills,
+          "softSkills": jobModel.softSkills,
+        },
+        jwt: token,
+      );
+      return Right(JobModel.fromJson(response["job"]));
+    } on DioError catch (e) {
+      return Left(ServerFailure.fromDioError(e));
+    } catch (e) {
+      return Left(ServerFailure(e.toString()));
+    }
+  }
+
+  @override
+  Future<Either<Failure, ApplicationModel>> applyForJob(
+      var pickedFile,
+      List<String> technicalSkills,
+      List<String> softSkills,
+      JobModel job) async {
+    try {
+      String filename = pickedFile.path.split('/').last;
+      FormData formData = FormData.fromMap({
+        "image": await MultipartFile.fromFile(
+          pickedFile.path,
+          filename: filename,
+          contentType: MediaType('application', 'pdf'),
+        ),
+        "userTechSkills": technicalSkills,
+        "userSoftSkills": softSkills,
+      });
+      final response = await apiServices.post(
+        endPoint: "${Endpoints.jobs}/${job.id}/apply",
+        data: formData,
+        jwt: token,
+      );
+      return Right(ApplicationModel.fromJson(response["application"]));
+    } on DioError catch (e) {
+      return Left(ServerFailure.fromDioError(e));
+    } catch (e) {
+      return Left(ServerFailure(e.toString()));
+    }
   }
 }

@@ -30,6 +30,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "addJob": MessageLookupByLibrary.simpleMessage("إضافة وظيفة"),
         "adress": MessageLookupByLibrary.simpleMessage("العنوان"),
         "appName": MessageLookupByLibrary.simpleMessage("كاريير كرافت"),
+        "application": MessageLookupByLibrary.simpleMessage("التقدم للوظيفة"),
+        "applicationSent":
+            MessageLookupByLibrary.simpleMessage("! تم إرسال طلبك بنجاح"),
         "applyNow": MessageLookupByLibrary.simpleMessage("قدم الآن"),
         "areYouSure":
             MessageLookupByLibrary.simpleMessage("هل انت متأكد انك تريد "),
@@ -74,6 +77,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "الرجاء إدخال الرمز المرسل إلى بريدك الإلكتروني!"),
         "enterLogin": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "enterNew": MessageLookupByLibrary.simpleMessage("أدخل"),
+        "error": MessageLookupByLibrary.simpleMessage("خطأ"),
+        "fileNotPicked":
+            MessageLookupByLibrary.simpleMessage("! لم يتم اختيار ملف"),
         "firstName": MessageLookupByLibrary.simpleMessage("الاسم الأول"),
         "forgotPasswordText":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
@@ -139,6 +145,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "terms": MessageLookupByLibrary.simpleMessage("الشروط والأحكام"),
         "updateAccount": MessageLookupByLibrary.simpleMessage("تحديث الحساب"),
         "updateJob": MessageLookupByLibrary.simpleMessage("تعديل الوظيفة"),
+        "uploadResume":
+            MessageLookupByLibrary.simpleMessage("تحميل السيرة الذاتية"),
+        "uploaded": MessageLookupByLibrary.simpleMessage("! تم التحميل"),
         "validationFailed":
             MessageLookupByLibrary.simpleMessage("خطأ في التحقق"),
         "viewJobs": MessageLookupByLibrary.simpleMessage("عرض الوظائف"),

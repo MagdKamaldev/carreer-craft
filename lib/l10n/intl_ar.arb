@@ -94,5 +94,11 @@
     "applyNow" : "قدم الآن",
     "deleteJob" : "حذف الوظيفة",
     "updateJob" : "تعديل الوظيفة",
-    "enterNew" : "أدخل"
+    "enterNew" : "أدخل",
+    "application" :"التقدم للوظيفة",
+    "uploaded" : "! تم التحميل",
+    "uploadResume" :"تحميل السيرة الذاتية",
+    "error" : "خطأ",
+    "fileNotPicked" : "! لم يتم اختيار ملف",
+    "applicationSent" : "! تم إرسال طلبك بنجاح"
 }

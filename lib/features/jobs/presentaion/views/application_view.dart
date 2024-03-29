@@ -17,6 +17,7 @@ class ApplicationView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextTheme theme = Theme.of(context).textTheme;
     Size size = MediaQuery.of(context).size;
     return BlocProvider(
       create: (context) => JobsCubit(getIt<JobsRepositoryImplementation>()),
@@ -48,7 +49,7 @@ class ApplicationView extends StatelessWidget {
                   SizedBox(
                     height: size.height * 0.06,
                   ),
-                  if (state is! PickFileLoaded)
+                  if (JobsCubit.get(context).file == null)
                     GestureDetector(
                       onTap: () {
                         JobsCubit.get(context).pickFile(context);
@@ -82,7 +83,7 @@ class ApplicationView extends StatelessWidget {
                         ),
                       ),
                     ),
-                  if (state is PickFileLoaded)
+                  if (JobsCubit.get(context).file != null)
                     Container(
                       width: size.width * 0.5,
                       height: size.height * 0.2,
@@ -102,13 +103,39 @@ class ApplicationView extends StatelessWidget {
                                 color: primary.shade200,
                               ),
                             ),
-                            Text(S.of(context).uploadResume,
+                            Text(S.of(context).uploaded,
                                 style: Theme.of(context)
                                     .textTheme
                                     .titleMedium!
                                     .copyWith(color: primary.shade200)),
                           ],
                         ),
+                      ),
+                    ),
+                  if (JobsCubit.get(context).file != null)
+                    SizedBox(
+                      height: size.height * 0.02,
+                    ),
+                  if (JobsCubit.get(context).file != null)
+                    GestureDetector(
+                      onTap: () {
+                        JobsCubit.get(context).removeFile();
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            S.of(context).cancel,
+                            style: theme.titleLarge,
+                          ),
+                          SizedBox(
+                            width: size.width * 0.05,
+                          ),
+                          SvgPicture.asset(
+                            "assets/images/cancel.svg",
+                            color: primary,
+                          ),
+                        ],
                       ),
                     ),
                 ],

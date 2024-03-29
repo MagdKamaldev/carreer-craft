@@ -30,10 +30,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "addJob": MessageLookupByLibrary.simpleMessage("Add Job"),
         "adress": MessageLookupByLibrary.simpleMessage("Address"),
         "appName": MessageLookupByLibrary.simpleMessage("Career Craft"),
+        "application": MessageLookupByLibrary.simpleMessage("Application"),
+        "applicationSent": MessageLookupByLibrary.simpleMessage(
+            "Application Sent Successfully!"),
         "applyNow": MessageLookupByLibrary.simpleMessage("Apply Now"),
         "areYouSure":
             MessageLookupByLibrary.simpleMessage("Are you sure you want to"),
-        "cancel": MessageLookupByLibrary.simpleMessage("cancel"),
+        "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("Change Password"),
         "checkMail": MessageLookupByLibrary.simpleMessage("Check Your Mail"),
@@ -77,6 +80,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Please enter the code sent to your email !"),
         "enterLogin": MessageLookupByLibrary.simpleMessage("Login"),
         "enterNew": MessageLookupByLibrary.simpleMessage("Enter New"),
+        "error": MessageLookupByLibrary.simpleMessage("Error"),
+        "fileNotPicked":
+            MessageLookupByLibrary.simpleMessage("File not picked !"),
         "firstName": MessageLookupByLibrary.simpleMessage("First Name"),
         "forgotPasswordText":
             MessageLookupByLibrary.simpleMessage("Forgot Password"),
@@ -142,6 +148,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "terms": MessageLookupByLibrary.simpleMessage("Terms and Conditions"),
         "updateAccount": MessageLookupByLibrary.simpleMessage("Update Account"),
         "updateJob": MessageLookupByLibrary.simpleMessage("Update Job"),
+        "uploadResume": MessageLookupByLibrary.simpleMessage("Upload Resume"),
+        "uploaded": MessageLookupByLibrary.simpleMessage("Uploaded !"),
         "validationFailed":
             MessageLookupByLibrary.simpleMessage("Validation Error"),
         "viewJobs": MessageLookupByLibrary.simpleMessage("View Jobs"),

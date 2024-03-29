@@ -72,7 +72,7 @@
     "maximumEmployees":"Max Employees",
     "editCompany":"Edit Company",
     "areYouSure" : "Are you sure you want to",
-    "cancel" : "cancel",
+    "cancel" : "Cancel",
     "addJob": "Add Job",
     "jobTitle": "Job Title",
     "jobLocation": "Job Location",
@@ -96,5 +96,11 @@
     "applyNow" : "Apply Now",
     "deleteJob" : "Delete Job",
     "updateJob" : "Update Job",
-    "enterNew" : "Enter New"
+    "enterNew" : "Enter New",
+    "application" : "Application",
+    "uploadResume" : "Upload Resume",
+    "uploaded" : "Uploaded !",
+    "error" : "Error",
+    "fileNotPicked" : "File not picked !",
+    "applicationSent" : "Application Sent Successfully!"
 }

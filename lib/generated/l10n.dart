@@ -780,10 +780,10 @@ class S {
     );
   }
 
-  /// `cancel`
+  /// `Cancel`
   String get cancel {
     return Intl.message(
-      'cancel',
+      'Cancel',
       name: 'cancel',
       desc: '',
       args: [],
@@ -1025,6 +1025,66 @@ class S {
     return Intl.message(
       'Enter New',
       name: 'enterNew',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Application`
+  String get application {
+    return Intl.message(
+      'Application',
+      name: 'application',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Upload Resume`
+  String get uploadResume {
+    return Intl.message(
+      'Upload Resume',
+      name: 'uploadResume',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Uploaded !`
+  String get uploaded {
+    return Intl.message(
+      'Uploaded !',
+      name: 'uploaded',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Error`
+  String get error {
+    return Intl.message(
+      'Error',
+      name: 'error',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `File not picked !`
+  String get fileNotPicked {
+    return Intl.message(
+      'File not picked !',
+      name: 'fileNotPicked',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Application Sent Successfully!`
+  String get applicationSent {
+    return Intl.message(
+      'Application Sent Successfully!',
+      name: 'applicationSent',
       desc: '',
       args: [],
     );
