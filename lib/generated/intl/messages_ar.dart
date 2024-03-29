@@ -73,6 +73,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterCode": MessageLookupByLibrary.simpleMessage(
             "الرجاء إدخال الرمز المرسل إلى بريدك الإلكتروني!"),
         "enterLogin": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "enterNew": MessageLookupByLibrary.simpleMessage("أدخل"),
         "firstName": MessageLookupByLibrary.simpleMessage("الاسم الأول"),
         "forgotPasswordText":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور"),
@@ -137,6 +138,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("المهارات التقنية"),
         "terms": MessageLookupByLibrary.simpleMessage("الشروط والأحكام"),
         "updateAccount": MessageLookupByLibrary.simpleMessage("تحديث الحساب"),
+        "updateJob": MessageLookupByLibrary.simpleMessage("تعديل الوظيفة"),
         "validationFailed":
             MessageLookupByLibrary.simpleMessage("خطأ في التحقق"),
         "viewJobs": MessageLookupByLibrary.simpleMessage("عرض الوظائف"),

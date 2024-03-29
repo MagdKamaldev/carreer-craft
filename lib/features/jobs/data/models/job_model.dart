@@ -39,7 +39,9 @@ class JobModel {
       softSkills: (json['softSkills'] as List<dynamic>?)
           ?.map((skill) => skill.toString())
           .toList(),
-      company: CompanyModel.fromJson(json['company'][0]) as CompanyModel?,
+      company: json['company']?.isNotEmpty == true
+          ? CompanyModel.fromJson(json['company'][0]) as CompanyModel?
+          : null,
     );
   }
 

@@ -1009,6 +1009,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Update Job`
+  String get updateJob {
+    return Intl.message(
+      'Update Job',
+      name: 'updateJob',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter New`
+  String get enterNew {
+    return Intl.message(
+      'Enter New',
+      name: 'enterNew',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

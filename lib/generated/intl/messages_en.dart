@@ -76,6 +76,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterCode": MessageLookupByLibrary.simpleMessage(
             "Please enter the code sent to your email !"),
         "enterLogin": MessageLookupByLibrary.simpleMessage("Login"),
+        "enterNew": MessageLookupByLibrary.simpleMessage("Enter New"),
         "firstName": MessageLookupByLibrary.simpleMessage("First Name"),
         "forgotPasswordText":
             MessageLookupByLibrary.simpleMessage("Forgot Password"),
@@ -140,6 +141,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Technical Skills"),
         "terms": MessageLookupByLibrary.simpleMessage("Terms and Conditions"),
         "updateAccount": MessageLookupByLibrary.simpleMessage("Update Account"),
+        "updateJob": MessageLookupByLibrary.simpleMessage("Update Job"),
         "validationFailed":
             MessageLookupByLibrary.simpleMessage("Validation Error"),
         "viewJobs": MessageLookupByLibrary.simpleMessage("View Jobs"),

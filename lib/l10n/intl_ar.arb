@@ -92,5 +92,7 @@
     "partTime": "دوام جزئي",
     "createJob": "إنشاء وظيفة",
     "applyNow" : "قدم الآن",
-    "deleteJob" : "حذف الوظيفة"
+    "deleteJob" : "حذف الوظيفة",
+    "updateJob" : "تعديل الوظيفة",
+    "enterNew" : "أدخل"
 }

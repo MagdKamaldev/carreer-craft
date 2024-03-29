@@ -94,5 +94,7 @@
     "partTime": "Part-Time",
     "createJob": "Create Job",
     "applyNow" : "Apply Now",
-    "deleteJob" : "Delete Job"
+    "deleteJob" : "Delete Job",
+    "updateJob" : "Update Job",
+    "enterNew" : "Enter New"
 }

@@ -1,10 +1,12 @@
 import 'package:career_craft/core/constants.dart';
 import 'package:career_craft/core/utils/alert.dart';
 import 'package:career_craft/core/utils/app_bars.dart';
+import 'package:career_craft/core/utils/components.dart';
 import 'package:career_craft/core/utils/service_locator.dart';
 import 'package:career_craft/features/jobs/data/models/job_model.dart';
 import 'package:career_craft/features/jobs/data/repositories/jobs_repository_impelemntation.dart';
 import 'package:career_craft/features/jobs/presentaion/manager/jobs_cubit/jobs_cubit.dart';
+import 'package:career_craft/features/jobs/presentaion/views/update_job_view.dart';
 import 'package:career_craft/features/jobs/presentaion/views/widgets/job_details_view_body.dart';
 import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -27,11 +29,7 @@ class JobDetailsView extends StatelessWidget {
                   ? [
                       IconButton(
                           onPressed: () {
-                            // navigateTo(
-                            //     context,
-                            //     EditCompanyView(
-                            //       company: state.company,
-                            //     ));
+                            navigateTo(context, UpdateJobView(job: job));
                           },
                           icon: const Icon(
                             Icons.edit,

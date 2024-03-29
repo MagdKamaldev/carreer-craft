@@ -98,7 +98,6 @@ class _AllJobListViewState extends State<AllJobListView> {
                       return GestureDetector(
                         onTap: () {
                           navigateTo(context, JobDetailsView(job: jobs[index]));
-                         
                         },
                         child: Column(
                           children: [

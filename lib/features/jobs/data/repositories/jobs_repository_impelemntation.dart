@@ -39,8 +39,8 @@ class JobsRepositoryImplementation extends JobsRepository {
   }
 
   @override
-  Future<Either<Failure, String>> deleteJob(String id) async{
-    try{
+  Future<Either<Failure, String>> deleteJob(String id) async {
+    try {
       final response = await apiServices.delete(
         endPoint: "${Endpoints.jobs}/$id",
         jwt: token,
@@ -51,7 +51,6 @@ class JobsRepositoryImplementation extends JobsRepository {
     } catch (e) {
       return Left(ServerFailure(e.toString()));
     }
-   
   }
 
   @override
@@ -75,8 +74,9 @@ class JobsRepositoryImplementation extends JobsRepository {
   }
 
   @override
-  Future<Either<Failure, List<JobModel>>> getCompanyJobs(String companyName) async{
-    try{
+  Future<Either<Failure, List<JobModel>>> getCompanyJobs(
+      String companyName) async {
+    try {
       final response = await apiServices.get(
         endPoint: "${Endpoints.jobs}?company=$companyName",
         jwt: token,
@@ -90,13 +90,30 @@ class JobsRepositoryImplementation extends JobsRepository {
       return Left(ServerFailure.fromDioError(e));
     } catch (e) {
       return Left(ServerFailure(e.toString()));
-    
     }
   }
 
   @override
-  Future<Either<Failure, JobModel>> updateJob(JobModel jobModel) {
-    // TODO: implement updateJob
-    throw UnimplementedError();
+  Future<Either<Failure, JobModel>> updateJob(JobModel jobModel) async {
+    // try{
+    final response = await apiServices.put(
+      endPoint: "${Endpoints.jobs}/${jobModel.id}",
+      data: {
+        "jobTitle": jobModel.jobTitle,
+        "jobLocation": jobModel.jobLocation,
+        "workingTime": jobModel.workingTime,
+        "seniortyLevel": jobModel.seniorityLevel,
+        "jobDescription": jobModel.jobDescription,
+        "technicalSkills": jobModel.technicalSkills,
+        "softSkills": jobModel.softSkills,
+      },
+      jwt: token,
+    );
+    return Right(JobModel.fromJson(response["job"]));
+    // } on DioError catch (e) {
+    //   return Left(ServerFailure.fromDioError(e));
+    // } catch (e) {
+    //   return Left(ServerFailure(e.toString()));
+    // }
   }
 }
