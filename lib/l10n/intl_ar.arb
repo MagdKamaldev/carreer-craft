@@ -102,5 +102,6 @@
     "fileNotPicked" : "! لم يتم اختيار ملف",
     "applicationSent" : "! تم إرسال طلبك بنجاح",
     "viewApplications":"عرض التقديمات",
-    "applications":"التقديمات"
+    "applications":"التقديمات",
+    "resume":"السيرة الذاتية"
 }

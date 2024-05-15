@@ -26,8 +26,8 @@ class ApplicationView extends StatelessWidget {
         builder: (context, state) => Scaffold(
           appBar: companyAppBar(context, S.of(context).application, []),
           body: SingleChildScrollView(
-            child: Padding(
-              padding: EdgeInsets.all(size.height * 0.02),
+              child: Padding(
+                padding: EdgeInsets.all(size.height * 0.02),
               child: Column(
                 children: [
                   IngredientListWidget(

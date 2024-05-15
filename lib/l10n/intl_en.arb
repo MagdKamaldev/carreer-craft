@@ -104,5 +104,6 @@
     "fileNotPicked" : "File not picked !",
     "applicationSent" : "Application Sent Successfully!",
     "viewApplications":"View Applications",
-    "applications":"Applications"
+    "applications":"Applications",
+    "resume":"resume"
 }

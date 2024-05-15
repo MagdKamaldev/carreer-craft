@@ -135,6 +135,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetCode": MessageLookupByLibrary.simpleMessage("Reset Code"),
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
         "resources": MessageLookupByLibrary.simpleMessage("Resources"),
+        "resume": MessageLookupByLibrary.simpleMessage("resume"),
         "sendCode": MessageLookupByLibrary.simpleMessage("Send Code"),
         "senior": MessageLookupByLibrary.simpleMessage("Senior"),
         "seniorityLevel":

@@ -133,6 +133,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetCode": MessageLookupByLibrary.simpleMessage("رمز التحقق"),
         "resetPassword":
             MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
+        "resume": MessageLookupByLibrary.simpleMessage("السيرة الذاتية"),
         "sendCode": MessageLookupByLibrary.simpleMessage("إرسال الرمز"),
         "senior": MessageLookupByLibrary.simpleMessage("كبار الخبراء"),
         "seniorityLevel": MessageLookupByLibrary.simpleMessage("مستوى الخبرة"),
