@@ -37,7 +37,7 @@ class SignUpRepositoryImplementation implements SignUpRepository {
           "role": role,
         },
       );
-      token = response["token"];
+      token = response["token"];  
       kIdBox.put(kIdBoxString, response["user"]["_id"]);
       kTokenBox.put(kTokenBoxString, token);
       return Right(UserModel.fromJson(response["user"]));

@@ -30,7 +30,6 @@ class UserModel {
         mobileNumber: json['mobileNumber'] as String?,
         role: json['role'] as String?,
         status: json['status'] as String?,
-        id: json['_id'] as String?,
       );
 
   Map<String, dynamic> toJson() => {
