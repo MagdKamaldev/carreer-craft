@@ -6,6 +6,7 @@ import 'package:career_craft/features/settings/categories/language/presentation/
 import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
+
 class LanguageView extends StatefulWidget {
   const LanguageView({super.key});
 

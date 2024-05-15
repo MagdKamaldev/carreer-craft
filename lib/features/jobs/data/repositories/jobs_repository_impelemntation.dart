@@ -174,29 +174,28 @@ class JobsRepositoryImplementation extends JobsRepository {
     }
   }
 
- @override
+  @override
   Future<Either<Failure, String>> generateExcellFile(String id) async {
-  try {
-    final response = await apiServices.getBytes(
-      endPoint: "${Endpoints.jobs}/$id/applications/download",
-      jwt: token,
-    );
-    // Create a temporary file
-    final tempDir = await getTemporaryDirectory();
-    final tempFile = File('${tempDir.path}/downloaded_excel.xlsx');
+    try {
+      final response = await apiServices.getBytes(
+        endPoint: "${Endpoints.jobs}/$id/applications/download",
+        jwt: token,
+      );
+      // Create a temporary file
+      final tempDir = await getTemporaryDirectory();
+      final tempFile = File('${tempDir.path}/downloaded_excel.xlsx');
 
-    // Write the downloaded data to the temporary file
-    await tempFile.writeAsBytes(response.data);
+      // Write the downloaded data to the temporary file
+      await tempFile.writeAsBytes(response.data);
 
-    // Return the path to the temporary file
-    return Right(tempFile.path);
-
-  } catch (e) {
-    if (e is DioError) {
-      return Left(ServerFailure.fromDioError(e));
-    } else {
-      return Left(ServerFailure(e.toString()));
+      // Return the path to the temporary file
+      return Right(tempFile.path);
+    } catch (e) {
+      if (e is DioError) {
+        return Left(ServerFailure.fromDioError(e));
+      } else {
+        return Left(ServerFailure(e.toString()));
+      }
     }
   }
-}
 }
