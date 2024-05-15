@@ -1,3 +1,4 @@
+import 'package:career_craft/core/colors.dart';
 import 'package:career_craft/core/utils/service_locator.dart';
 import 'package:career_craft/features/jobs/data/models/job_model.dart';
 import 'package:career_craft/features/jobs/data/repositories/jobs_repository_impelemntation.dart';
@@ -24,9 +25,14 @@ class JobApplicationsViewBody extends StatelessWidget {
                     child: ListView.builder(
                       itemBuilder: (context, index) {
                         final application = state.applications[index];
-                        return ListTile(
-                            title: Text(application.userId!.firstName!),
-                            subtitle: Text(application.userId!.mobileNumber!));
+                        return SizedBox(
+                          width: size.width * 0.95,
+                          height: size.height * 0.13,
+                          child: Card(
+                              elevation: 2,
+                              color: primary.shade500,
+                              child: Text(application.userId!.firstName!)),
+                        );
                       },
                       itemCount: state.applications.length,
                     ))
