@@ -33,6 +33,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "application": MessageLookupByLibrary.simpleMessage("Application"),
         "applicationSent": MessageLookupByLibrary.simpleMessage(
             "Application Sent Successfully!"),
+        "applications": MessageLookupByLibrary.simpleMessage("Applications"),
         "applyNow": MessageLookupByLibrary.simpleMessage("Apply Now"),
         "areYouSure":
             MessageLookupByLibrary.simpleMessage("Are you sure you want to"),
@@ -152,6 +153,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "uploaded": MessageLookupByLibrary.simpleMessage("Uploaded !"),
         "validationFailed":
             MessageLookupByLibrary.simpleMessage("Validation Error"),
+        "viewApplications":
+            MessageLookupByLibrary.simpleMessage("View Applications"),
         "viewJobs": MessageLookupByLibrary.simpleMessage("View Jobs"),
         "weWillSend": MessageLookupByLibrary.simpleMessage(
             "We will send you a code, it help us keep your account secure."),

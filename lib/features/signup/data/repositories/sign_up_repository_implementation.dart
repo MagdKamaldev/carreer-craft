@@ -1,5 +1,4 @@
 // ignore_for_file: deprecated_member_use
-
 import 'package:career_craft/core/constants.dart';
 import 'package:career_craft/core/errors/failures.dart';
 import 'package:career_craft/core/utils/api_services.dart';
@@ -32,6 +31,7 @@ class SignUpRepositoryImplementation implements SignUpRepository {
           "firstName": firstName,
           "lastName": lastName,
           "password": password,
+          "email": email,
           "DOB": dob,
           "mobileNumber": mobileNumber,
           "role": role,

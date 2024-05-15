@@ -4,6 +4,7 @@ import 'package:career_craft/core/errors/failures.dart';
 import 'package:career_craft/core/utils/api_services.dart';
 import 'package:career_craft/core/utils/end_points.dart';
 import 'package:career_craft/features/jobs/data/models/application_model.dart';
+import 'package:career_craft/features/jobs/data/models/get_application_model/application_model.dart';
 import 'package:career_craft/features/jobs/data/models/job_model.dart';
 import 'package:career_craft/features/jobs/data/repositories/jobs_repository.dart';
 import 'package:dartz/dartz.dart';
@@ -148,5 +149,25 @@ class JobsRepositoryImplementation extends JobsRepository {
     } catch (e) {
       return Left(ServerFailure(e.toString()));
     }
+  }
+
+  @override
+  Future<Either<Failure, List<GetApplicationModel>>> getApplicatedJobs(
+      String id) async {
+    // try{
+    final response = await apiServices.get(
+      endPoint: "${Endpoints.jobs}/$id/applications",
+      jwt: token,
+    );
+    final List<GetApplicationModel> applications = [];
+    for (var application in response["applications"]) {
+      applications.add(GetApplicationModel.fromJson(application));
+    }
+    return Right(applications);
+    //  }on DioError catch (e) {
+    //     return Left(ServerFailure.fromDioError(e));
+    //   } catch (e) {
+    //     return Left(ServerFailure(e.toString()));
+    //   }
   }
 }

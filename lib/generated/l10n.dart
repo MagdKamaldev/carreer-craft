@@ -1089,6 +1089,26 @@ class S {
       args: [],
     );
   }
+
+  /// `View Applications`
+  String get viewApplications {
+    return Intl.message(
+      'View Applications',
+      name: 'viewApplications',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Applications`
+  String get applications {
+    return Intl.message(
+      'Applications',
+      name: 'applications',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

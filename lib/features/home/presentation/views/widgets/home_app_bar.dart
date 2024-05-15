@@ -1,5 +1,4 @@
 import 'package:career_craft/core/colors.dart';
-import 'package:career_craft/core/constants.dart';
 import 'package:career_craft/core/utils/components.dart';
 import 'package:career_craft/features/settings/presentation/views/settings_view.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +17,6 @@ PreferredSizeWidget homeAppBar(
         child: GestureDetector(
             onTap: () {
               scaffoldKey.currentState!.openDrawer();
-              print(token);
             },
             child: SvgPicture.asset("assets/images/drawer.svg")),
       ),

@@ -93,8 +93,6 @@ class SignUpTab extends StatelessWidget {
                   SizedBox(
                     height: size.height * 0.02,
                   ),
-        
-                
                   defaultTextField(
                       controller: phoneController,
                       type: TextInputType.emailAddress,
@@ -161,10 +159,8 @@ class SignUpTab extends StatelessWidget {
                     onPressed: () {
                       if (formKey.currentState!.validate()) {
                         SignUpCubit.get(context).signUp(
-                           
                             firstName: firstNameController.text,
                             lastName: lastNameController.text,
-              
                             email: emailcontroller.text,
                             password: passwordcontroller.text,
                             dob:
@@ -173,7 +169,7 @@ class SignUpTab extends StatelessWidget {
                             role:
                                 SignUpCubit.get(context).selectedValue == "yes"
                                     ? "HR"
-                                    : "U");
+                                    : "USER");
                       }
                     },
                   ),

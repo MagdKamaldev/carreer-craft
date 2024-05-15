@@ -1,7 +1,9 @@
 import 'package:career_craft/core/colors.dart';
+import 'package:career_craft/core/constants.dart';
 import 'package:career_craft/core/utils/components.dart';
 import 'package:career_craft/features/jobs/data/models/job_model.dart';
 import 'package:career_craft/features/jobs/presentaion/views/application_view.dart';
+import 'package:career_craft/features/jobs/presentaion/views/job_applications_view.dart';
 import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
@@ -133,13 +135,26 @@ class JobDetailsViewBody extends StatelessWidget {
                 SizedBox(
                   height: size.height * 0.05,
                 ),
-                defaultButton(
-                  function: () {
-                    navigateTo(context, ApplicationView(job: job));
-                  },
-                  context: context,
-                  text: S.of(context).applyNow,
-                ),
+                if (job.addedBy != kIdBox.get(kIdBoxString))
+                  defaultButton(
+                    function: () {
+                      navigateTo(context, ApplicationView(job: job));
+                    },
+                    context: context,
+                    text: S.of(context).applyNow,
+                  ),
+                if (job.addedBy == kIdBox.get(kIdBoxString))
+                  defaultButton(
+                    function: () {
+                      navigateTo(
+                          context,
+                          JobApplicationsView(
+                            job: job,
+                          ));
+                    },
+                    context: context,
+                    text: S.of(context).viewApplications,
+                  ),
                 SizedBox(
                   height: size.height * 0.05,
                 ),

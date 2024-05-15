@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:career_craft/core/errors/error_snackbar.dart';
 import 'package:career_craft/features/jobs/data/models/application_model.dart';
+import 'package:career_craft/features/jobs/data/models/get_application_model/application_model.dart';
 import 'package:career_craft/features/jobs/data/models/job_model.dart';
 import 'package:career_craft/features/jobs/data/repositories/jobs_repository_impelemntation.dart';
 import 'package:career_craft/generated/l10n.dart';
@@ -116,4 +117,15 @@ class JobsCubit extends Cubit<JobsState> {
       },
     );
   }
+
+  Future<void> getApplicatedJobs(String id) async {
+    emit(GetApplicationsLoading());
+    final response = await jobRepositoryImplementation.getApplicatedJobs(id);
+    response.fold(
+      (failure) =>
+          emit(GetApplicationsError(message: failure.message.toString())),
+      (applications) => emit(GetApplicationsLoaded(applications: applications)),
+    );
+  }
+
 }

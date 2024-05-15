@@ -129,11 +129,9 @@ class AcconutSettingViewBody extends StatelessWidget {
                       onPressed: () {
                         if (formKey.currentState!.validate()) {
                           UserCubit.get(context).updateProfile(
-                           
                             token: token!,
                             firstName: firstNameController.text,
                             lastName: lastNameController.text,
-                      
                             email: emailcontroller.text,
                             password: passwordcontroller.text,
                             dob:

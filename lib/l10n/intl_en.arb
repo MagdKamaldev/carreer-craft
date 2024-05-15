@@ -102,5 +102,7 @@
     "uploaded" : "Uploaded !",
     "error" : "Error",
     "fileNotPicked" : "File not picked !",
-    "applicationSent" : "Application Sent Successfully!"
+    "applicationSent" : "Application Sent Successfully!",
+    "viewApplications":"View Applications",
+    "applications":"Applications"
 }

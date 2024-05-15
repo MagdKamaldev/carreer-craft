@@ -100,5 +100,7 @@
     "uploadResume" :"تحميل السيرة الذاتية",
     "error" : "خطأ",
     "fileNotPicked" : "! لم يتم اختيار ملف",
-    "applicationSent" : "! تم إرسال طلبك بنجاح"
+    "applicationSent" : "! تم إرسال طلبك بنجاح",
+    "viewApplications":"عرض التقديمات",
+    "applications":"التقديمات"
 }

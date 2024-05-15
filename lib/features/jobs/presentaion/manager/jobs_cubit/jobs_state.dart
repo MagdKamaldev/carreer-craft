@@ -96,3 +96,15 @@ class ApplicationError extends JobsState {
   final String message;
   ApplicationError({required this.message});
 }
+
+class GetApplicationsLoading extends JobsState {}
+
+class GetApplicationsLoaded extends JobsState {
+  final List<GetApplicationModel> applications;
+  GetApplicationsLoaded({required this.applications});
+}
+
+class GetApplicationsError extends JobsState {
+  final String message;
+  GetApplicationsError({required this.message});
+}

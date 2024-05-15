@@ -33,6 +33,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "application": MessageLookupByLibrary.simpleMessage("التقدم للوظيفة"),
         "applicationSent":
             MessageLookupByLibrary.simpleMessage("! تم إرسال طلبك بنجاح"),
+        "applications": MessageLookupByLibrary.simpleMessage("التقديمات"),
         "applyNow": MessageLookupByLibrary.simpleMessage("قدم الآن"),
         "areYouSure":
             MessageLookupByLibrary.simpleMessage("هل انت متأكد انك تريد "),
@@ -150,6 +151,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "uploaded": MessageLookupByLibrary.simpleMessage(" ! تم التحميل"),
         "validationFailed":
             MessageLookupByLibrary.simpleMessage("خطأ في التحقق"),
+        "viewApplications":
+            MessageLookupByLibrary.simpleMessage("عرض التقديمات"),
         "viewJobs": MessageLookupByLibrary.simpleMessage("عرض الوظائف"),
         "weWillSend": MessageLookupByLibrary.simpleMessage(
             "سنقوم بإرسال رمز لمساعدتنا في الحفاظ على أمان حسابك."),

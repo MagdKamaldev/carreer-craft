@@ -14,20 +14,16 @@ class SignUpCubit extends Cubit<SignUpState> {
       required String lastName,
       required String email,
       required String password,
-     
       required String dob,
       required String mobileNumber,
-      
       required String role}) async {
     emit(SignUpLoading());
     var result = await signUpRepository.signUp(
       firstName,
       lastName,
       email,
-      
       password,
       dob,
-    
       mobileNumber,
       role,
     );
