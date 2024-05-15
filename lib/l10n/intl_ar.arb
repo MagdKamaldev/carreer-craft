@@ -103,5 +103,6 @@
     "applicationSent" : "! تم إرسال طلبك بنجاح",
     "viewApplications":"عرض التقديمات",
     "applications":"التقديمات",
-    "resume":"السيرة الذاتية"
+    "resume":"السيرة الذاتية",
+    "generateExcell":"توليد ملف اكسل"
 }

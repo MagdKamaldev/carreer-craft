@@ -13,5 +13,7 @@ abstract class JobsRepository {
   Future<Either<Failure, String>> deleteJob(String id);
   Future<Either<Failure, ApplicationModel>> applyForJob(var pickedFile,
       List<String> technicalSkills, List<String> softSkills, JobModel job);
-  Future<Either<Failure, List<GetApplicationModel>>> getApplicatedJobs(String id);
+  Future<Either<Failure, List<GetApplicationModel>>> getApplicatedJobs(
+      String id);
+  Future<Either<Failure,dynamic>> generateExcellFile(String id);
 }

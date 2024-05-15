@@ -108,3 +108,15 @@ class GetApplicationsError extends JobsState {
   final String message;
   GetApplicationsError({required this.message});
 }
+
+class GenerateExcellFileLoading extends JobsState {}
+
+class GenerateExcellFileLoaded extends JobsState {
+  final dynamic message;
+  GenerateExcellFileLoaded({required this.message});
+}
+
+class GenerateExcellFileError extends JobsState {
+  final String message;
+  GenerateExcellFileError({required this.message});
+}

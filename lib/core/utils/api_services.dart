@@ -55,4 +55,20 @@ class ApiServices {
     var response = await _dio.delete("$_baseUrl$endPoint");
     return response.data;
   }
+
+  Future<Response> getBytes({
+    required String endPoint,
+    Map<String, dynamic>? query,
+    String? jwt,
+  }) async {
+    _dio.options.headers = {
+      "Authorization": "Bearer $jwt",
+      "Content-Type": "application/json",
+    };
+    _dio.options.responseType = ResponseType.bytes;
+    return _dio.get(
+      "$_baseUrl$endPoint",
+      queryParameters: query,
+    );
+  }
 }

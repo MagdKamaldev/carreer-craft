@@ -89,6 +89,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "forgotPasswordq":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "fullTime": MessageLookupByLibrary.simpleMessage("دوام كامل"),
+        "generateExcell":
+            MessageLookupByLibrary.simpleMessage("توليد ملف اكسل"),
         "hirePlan": MessageLookupByLibrary.simpleMessage("هل تخطط للتوظيف؟"),
         "hybrid": MessageLookupByLibrary.simpleMessage("هجين"),
         "industry": MessageLookupByLibrary.simpleMessage("الصناعة"),

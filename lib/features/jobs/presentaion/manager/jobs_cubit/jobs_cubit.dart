@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'dart:io';
 import 'package:career_craft/core/errors/error_snackbar.dart';
 import 'package:career_craft/features/jobs/data/models/application_model.dart';
@@ -6,7 +8,9 @@ import 'package:career_craft/features/jobs/data/models/job_model.dart';
 import 'package:career_craft/features/jobs/data/repositories/jobs_repository_impelemntation.dart';
 import 'package:career_craft/generated/l10n.dart';
 import 'package:file_picker/file_picker.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:open_file/open_file.dart';
 part 'jobs_state.dart';
 
 class JobsCubit extends Cubit<JobsState> {
@@ -128,4 +132,29 @@ class JobsCubit extends Cubit<JobsState> {
     );
   }
 
-}
+  Future<void> generateExcellFile(String id,context) async {
+    emit(GenerateExcellFileLoading());
+    final response = await jobRepositoryImplementation.generateExcellFile(id);
+    response.fold(
+      (failure) =>
+          emit(GenerateExcellFileError(message: failure.message.toString())),
+      (path) {
+        emit(GenerateExcellFileLoaded(message: path));
+        openExcelSheet(path,context);
+      },
+    );
+  }
+
+  void openExcelSheet(String path, BuildContext context) async {
+    try {
+      if (path != "") {
+        await OpenFile.open(path);
+      } else {
+        showErrorSnackbar(context: context, title: "Path Error", body: "Error in Generating path");
+      }
+    } catch (error) {
+      showErrorSnackbar(context: context, title: "Error", body: error.toString());
+      }
+    }
+  }
+

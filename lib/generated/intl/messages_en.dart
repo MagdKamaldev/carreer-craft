@@ -92,6 +92,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "forgotPasswordq":
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
         "fullTime": MessageLookupByLibrary.simpleMessage("Full-Time"),
+        "generateExcell":
+            MessageLookupByLibrary.simpleMessage("Generate Excel Sheet"),
         "hirePlan": MessageLookupByLibrary.simpleMessage("planning To hire ?"),
         "hybrid": MessageLookupByLibrary.simpleMessage("Hybrid"),
         "industry": MessageLookupByLibrary.simpleMessage("Industry"),

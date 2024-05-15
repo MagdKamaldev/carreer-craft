@@ -1119,6 +1119,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Generate Excel Sheet`
+  String get generateExcell {
+    return Intl.message(
+      'Generate Excel Sheet',
+      name: 'generateExcell',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

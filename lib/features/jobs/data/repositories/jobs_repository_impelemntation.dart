@@ -1,4 +1,6 @@
 // ignore_for_file: deprecated_member_use
+import 'dart:io';
+
 import 'package:career_craft/core/constants.dart';
 import 'package:career_craft/core/errors/failures.dart';
 import 'package:career_craft/core/utils/api_services.dart';
@@ -10,6 +12,7 @@ import 'package:career_craft/features/jobs/data/repositories/jobs_repository.dar
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:http_parser/http_parser.dart';
+import 'package:path_provider/path_provider.dart';
 
 class JobsRepositoryImplementation extends JobsRepository {
   final ApiServices apiServices;
@@ -154,20 +157,45 @@ class JobsRepositoryImplementation extends JobsRepository {
   @override
   Future<Either<Failure, List<GetApplicationModel>>> getApplicatedJobs(
       String id) async {
-    // try{
-    final response = await apiServices.get(
-      endPoint: "${Endpoints.jobs}/$id/applications",
+    try {
+      final response = await apiServices.get(
+        endPoint: "${Endpoints.jobs}/$id/applications",
+        jwt: token,
+      );
+      final List<GetApplicationModel> applications = [];
+      for (var application in response["applications"]) {
+        applications.add(GetApplicationModel.fromJson(application));
+      }
+      return Right(applications);
+    } on DioError catch (e) {
+      return Left(ServerFailure.fromDioError(e));
+    } catch (e) {
+      return Left(ServerFailure(e.toString()));
+    }
+  }
+
+ Future<Either<Failure, String>> generateExcellFile(String id) async {
+  try {
+    final response = await apiServices.getBytes(
+      endPoint: "${Endpoints.jobs}/$id/applications/download",
       jwt: token,
     );
-    final List<GetApplicationModel> applications = [];
-    for (var application in response["applications"]) {
-      applications.add(GetApplicationModel.fromJson(application));
+    // Create a temporary file
+    final tempDir = await getTemporaryDirectory();
+    final tempFile = File('${tempDir.path}/downloaded_excel.xlsx');
+
+    // Write the downloaded data to the temporary file
+    await tempFile.writeAsBytes(response.data);
+
+    // Return the path to the temporary file
+    return Right(tempFile.path);
+
+  } catch (e) {
+    if (e is DioError) {
+      return Left(ServerFailure.fromDioError(e));
+    } else {
+      return Left(ServerFailure(e.toString()));
     }
-    return Right(applications);
-    //  }on DioError catch (e) {
-    //     return Left(ServerFailure.fromDioError(e));
-    //   } catch (e) {
-    //     return Left(ServerFailure(e.toString()));
-    //   }
   }
+}
 }
