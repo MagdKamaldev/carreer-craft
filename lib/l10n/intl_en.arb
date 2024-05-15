@@ -105,6 +105,8 @@
     "applicationSent" : "Application Sent Successfully!",
     "viewApplications":"View Applications",
     "applications":"Applications",
-    "resume":"resume",
-    "generateExcell":"Generate Excel Sheet"
+    "resume":"Resume",
+    "generateExcell":"Generate Excel Sheet",
+    "aboutInfo":"About Info",
+    "skills":"Skills"
 }

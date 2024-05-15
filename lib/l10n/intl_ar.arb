@@ -104,5 +104,7 @@
     "viewApplications":"عرض التقديمات",
     "applications":"التقديمات",
     "resume":"السيرة الذاتية",
-    "generateExcell":"توليد ملف اكسل"
+    "generateExcell":"توليد ملف اكسل",
+    "aboutInfo":"معلومات عن المتقدم",
+    "skills":"المهارات"
 }

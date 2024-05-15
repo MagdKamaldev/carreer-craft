@@ -1110,10 +1110,10 @@ class S {
     );
   }
 
-  /// `resume`
+  /// `Resume`
   String get resume {
     return Intl.message(
-      'resume',
+      'Resume',
       name: 'resume',
       desc: '',
       args: [],
@@ -1125,6 +1125,26 @@ class S {
     return Intl.message(
       'Generate Excel Sheet',
       name: 'generateExcell',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `About Info`
+  String get aboutInfo {
+    return Intl.message(
+      'About Info',
+      name: 'aboutInfo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Skills`
+  String get skills {
+    return Intl.message(
+      'Skills',
+      name: 'skills',
       desc: '',
       args: [],
     );

@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Bio": MessageLookupByLibrary.simpleMessage("Bio"),
         "RateUs": MessageLookupByLibrary.simpleMessage("Rate Us in Play Store"),
+        "aboutInfo": MessageLookupByLibrary.simpleMessage("About Info"),
         "accountSettings":
             MessageLookupByLibrary.simpleMessage("Account Settings"),
         "addCompany": MessageLookupByLibrary.simpleMessage("Add Company"),
@@ -137,12 +138,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetCode": MessageLookupByLibrary.simpleMessage("Reset Code"),
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
         "resources": MessageLookupByLibrary.simpleMessage("Resources"),
-        "resume": MessageLookupByLibrary.simpleMessage("resume"),
+        "resume": MessageLookupByLibrary.simpleMessage("Resume"),
         "sendCode": MessageLookupByLibrary.simpleMessage("Send Code"),
         "senior": MessageLookupByLibrary.simpleMessage("Senior"),
         "seniorityLevel":
             MessageLookupByLibrary.simpleMessage("Seniority Level"),
         "settings": MessageLookupByLibrary.simpleMessage("Settings"),
+        "skills": MessageLookupByLibrary.simpleMessage("Skills"),
         "slogan": MessageLookupByLibrary.simpleMessage("Your Career Compass !"),
         "softSkills": MessageLookupByLibrary.simpleMessage("Soft Skills"),
         "success": MessageLookupByLibrary.simpleMessage("Success"),

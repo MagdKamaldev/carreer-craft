@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Bio": MessageLookupByLibrary.simpleMessage("نبذة"),
         "RateUs": MessageLookupByLibrary.simpleMessage("قيمنا في المتجر"),
+        "aboutInfo": MessageLookupByLibrary.simpleMessage("معلومات عن المتقدم"),
         "accountSettings":
             MessageLookupByLibrary.simpleMessage("اعدادت الحساب"),
         "addCompany": MessageLookupByLibrary.simpleMessage("إضافة شركة"),
@@ -140,6 +141,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "senior": MessageLookupByLibrary.simpleMessage("كبار الخبراء"),
         "seniorityLevel": MessageLookupByLibrary.simpleMessage("مستوى الخبرة"),
         "settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),
+        "skills": MessageLookupByLibrary.simpleMessage("المهارات"),
         "slogan": MessageLookupByLibrary.simpleMessage("بوصلتك المهنية !"),
         "softSkills": MessageLookupByLibrary.simpleMessage("المهارات الشخصية"),
         "success": MessageLookupByLibrary.simpleMessage("نجاح"),
