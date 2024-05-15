@@ -20,7 +20,7 @@ class AddJobButton extends StatelessWidget {
           showErrorSnackbar(
               context: context,
               title: "success",
-              body: "your Company has been Added successfully !",
+              body: "your Job has been Added successfully !",
               icon: "assets/images/true.svg");
         } else if (state is CreateJobError) {
           showErrorSnackbar(

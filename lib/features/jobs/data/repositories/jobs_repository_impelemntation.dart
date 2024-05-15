@@ -23,7 +23,7 @@ class JobsRepositoryImplementation extends JobsRepository {
           "jobTitle": jobModel.jobTitle,
           "jobLocation": jobModel.jobLocation,
           "workingTime": jobModel.workingTime,
-          "seniortyLevel": jobModel.seniorityLevel,
+          "seniorityLevel": jobModel.seniorityLevel,
           "jobDescription": jobModel.jobDescription,
           "technicalSkills": jobModel.technicalSkills,
           "softSkills": jobModel.softSkills,
