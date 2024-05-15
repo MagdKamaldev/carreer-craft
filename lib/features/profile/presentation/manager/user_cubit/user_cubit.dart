@@ -24,19 +24,15 @@ class UserCubit extends Cubit<UserState> {
     required String firstName,
     required String lastName,
     required String email,
-    required String recoveryEmail,
     required String password,
     required String dob,
-    required String bio,
   }) async {
     emit(UserLoading());
     final response = await profileRepositoryImplementation.updateProfile(
       token: token,
       firstName: firstName,
       lastName: lastName,
-      bio: bio,
       email: email,
-      recoveryEmail: recoveryEmail,
       password: password,
       dob: dob,
     );

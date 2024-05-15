@@ -89,7 +89,7 @@ class UpdateJobViewBody extends StatelessWidget {
               IngredientListWidget(
                 ingredients: job.technicalSkills!,
                 onIngredientsChanged: (values) {
-                 technicalSkills = values.cast<String>();
+                  technicalSkills = values.cast<String>();
                 },
                 title: S.of(context).technicalSkills,
               ),

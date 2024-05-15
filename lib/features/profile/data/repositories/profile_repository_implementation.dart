@@ -37,8 +37,6 @@ class ProfileRepositoryImplementation implements ProfileRepository {
     required String firstName,
     required String lastName,
     required String email,
-    required String bio,
-    required String recoveryEmail,
     required String password,
     required String dob,
   }) async {
@@ -49,7 +47,6 @@ class ProfileRepositoryImplementation implements ProfileRepository {
           "firstName": firstName,
           "lastName": lastName,
           "email": email,
-          "recoveryEmail": recoveryEmail,
           "password": password,
           "dob": dob,
         },

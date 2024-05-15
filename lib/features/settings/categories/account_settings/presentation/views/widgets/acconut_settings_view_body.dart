@@ -17,11 +17,9 @@ class AcconutSettingViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextEditingController emailcontroller = TextEditingController();
-    TextEditingController recoveryEmailcontroller = TextEditingController();
     TextEditingController passwordcontroller = TextEditingController();
     TextEditingController firstNameController = TextEditingController();
     TextEditingController lastNameController = TextEditingController();
-    TextEditingController bioController = TextEditingController();
     TextTheme theme = Theme.of(context).textTheme;
     Size size = MediaQuery.of(context).size;
     GlobalKey<FormState> formKey = GlobalKey<FormState>();
@@ -32,10 +30,8 @@ class AcconutSettingViewBody extends StatelessWidget {
       child: BlocConsumer<UserCubit, UserState>(listener: (context, state) {
         if (state is UserLoaded) {
           emailcontroller.text = state.user.email!;
-          recoveryEmailcontroller.text = state.user.recoveryEmail!;
           firstNameController.text = state.user.firstName!;
           lastNameController.text = state.user.lastName!;
-          bioController.text = state.user.bio!;
         }
       }, builder: (context, state) {
         if (state is UserLoading) {
@@ -107,34 +103,6 @@ class AcconutSettingViewBody extends StatelessWidget {
                       height: size.height * 0.02,
                     ),
                     defaultTextField(
-                        controller: recoveryEmailcontroller,
-                        type: TextInputType.emailAddress,
-                        label: S.of(context).recoveryEmail,
-                        theme: theme,
-                        context: context,
-                        validate: (String value) {
-                          if (value.isEmpty) {
-                            return S.of(context).emptyValidation;
-                          }
-                        }),
-                    SizedBox(
-                      height: size.height * 0.02,
-                    ),
-                    defaultTextField(
-                        controller: bioController,
-                        type: TextInputType.name,
-                        label: S.of(context).Bio,
-                        theme: theme,
-                        context: context,
-                        validate: (String value) {
-                          if (value.isEmpty) {
-                            return S.of(context).emptyValidation;
-                          }
-                        }),
-                    SizedBox(
-                      height: size.height * 0.02,
-                    ),
-                    defaultTextField(
                         controller: passwordcontroller,
                         type: TextInputType.visiblePassword,
                         label: S.of(context).password,
@@ -161,11 +129,11 @@ class AcconutSettingViewBody extends StatelessWidget {
                       onPressed: () {
                         if (formKey.currentState!.validate()) {
                           UserCubit.get(context).updateProfile(
-                            recoveryEmail: recoveryEmailcontroller.text,
+                           
                             token: token!,
                             firstName: firstNameController.text,
                             lastName: lastNameController.text,
-                            bio: bioController.text,
+                      
                             email: emailcontroller.text,
                             password: passwordcontroller.text,
                             dob:

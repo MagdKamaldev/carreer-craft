@@ -16,13 +16,11 @@ class SignUpTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextEditingController emailcontroller = TextEditingController();
-    TextEditingController recoveryEmailController = TextEditingController();
     TextEditingController passwordcontroller = TextEditingController();
     TextEditingController confirmPasswordcontroller = TextEditingController();
     TextEditingController firstNameController = TextEditingController();
     TextEditingController lastNameController = TextEditingController();
     TextEditingController phoneController = TextEditingController();
-    TextEditingController bioController = TextEditingController();
     TextTheme theme = Theme.of(context).textTheme;
     Size size = MediaQuery.of(context).size;
     GlobalKey<FormState> formKey = GlobalKey<FormState>();
@@ -95,34 +93,8 @@ class SignUpTab extends StatelessWidget {
                   SizedBox(
                     height: size.height * 0.02,
                   ),
-                  defaultTextField(
-                      controller: recoveryEmailController,
-                      type: TextInputType.emailAddress,
-                      label: S.of(context).recoveryEmail,
-                      theme: theme,
-                      context: context,
-                      validate: (String value) {
-                        if (value.isEmpty) {
-                          return S.of(context).emptyValidation;
-                        }
-                      }),
-                  SizedBox(
-                    height: size.height * 0.02,
-                  ),
-                  defaultTextField(
-                      controller: bioController,
-                      type: TextInputType.name,
-                      label: S.of(context).Bio,
-                      theme: theme,
-                      context: context,
-                      validate: (String value) {
-                        if (value.isEmpty) {
-                          return S.of(context).emptyValidation;
-                        }
-                      }),
-                  SizedBox(
-                    height: size.height * 0.02,
-                  ),
+        
+                
                   defaultTextField(
                       controller: phoneController,
                       type: TextInputType.emailAddress,
@@ -189,10 +161,10 @@ class SignUpTab extends StatelessWidget {
                     onPressed: () {
                       if (formKey.currentState!.validate()) {
                         SignUpCubit.get(context).signUp(
-                            recoveryEmail: recoveryEmailController.text,
+                           
                             firstName: firstNameController.text,
                             lastName: lastNameController.text,
-                            bio: bioController.text,
+              
                             email: emailcontroller.text,
                             password: passwordcontroller.text,
                             dob:
@@ -200,8 +172,8 @@ class SignUpTab extends StatelessWidget {
                             mobileNumber: phoneController.text,
                             role:
                                 SignUpCubit.get(context).selectedValue == "yes"
-                                    ? "hr"
-                                    : "user");
+                                    ? "HR"
+                                    : "U");
                       }
                     },
                   ),

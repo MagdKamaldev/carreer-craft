@@ -10,5 +10,6 @@ abstract class JobsRepository {
   Future<Either<Failure, JobModel>> createJob(JobModel jobModel);
   Future<Either<Failure, JobModel>> updateJob(JobModel jobModel);
   Future<Either<Failure, String>> deleteJob(String id);
-  Future<Either<Failure, ApplicationModel>> applyForJob(var pickedFile,List<String> technicalSkills,List<String> softSkills,JobModel job);
+  Future<Either<Failure, ApplicationModel>> applyForJob(var pickedFile,
+      List<String> technicalSkills, List<String> softSkills, JobModel job);
 }
