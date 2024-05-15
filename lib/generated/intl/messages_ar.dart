@@ -36,6 +36,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("! تم إرسال طلبك بنجاح"),
         "applications": MessageLookupByLibrary.simpleMessage("التقديمات"),
         "applyNow": MessageLookupByLibrary.simpleMessage("قدم الآن"),
+        "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "areYouSure":
             MessageLookupByLibrary.simpleMessage("هل انت متأكد انك تريد "),
         "cancel": MessageLookupByLibrary.simpleMessage("الغاء"),
@@ -75,6 +76,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "editCompany": MessageLookupByLibrary.simpleMessage("تعديل الشركة"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "employees": MessageLookupByLibrary.simpleMessage("عدد الموظفين"),
+        "english": MessageLookupByLibrary.simpleMessage("الانجليزية"),
         "enterCode": MessageLookupByLibrary.simpleMessage(
             "الرجاء إدخال الرمز المرسل إلى بريدك الإلكتروني!"),
         "enterLogin": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
@@ -136,7 +138,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetCode": MessageLookupByLibrary.simpleMessage("رمز التحقق"),
         "resetPassword":
             MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
+        "resources": MessageLookupByLibrary.simpleMessage("الموارد"),
+        "restartToNotice": MessageLookupByLibrary.simpleMessage(
+            "برجاء إعادة تشغيل التطبيق لتطبيق التغييرات"),
         "resume": MessageLookupByLibrary.simpleMessage("السيرة الذاتية"),
+        "save": MessageLookupByLibrary.simpleMessage("حفظ"),
+        "selectLanguage": MessageLookupByLibrary.simpleMessage("اختر اللغة"),
         "sendCode": MessageLookupByLibrary.simpleMessage("إرسال الرمز"),
         "senior": MessageLookupByLibrary.simpleMessage("كبار الخبراء"),
         "seniorityLevel": MessageLookupByLibrary.simpleMessage("مستوى الخبرة"),

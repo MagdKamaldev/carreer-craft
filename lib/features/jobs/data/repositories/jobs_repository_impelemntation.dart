@@ -174,7 +174,8 @@ class JobsRepositoryImplementation extends JobsRepository {
     }
   }
 
- Future<Either<Failure, String>> generateExcellFile(String id) async {
+ @override
+  Future<Either<Failure, String>> generateExcellFile(String id) async {
   try {
     final response = await apiServices.getBytes(
       endPoint: "${Endpoints.jobs}/$id/applications/download",

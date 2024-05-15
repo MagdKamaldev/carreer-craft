@@ -1,6 +1,5 @@
 // ignore_for_file: deprecated_member_use
 import 'package:career_craft/core/constants.dart';
-import 'package:career_craft/core/utils/locale.dart';
 import 'package:career_craft/core/utils/service_locator.dart';
 import 'package:career_craft/core/utils/themes.dart';
 import 'package:career_craft/features/home/presentation/manager/home_cubit/home_cubit.dart';
@@ -18,6 +17,7 @@ void main() async {
   await Hive.initFlutter();
   await Hive.openBox(kTokenBoxString);
   await Hive.openBox(kIdBoxString);
+  await Hive.openBox(kLangBoxString);
   runApp(const CareerCraft());
 }
 
@@ -37,7 +37,7 @@ class CareerCraft extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
-        locale: Locale(langCode),
+        locale: Locale(kLangBox.get(kLangBoxString) ?? 'en'),
         title: 'Career Craft',
         theme: theme,
         debugShowCheckedModeBanner: false,

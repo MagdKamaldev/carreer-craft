@@ -2,6 +2,7 @@ import 'package:career_craft/core/colors.dart';
 import 'package:career_craft/core/utils/components.dart';
 import 'package:career_craft/core/utils/functions/logout.dart';
 import 'package:career_craft/features/settings/categories/account_settings/presentation/views/acccount_settings_view.dart';
+import 'package:career_craft/features/settings/categories/language/presentation/language_view.dart';
 import 'package:career_craft/features/settings/presentation/views/widgets/profile_navigator.dart';
 import 'package:career_craft/features/settings/presentation/views/widgets/settings_item.dart';
 import 'package:career_craft/generated/l10n.dart';
@@ -60,8 +61,13 @@ class SettingsViewBody extends StatelessWidget {
             SizedBox(
               height: size.height * 0.035,
             ),
-            settingsItem(size, theme, "assets/images/language.svg",
-                S.of(context).language),
+            GestureDetector(
+              onTap: () {
+                navigateTo(context, const LanguageView());
+              },
+              child: settingsItem(size, theme, "assets/images/language.svg",
+                  S.of(context).language),
+            ),
             SizedBox(
               height: size.height * 0.06,
             ),

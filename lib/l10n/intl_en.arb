@@ -108,5 +108,10 @@
     "resume":"Resume",
     "generateExcell":"Generate Excel Sheet",
     "aboutInfo":"About Info",
-    "skills":"Skills"
+    "skills":"Skills",
+    "selectLanguage":"Select Language", 
+    "english":"English",
+    "arabic":"Arabic",
+    "save":"Save",
+    "restartToNotice":"Please restart the app to notice changes !"
 }

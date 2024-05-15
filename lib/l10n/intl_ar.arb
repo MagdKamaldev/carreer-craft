@@ -47,7 +47,7 @@
     "accountSettings": "اعدادت الحساب",
     "preferences": "التفضيلات",
     "notifications": "الإشعارات",
-    "Resources": "الموارد",
+    "resources": "الموارد",
     "language": "اللغة",
     "contactSupport": "الاتصال بالدعم",
     "RateUs": "قيمنا في المتجر",
@@ -106,5 +106,10 @@
     "resume":"السيرة الذاتية",
     "generateExcell":"توليد ملف اكسل",
     "aboutInfo":"معلومات عن المتقدم",
-    "skills":"المهارات"
+    "skills":"المهارات",
+    "selectLanguage":"اختر اللغة", 
+    "english":"الانجليزية",
+    "arabic":"العربية",
+    "save":"حفظ",
+    "restartToNotice":"برجاء إعادة تشغيل التطبيق لتطبيق التغييرات"
 }

@@ -6,5 +6,7 @@ String? token = "";
 String? id = "";
 var kTokenBox = Hive.box(kTokenBoxString);
 var kIdBox = Hive.box(kIdBoxString);
+var kLangBox = Hive.box(kLangBoxString);
 const kTokenBoxString = "token";
 const kIdBoxString = "id";
+const kLangBoxString = "lang";

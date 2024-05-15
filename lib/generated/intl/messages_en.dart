@@ -36,6 +36,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Application Sent Successfully!"),
         "applications": MessageLookupByLibrary.simpleMessage("Applications"),
         "applyNow": MessageLookupByLibrary.simpleMessage("Apply Now"),
+        "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "areYouSure":
             MessageLookupByLibrary.simpleMessage("Are you sure you want to"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
@@ -78,6 +79,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "employees": MessageLookupByLibrary.simpleMessage("Employees"),
         "emptyValidation":
             MessageLookupByLibrary.simpleMessage("field must not be empty"),
+        "english": MessageLookupByLibrary.simpleMessage("English"),
         "enterCode": MessageLookupByLibrary.simpleMessage(
             "Please enter the code sent to your email !"),
         "enterLogin": MessageLookupByLibrary.simpleMessage("Login"),
@@ -138,7 +140,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetCode": MessageLookupByLibrary.simpleMessage("Reset Code"),
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
         "resources": MessageLookupByLibrary.simpleMessage("Resources"),
+        "restartToNotice": MessageLookupByLibrary.simpleMessage(
+            "Please restart the app to notice changes !"),
         "resume": MessageLookupByLibrary.simpleMessage("Resume"),
+        "save": MessageLookupByLibrary.simpleMessage("Save"),
+        "selectLanguage":
+            MessageLookupByLibrary.simpleMessage("Select Language"),
         "sendCode": MessageLookupByLibrary.simpleMessage("Send Code"),
         "senior": MessageLookupByLibrary.simpleMessage("Senior"),
         "seniorityLevel":
