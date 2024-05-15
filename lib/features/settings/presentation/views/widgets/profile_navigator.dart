@@ -1,7 +1,7 @@
 import 'package:career_craft/core/colors.dart';
 import 'package:career_craft/core/utils/components.dart';
-import 'package:career_craft/features/profile/presentation/views/profile_view.dart';
 import 'package:career_craft/features/profile/presentation/views/widgets/profile_picture.dart';
+import 'package:career_craft/features/settings/presentation/views/widgets/profile_settings.dart';
 import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +29,7 @@ class ProfileNavigator extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                navigateTo(context, const ProfileView());
+                navigateTo(context, const SettingsProfile());
               },
               child: Row(
                 children: [

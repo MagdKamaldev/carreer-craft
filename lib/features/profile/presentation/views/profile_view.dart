@@ -33,148 +33,144 @@ class ProfileView extends StatelessWidget {
               ),
             );
           } else if (state is UserLoaded) {
-            return Scaffold(
-              body: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  const CoverPhoto(),
-                  SizedBox(
-                    height: size.height * 0.02,
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const CoverPhoto(),
+                SizedBox(
+                  height: size.height * 0.02,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: Text(
+                    state.user.role.toString(),
+                    style: Theme.of(context).textTheme.titleMedium,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16),
-                    child: Text(
-                      state.user.role.toString(),
-                      style: Theme.of(context).textTheme.titleMedium,
+                ),
+                SizedBox(
+                  height: size.height * 0.03,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: Text(
+                    state.user.mobileNumber!,
+                    style: Theme.of(context).textTheme.titleMedium,
+                  ),
+                ),
+                SizedBox(
+                  height: size.height * 0.03,
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: Row(
+                        children: [
+                          Text(
+                            "${state.user.firstName.toString()} ${state.user.lastName.toString()}",
+                            style: Theme.of(context).textTheme.titleLarge,
+                          ),
+                          SizedBox(
+                            width: size.width * 0.05,
+                          ),
+                          Text(
+                            state.user.status!,
+                            style:
+                                Theme.of(context).textTheme.bodySmall!.copyWith(
+                                      color: secondary,
+                                    ),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    height: size.height * 0.03,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16),
-                    child: Text(
-                      state.user.mobileNumber!,
-                      style: Theme.of(context).textTheme.titleMedium,
+                    SizedBox(
+                      height: size.height * 0.02,
                     ),
-                  ),
-                  SizedBox(
-                    height: size.height * 0.03,
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16),
-                        child: Row(
-                          children: [
-                            Text(
-                              "${state.user.firstName.toString()} ${state.user.lastName.toString()}",
-                              style: Theme.of(context).textTheme.titleLarge,
-                            ),
-                            SizedBox(
-                              width: size.width * 0.05,
-                            ),
-                            Text(
-                              state.user.status!,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .bodySmall!
-                                  .copyWith(
-                                    color: secondary,
-                                  ),
-                            ),
-                          ],
-                        ),
+                    SizedBox(
+                      height: size.height * 0.02,
+                    ),
+                    Container(
+                      width: double.infinity,
+                      height: 1,
+                      color: secondary,
+                    ),
+                    SizedBox(
+                      height: size.height * 0.02,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            S.of(context).jobs,
+                            style: Theme.of(context).textTheme.headlineSmall,
+                          ),
+                          SizedBox(
+                            height: size.height * 0.05,
+                          ),
+                        ],
                       ),
-                      SizedBox(
-                        height: size.height * 0.02,
+                    ),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          const SizedBox(
+                            width: 16,
+                          ),
+                          Column(
+                            children: [
+                              const ProfilePicture(radius: 42, bigRadius: 44),
+                              SizedBox(
+                                height: size.height * 0.01,
+                              ),
+                              Text(
+                                "(Flutter Developer)",
+                                style: Theme.of(context).textTheme.bodySmall,
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            width: size.width * 0.05,
+                          ),
+                          Column(
+                            children: [
+                              const ProfilePicture(radius: 42, bigRadius: 44),
+                              SizedBox(
+                                height: size.height * 0.01,
+                              ),
+                              Text(
+                                "(Flutter Developer)",
+                                style: Theme.of(context).textTheme.bodySmall,
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            width: size.width * 0.05,
+                          ),
+                          Column(
+                            children: [
+                              const ProfilePicture(radius: 42, bigRadius: 44),
+                              SizedBox(
+                                height: size.height * 0.01,
+                              ),
+                              Text(
+                                "(Flutter Developer)",
+                                style: Theme.of(context).textTheme.bodySmall,
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            width: 16,
+                          ),
+                        ],
                       ),
-                      SizedBox(
-                        height: size.height * 0.02,
-                      ),
-                      Container(
-                        width: double.infinity,
-                        height: 1,
-                        color: secondary,
-                      ),
-                      SizedBox(
-                        height: size.height * 0.02,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              S.of(context).jobs,
-                              style: Theme.of(context).textTheme.headlineSmall,
-                            ),
-                            SizedBox(
-                              height: size.height * 0.05,
-                            ),
-                          ],
-                        ),
-                      ),
-                      SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Row(
-                          children: [
-                            const SizedBox(
-                              width: 16,
-                            ),
-                            Column(
-                              children: [
-                                const ProfilePicture(radius: 42, bigRadius: 44),
-                                SizedBox(
-                                  height: size.height * 0.01,
-                                ),
-                                Text(
-                                  "(Flutter Developer)",
-                                  style: Theme.of(context).textTheme.bodySmall,
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              width: size.width * 0.05,
-                            ),
-                            Column(
-                              children: [
-                                const ProfilePicture(radius: 42, bigRadius: 44),
-                                SizedBox(
-                                  height: size.height * 0.01,
-                                ),
-                                Text(
-                                  "(Flutter Developer)",
-                                  style: Theme.of(context).textTheme.bodySmall,
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              width: size.width * 0.05,
-                            ),
-                            Column(
-                              children: [
-                                const ProfilePicture(radius: 42, bigRadius: 44),
-                                SizedBox(
-                                  height: size.height * 0.01,
-                                ),
-                                Text(
-                                  "(Flutter Developer)",
-                                  style: Theme.of(context).textTheme.bodySmall,
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              width: 16,
-                            ),
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                ],
-              ),
+                    )
+                  ],
+                ),
+              ],
             );
           }
           return const SizedBox();
