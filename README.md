@@ -11,6 +11,8 @@
 ## Design is made using Advanta wireframe kit :
 [Design System Used](https://www.figma.com/community/file/1190455370113774565)
 
+![alt text](<assets/docs/Career Craft (1).png>)
+
 
 
 
