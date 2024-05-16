@@ -1,4 +1,5 @@
 import 'package:career_craft/core/colors.dart';
+import 'package:career_craft/core/constants.dart';
 import 'package:career_craft/core/errors/error_snackbar.dart';
 import 'package:career_craft/core/utils/components.dart';
 import 'package:career_craft/core/utils/service_locator.dart';

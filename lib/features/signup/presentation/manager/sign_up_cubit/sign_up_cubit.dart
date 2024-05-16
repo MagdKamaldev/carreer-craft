@@ -1,5 +1,6 @@
 import 'package:career_craft/core/models/user_model.dart';
 import 'package:career_craft/features/signup/data/repositories/sign_up_repository.dart';
+import 'package:career_craft/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 part 'sign_up_state.dart';

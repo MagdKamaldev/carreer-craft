@@ -166,10 +166,12 @@ class SignUpTab extends StatelessWidget {
                             dob:
                                 "${SignUpCubit.get(context).yearController.text}-${SignUpCubit.get(context).monthController.text}-${SignUpCubit.get(context).dayController.text}",
                             mobileNumber: phoneController.text,
-                            role:
-                                SignUpCubit.get(context).selectedValue == "yes"
-                                    ? "HR"
-                                    : "USER");
+                            role: SignUpCubit.get(context).selectedValue ==
+                                        S.of(context).yes ||
+                                    SignUpCubit.get(context).selectedValue ==
+                                        null
+                                ? "HR"
+                                : "USER");
                       }
                     },
                   ),
