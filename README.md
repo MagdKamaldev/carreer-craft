@@ -1,10 +1,22 @@
 # Carrer Craft with mvvm architecture
 
-## Career Craft is an app made with flutter to help recruiter find candidtes for open positions
-![logo](assets/images/logo.svg)
-#### 1- we create the feature models : inside the feature folder  data/models/eg_model
+## Career Craft is an app made with flutter to help recruiters find candidates for open positions using API: 
 
-#### 2- we create the feature repository : inside the feature folder  data/repository/eg_repository
+[Link to GitHub repo](https://github.com/Fadyy22/alx-career-craft)
+
+## preview the app from here:
+
+[Link to preview video](https://www.youtube.com/watch?v=kQt9ilfJeqY&t=370s)
+
+## Design is made using Advanta wireframe kit :
+[Design System Used](https://www.figma.com/community/file/1190455370113774565)
+
+![alt text](<assets/docs/Career Craft (1).png>)
+
+![alt text](<assets/docs/Career Craft (1).png>)
+
+
+
 
 
 
