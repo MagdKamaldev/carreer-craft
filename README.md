@@ -1,8 +1,8 @@
 # Carrer Craft with mvvm architecture
 
-## Career Craft is an app made with flutter to help recruiters find candidates for open positions using API: 
+## Career Craft is an app made with flutter to help recruiters find candidates for open positions using API made by (@Fadyy22): 
 
-[Link to GitHub repo](https://github.com/Fadyy22/alx-career-craft)
+[Api GitHub repo](https://github.com/Fadyy22/alx-career-craft)
 
 ## preview the app from here:
 
